@@ -1,0 +1,160 @@
+---
+title: "Unit 13"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+
+## Unit 13
+
+Campbell Scores
+
+
+
+## Overview Of Campbell Scores
+
+We have discussed throughout many of the past units the importance of understanding alternative explanations or counterfactuals. In all of research and evaluation it is important to consider any possible explanations other than the independent variable that may account for the outcome. 
+
+
+## Review Of An Example Of Alternative Explanations
+
+In this unit we will discuss the goal of eliminating alternative explanations or hypotheses. As we have discussed this should always be a goal of a researcher or evaluator in any field. Let us recall Zimbardo's "Broken Windows" study and how it affected crime policy in the US. The URL below will take you to an article that discusses the "Broken Windows" study and crime.
+
+https://www.theatlantic.com/magazine/archive/1982/03/broken-windows/304465/
+
+
+## Review Of An Example Of Alternative Explanations
+
+Zimbardo used an independent variable of the neighborhood to explain why there was vandalism. However, Zimbardo being an objective and quality researcher looked for competing hypotheses. That competing hypothesis was damage to the vehicle or a broken window. As we discussed previously, the damage to the vehicle was actually what would lead to more vandalism of the car and not the type of neighborhood. This had a very large impact on crime policy. It is always important to not only consider competing hypotheses, but also search for them.
+
+
+## The Competing Hypothesis
+
+One way to look at the initial results is that the program had an effect. This program was the neighborhood. However the the change that we saw in our treatment group above and beyond the comparison group was a result of a Campbell score. Next we will discuss how Campbell scores can be used to account for alternative explanations, competing hypotheses, and counterfactuals.
+
+
+## Ten Competing Hypotheses And Campbell Scores
+
+Omitted Variable Bias
+
+  - Selection/Omitted Variables
+  - Non-Random Attrition
+
+Trends in the Data
+
+  - Maturation
+  - Secular Trends
+  - Testing
+  - Seasonality
+  - Regression to the Mean
+
+
+
+## Ten Competing Hypotheses And Campbell Scores
+
+Study Calibration
+
+  - Measurement Error
+  - Time-Frame of Study
+
+Contamination Factors
+
+  - Intervening Events 
+
+
+
+## Ten Competing Hypotheses And Campbell Scores
+
+The previous ten Cambpell scores specify many of the alternative explanations that we have been discussing in previous units. When conducting research and evaluations these scores are very important to always consider in every case. Just as with the "Broken Windows" study results can occur that support the hypothesis, yet there can always be something that was overlooked, such as the initial damage to the car. That was the true factor in the vandalism.
+
+
+## Selection Into A Program
+
+Recall the example of pay and productivity. We discussed that if pay was given to the first half of people that showed up for work at an organization and the second half was the control that we may get positive results due to omitted variables. One such variable could have been motivation. We solved this by random assignment. This illustrates how selection can present a situation where there is likely a competing hypothesis. 
+
+
+
+## Selection Into A Program
+
+Selection into a program often biases the results or has another competing hypothesis to the results because if people have a choice to enroll in a program, those that enroll will be different than those that do not. In our example the treatment was assigned, but not randomly assigned. The same issues arise when people must select themselves to participate in a program. Often there may be reasons that some people choose to participate and some do not. This difference creates a confounding variable that may explain differences in the results. In this case the treatment or experimental group differs not only in participation of the program, but also with the omitted variable of characteristics and reasons for selecting to participate. Random assignment removes the differences from personal characteristics on average.
+
+
+
+## Attrition From A Program
+
+A very similar factor that may lead to a competing hypothesis and alternative explanation is attrition. Specifically non-random attrition is an issue that may bias the results. We just discussed that if people that select into a program than those that do not are different than this may explain the results. The same is true with non-random attrition. Often people do not remain in the program do so for personal characteristics that are not related to the treatment. Therefore, the results may trend in a certain direction and bias the results. 
+
+
+
+
+## Attrition From A Program
+
+Below is an example of how this can affect the results. Let us assume that the outcome of a program is measured by mean amounts of donations collected toward a charity. In this example, Fig. 13.1, the amounts of donations are shown for five people. However, the last two amounts of donations at the bottom of the list are for people that did not continue in the program or study. Fig. 13.1 shows how the mean amounts is less for the entire group, $2.00, versus the subset of the group that did not drop out, $2.50. Therefore, our results are affected and biased by attrition. The solution is to examine characteristics of those that stay versus those that leave.
+
+
+
+## Attrition From A Program
+
+
+Fig. 13.1
+
+<img src="Attrition_Donations_Example.png" width="90%" height="90%">
+
+
+
+## Maturation And Trends In Outcomes
+
+Often there are trends that are natural or due to other factors that will lead to changes in both the treatment group and the control group. Recall that we discussed factors such as practice effects. This is where simply being tested or part of a study leads to increasing the ability of the measure that is the dependent variable. Sometimes people simply improve even without practice effects. However, this would not be because of the independent variable, but rather natural trends or maturation.
+
+
+
+## Maturation And Trends In Outcomes
+
+Fig. 13.2 shows how the trend can be removed. By having a control or comparison group you can subtract the outcome of the control group from the treatment group, A-B, and you can see the effect of the program without the trend. The trend you can see because each group, A and B, both changed, but A changed at a greater rate.
+
+
+
+## Maturation And Trends In Outcomes
+
+Fig. 13.2
+
+<img src="Maturation_Trend_Pre_Post.png" width="90%" height="90%">
+
+
+
+## Secular Trends
+
+A fourth competing hypothesis is a secular trend. As with maturation, this is a trend that results in the change of the outcome, but is not due to the program or independent variable.  The trend and change in the outcome could be caused by environmental, economic, or cultural changes. This is another very important factor to consider when evaluating any program. The solution is again the same as Fig. 13.2: removing the trend to measure the effect.
+
+
+
+## Seasonality Trends
+
+Another type of trend is seasonality. Let us take the example of household spending. The spending increases and decreases during different times of the year or seasons. There are times, such as October through December that many people celebrate holidays and spend more money on friends and family members than other months. This is a factor that should be considered when evaluating spending or a program. The seasonal trend is different than other times of the year. If a policy program was implemented during this time to increase spending it is important to consider that spending increases for other seasonal reasons also. Therefore, the best way to evaluate spending would be to compare it to other years during the same months. This will help removed the seasonal trend. Fig. 13.3 shows how seasonal trends may fluctuate while the general trend is more of a steady trend. A program will affect changes in both trends. 
+
+
+
+## Seasonality Trends
+
+Fig. 13.3
+
+<img src="Seasonal_Trends_Graph.png" width="90%" height="90%">
+
+
+
+## Overview Of Competing Hypotheses
+
+The previous five competing hypotheses and Campbell Scores are always very important to consider. When possible they can be treated as omitted variables and can be included in the analysis to create a better specified model. There are five more Campbell Scores that we will continue to discuss and how they are involved in determining the treatment effect.
+
+
+
+## Looking Forward
+
+- We will continue to discuss Campbell Scores and competing hypotheses
+
+- We will continue to discuss the treatment effects when there may be competing hypotheses

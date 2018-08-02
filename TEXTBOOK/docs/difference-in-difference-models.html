@@ -1,0 +1,1250 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Program Evaluation: Methods and Design</title>
+  <meta name="description" content="This text serves as reference material for a course sequence in applied regression analysis and research design offered at an advanced undergraduate or master’s level for students in applied social science.">
+  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Program Evaluation: Methods and Design" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This text serves as reference material for a course sequence in applied regression analysis and research design offered at an advanced undergraduate or master’s level for students in applied social science." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Program Evaluation: Methods and Design" />
+  
+  <meta name="twitter:description" content="This text serves as reference material for a course sequence in applied regression analysis and research design offered at an advanced undergraduate or master’s level for students in applied social science." />
+  
+
+<meta name="author" content="Joshua Manning, Jesse Lecy">
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="counterfactuals-and-quasi-experiments.html">
+<link rel="next" href="interactions-with-slopes.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="custom.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="https://ds4ps.github.io/course_website/">Data Science I</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome</a></li>
+<li class="part"><span><b>I REGRESSION</b></span></li>
+<li class="chapter" data-level="1" data-path="r-markdown.html"><a href="r-markdown.html"><i class="fa fa-check"></i><b>1</b> R Markdown</a><ul>
+<li class="chapter" data-level="1.1" data-path="r-markdown.html"><a href="r-markdown.html#including-plots"><i class="fa fa-check"></i><b>1.1</b> Including Plots</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="program-impact.html"><a href="program-impact.html"><i class="fa fa-check"></i><b>2</b> Program Impact</a><ul>
+<li class="chapter" data-level="2.0.1" data-path="program-impact.html"><a href="program-impact.html#why-do-we-use-statistical-models-for-program-evaluation"><i class="fa fa-check"></i><b>2.0.1</b> Why do we use statistical models for program evaluation?</a></li>
+<li class="chapter" data-level="2.0.2" data-path="program-impact.html"><a href="program-impact.html#reminder-from-unit-1-advantages-of-statistical-evaluation"><i class="fa fa-check"></i><b>2.0.2</b> Reminder from Unit 1: Advantages of Statistical Evaluation</a></li>
+<li class="chapter" data-level="2.1" data-path="program-impact.html"><a href="program-impact.html#the-regression-equation"><i class="fa fa-check"></i><b>2.1</b> The Regression Equation</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="program-impact.html"><a href="program-impact.html#hypothetical-example-of-interpreting-the-regression-equation"><i class="fa fa-check"></i><b>2.1.1</b> Hypothetical Example of Interpreting the Regression Equation</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="program-impact.html"><a href="program-impact.html#confidence-intervals"><i class="fa fa-check"></i><b>2.2</b> Confidence Intervals</a></li>
+<li class="chapter" data-level="2.3" data-path="program-impact.html"><a href="program-impact.html#confidence-intervals-for-hypothesis-testing"><i class="fa fa-check"></i><b>2.3</b> Confidence Intervals For Hypothesis Testing</a></li>
+<li class="chapter" data-level="2.4" data-path="program-impact.html"><a href="program-impact.html#the-standard-error"><i class="fa fa-check"></i><b>2.4</b> The Standard Error</a></li>
+<li class="chapter" data-level="2.5" data-path="program-impact.html"><a href="program-impact.html#the-variance-and-standard-deviation-of-the-mean"><i class="fa fa-check"></i><b>2.5</b> The Variance and Standard Deviation Of The Mean</a><ul>
+<li class="chapter" data-level="2.5.1" data-path="program-impact.html"><a href="program-impact.html#hand-calculation-of-the-variance"><i class="fa fa-check"></i><b>2.5.1</b> Hand Calculation Of The Variance</a></li>
+</ul></li>
+<li class="chapter" data-level="2.6" data-path="program-impact.html"><a href="program-impact.html#the-standard-error-of-the-sample-mean"><i class="fa fa-check"></i><b>2.6</b> The Standard Error Of The Sample Mean</a><ul>
+<li class="chapter" data-level="2.6.1" data-path="program-impact.html"><a href="program-impact.html#calculating-the-standard-error-of-the-mean"><i class="fa fa-check"></i><b>2.6.1</b> Calculating The Standard Error Of The Mean</a></li>
+<li class="chapter" data-level="2.6.2" data-path="program-impact.html"><a href="program-impact.html#hand-calculating-the-mean-and-standard-error-of-samples."><i class="fa fa-check"></i><b>2.6.2</b> Hand Calculating The Mean And Standard Error Of Samples.</a></li>
+<li class="chapter" data-level="2.6.3" data-path="program-impact.html"><a href="program-impact.html#calculating-the-standard-error"><i class="fa fa-check"></i><b>2.6.3</b> Calculating The Standard Error</a></li>
+<li class="chapter" data-level="2.6.4" data-path="program-impact.html"><a href="program-impact.html#recap-of-the-standard-error"><i class="fa fa-check"></i><b>2.6.4</b> Recap Of The Standard Error</a></li>
+</ul></li>
+<li class="chapter" data-level="2.7" data-path="program-impact.html"><a href="program-impact.html#summary-what-we-covered-in-this-unit"><i class="fa fa-check"></i><b>2.7</b> Summary: What we covered in this unit</a><ul>
+<li class="chapter" data-level="2.7.1" data-path="program-impact.html"><a href="program-impact.html#looking-ahead"><i class="fa fa-check"></i><b>2.7.1</b> Looking Ahead</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="confidence-intervals-1.html"><a href="confidence-intervals-1.html"><i class="fa fa-check"></i><b>3</b> Confidence Intervals</a><ul>
+<li class="chapter" data-level="3.1" data-path="confidence-intervals-1.html"><a href="confidence-intervals-1.html#how-the-size-of-the-standard-error-represents-confidence"><i class="fa fa-check"></i><b>3.1</b> How The Size Of The Standard Error Represents Confidence</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="confidence-intervals-1.html"><a href="confidence-intervals-1.html#factors-that-influence-the-size-of-the-standard-error"><i class="fa fa-check"></i><b>3.1.1</b> Factors That Influence The Size Of The Standard Error</a></li>
+<li class="chapter" data-level="3.1.2" data-path="confidence-intervals-1.html"><a href="confidence-intervals-1.html#the-standard-error-of-the-mean-equation"><i class="fa fa-check"></i><b>3.1.2</b> The Standard Error Of The Mean Equation</a></li>
+<li class="chapter" data-level="3.1.3" data-path="confidence-intervals-1.html"><a href="confidence-intervals-1.html#factors-that-influence-the-size-of-the-standard-error-in-regression"><i class="fa fa-check"></i><b>3.1.3</b> Factors That Influence The Size Of The Standard Error In Regression</a></li>
+<li class="chapter" data-level="3.1.4" data-path="confidence-intervals-1.html"><a href="confidence-intervals-1.html#the-residual-in-regression"><i class="fa fa-check"></i><b>3.1.4</b> The Residual In Regression</a></li>
+<li class="chapter" data-level="3.1.5" data-path="confidence-intervals-1.html"><a href="confidence-intervals-1.html#factors-that-influence-the-size-of-the-standard-error-in-regression-1"><i class="fa fa-check"></i><b>3.1.5</b> Factors That Influence The Size Of The Standard Error In Regression</a></li>
+<li class="chapter" data-level="3.1.6" data-path="confidence-intervals-1.html"><a href="confidence-intervals-1.html#the-variance-and-standard-deviation-of-the-regression-slope-equation"><i class="fa fa-check"></i><b>3.1.6</b> The Variance And Standard Deviation Of The Regression Slope Equation</a></li>
+<li class="chapter" data-level="3.1.7" data-path="confidence-intervals-1.html"><a href="confidence-intervals-1.html#the-standard-error-of-the-regression-slope-equation"><i class="fa fa-check"></i><b>3.1.7</b> The Standard Error Of The Regression Slope Equation</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="confidence-intervals-1.html"><a href="confidence-intervals-1.html#standard-errors-and-confidence-intervals"><i class="fa fa-check"></i><b>3.2</b> Standard Errors And Confidence Intervals</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="confidence-intervals-1.html"><a href="confidence-intervals-1.html#calculating-the-confidence-interval-of-the-mean"><i class="fa fa-check"></i><b>3.2.1</b> Calculating The Confidence Interval Of The Mean</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="the-regression-residual.html"><a href="the-regression-residual.html"><i class="fa fa-check"></i><b>4</b> The Regression Residual</a><ul>
+<li class="chapter" data-level="4.1" data-path="the-regression-residual.html"><a href="the-regression-residual.html#regression-residuals-and-errors"><i class="fa fa-check"></i><b>4.1</b> Regression Residuals And Errors</a></li>
+<li class="chapter" data-level="4.2" data-path="the-regression-residual.html"><a href="the-regression-residual.html#the-residual-in-regression-1"><i class="fa fa-check"></i><b>4.2</b> The Residual In Regression</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="the-regression-residual.html"><a href="the-regression-residual.html#interpreting-and-using-the-residual-in-regression"><i class="fa fa-check"></i><b>4.2.1</b> Interpreting And Using The Residual In Regression</a></li>
+<li class="chapter" data-level="4.2.2" data-path="the-regression-residual.html"><a href="the-regression-residual.html#how-the-residual-describes-over-performing-and-under-performing"><i class="fa fa-check"></i><b>4.2.2</b> How The Residual Describes Over-performing and Under-performing</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="the-regression-residual.html"><a href="the-regression-residual.html#how-do-we-know-the-best-fitting-regression-line-for-our-data"><i class="fa fa-check"></i><b>4.3</b> How Do We Know The Best Fitting Regression Line For Our Data</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="the-regression-residual.html"><a href="the-regression-residual.html#the-calculation-of-the-regression-line"><i class="fa fa-check"></i><b>4.3.1</b> The Calculation Of The Regression Line</a></li>
+<li class="chapter" data-level="4.3.2" data-path="the-regression-residual.html"><a href="the-regression-residual.html#implications-of-squaring-residuals"><i class="fa fa-check"></i><b>4.3.2</b> Implications Of Squaring Residuals</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="the-regression-residual.html"><a href="the-regression-residual.html#the-regression-coefficient-equations-estimates"><i class="fa fa-check"></i><b>4.4</b> The Regression Coefficient Equations Estimates</a></li>
+<li class="chapter" data-level="4.5" data-path="the-regression-residual.html"><a href="the-regression-residual.html#looking-forward"><i class="fa fa-check"></i><b>4.5</b> Looking Forward</a></li>
+<li class="chapter" data-level="4.6" data-path="the-regression-residual.html"><a href="the-regression-residual.html#figure-example"><i class="fa fa-check"></i><b>4.6</b> Figure Example</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="the-regression-slope.html"><a href="the-regression-slope.html"><i class="fa fa-check"></i><b>5</b> The Regression Slope</a><ul>
+<li class="chapter" data-level="5.1" data-path="the-regression-slope.html"><a href="the-regression-slope.html#variance-revisited"><i class="fa fa-check"></i><b>5.1</b> Variance Revisited</a></li>
+<li class="chapter" data-level="5.2" data-path="the-regression-slope.html"><a href="the-regression-slope.html#the-standard-deviation-revisited"><i class="fa fa-check"></i><b>5.2</b> The Standard Deviation Revisited</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="the-regression-slope.html"><a href="the-regression-slope.html#squared-residuals"><i class="fa fa-check"></i><b>5.2.1</b> Squared Residuals</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="the-regression-slope.html"><a href="the-regression-slope.html#covariance"><i class="fa fa-check"></i><b>5.3</b> Covariance</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="the-regression-slope.html"><a href="the-regression-slope.html#calculating-the-covariance"><i class="fa fa-check"></i><b>5.3.1</b> Calculating The Covariance</a></li>
+<li class="chapter" data-level="5.3.2" data-path="the-regression-slope.html"><a href="the-regression-slope.html#positive-correlation"><i class="fa fa-check"></i><b>5.3.2</b> Positive Correlation</a></li>
+<li class="chapter" data-level="5.3.3" data-path="the-regression-slope.html"><a href="the-regression-slope.html#negative-corrleation"><i class="fa fa-check"></i><b>5.3.3</b> Negative Corrleation</a></li>
+<li class="chapter" data-level="5.3.4" data-path="the-regression-slope.html"><a href="the-regression-slope.html#low-correlation"><i class="fa fa-check"></i><b>5.3.4</b> Low Correlation</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="the-regression-slope.html"><a href="the-regression-slope.html#the-slope"><i class="fa fa-check"></i><b>5.4</b> The Slope</a></li>
+<li class="chapter" data-level="5.5" data-path="the-regression-slope.html"><a href="the-regression-slope.html#looking-ahead-1"><i class="fa fa-check"></i><b>5.5</b> Looking Ahead</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="explaining-variance.html"><a href="explaining-variance.html"><i class="fa fa-check"></i><b>6</b> Explaining Variance</a><ul>
+<li class="chapter" data-level="6.1" data-path="explaining-variance.html"><a href="explaining-variance.html#r-squared"><i class="fa fa-check"></i><b>6.1</b> R-Squared</a></li>
+<li class="chapter" data-level="6.2" data-path="explaining-variance.html"><a href="explaining-variance.html#hand-calculation-of-the-regression"><i class="fa fa-check"></i><b>6.2</b> Hand Calculation Of The Regression</a></li>
+<li class="chapter" data-level="6.3" data-path="explaining-variance.html"><a href="explaining-variance.html#partitioning-the-variance-of-y"><i class="fa fa-check"></i><b>6.3</b> Partitioning The Variance Of Y</a><ul>
+<li class="chapter" data-level="6.3.1" data-path="explaining-variance.html"><a href="explaining-variance.html#the-relationship-of-r-squared-and-partitioned-variance"><i class="fa fa-check"></i><b>6.3.1</b> The Relationship Of R-Squared And Partitioned Variance</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="explaining-variance.html"><a href="explaining-variance.html#looking-ahead-2"><i class="fa fa-check"></i><b>6.4</b> Looking Ahead</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="ballentine-venn-diagrams.html"><a href="ballentine-venn-diagrams.html"><i class="fa fa-check"></i><b>7</b> Ballentine Venn Diagrams</a><ul>
+<li class="chapter" data-level="7.0.1" data-path="ballentine-venn-diagrams.html"><a href="ballentine-venn-diagrams.html#concepts-that-bellentine-venn-diagrams-can-represent"><i class="fa fa-check"></i><b>7.0.1</b> Concepts That Bellentine Venn Diagrams Can Represent</a></li>
+<li class="chapter" data-level="7.0.2" data-path="ballentine-venn-diagrams.html"><a href="ballentine-venn-diagrams.html#variance"><i class="fa fa-check"></i><b>7.0.2</b> Variance</a></li>
+<li class="chapter" data-level="7.1" data-path="ballentine-venn-diagrams.html"><a href="ballentine-venn-diagrams.html#covariance-1"><i class="fa fa-check"></i><b>7.1</b> Covariance</a></li>
+<li class="chapter" data-level="7.2" data-path="ballentine-venn-diagrams.html"><a href="ballentine-venn-diagrams.html#correlation"><i class="fa fa-check"></i><b>7.2</b> Correlation</a></li>
+<li class="chapter" data-level="7.3" data-path="ballentine-venn-diagrams.html"><a href="ballentine-venn-diagrams.html#slope"><i class="fa fa-check"></i><b>7.3</b> Slope</a></li>
+<li class="chapter" data-level="7.4" data-path="ballentine-venn-diagrams.html"><a href="ballentine-venn-diagrams.html#r-square-and-the-regression-residual"><i class="fa fa-check"></i><b>7.4</b> R-Square and the Regression Residual</a></li>
+<li class="chapter" data-level="7.5" data-path="ballentine-venn-diagrams.html"><a href="ballentine-venn-diagrams.html#the-standard-error-1"><i class="fa fa-check"></i><b>7.5</b> The Standard Error</a></li>
+<li class="chapter" data-level="7.6" data-path="ballentine-venn-diagrams.html"><a href="ballentine-venn-diagrams.html#defining-other-variables-for-future-units"><i class="fa fa-check"></i><b>7.6</b> Defining Other Variables For Future Units</a></li>
+<li class="chapter" data-level="7.7" data-path="ballentine-venn-diagrams.html"><a href="ballentine-venn-diagrams.html#ahead"><i class="fa fa-check"></i><b>7.7</b> Ahead</a></li>
+</ul></li>
+<li class="part"><span><b>II RESEARCH DESIGN</b></span></li>
+<li class="chapter" data-level="8" data-path="introduction-to-research-design.html"><a href="introduction-to-research-design.html"><i class="fa fa-check"></i><b>8</b> Introduction To Research Design</a><ul>
+<li class="chapter" data-level="8.1" data-path="introduction-to-research-design.html"><a href="introduction-to-research-design.html#why-do-we-need-quality-research-design-and-methods"><i class="fa fa-check"></i><b>8.1</b> Why Do We Need Quality Research Design And Methods?</a><ul>
+<li class="chapter" data-level="8.1.1" data-path="introduction-to-research-design.html"><a href="introduction-to-research-design.html#overview-of-research-design"><i class="fa fa-check"></i><b>8.1.1</b> Overview Of Research Design</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="introduction-to-research-design.html"><a href="introduction-to-research-design.html#why-do-we-conduct-studies-to-evalueate-programs"><i class="fa fa-check"></i><b>8.2</b> Why Do We Conduct Studies To Evalueate Programs</a><ul>
+<li class="chapter" data-level="8.2.1" data-path="introduction-to-research-design.html"><a href="introduction-to-research-design.html#the-importance-of-understanding-the-relationship-among-variables"><i class="fa fa-check"></i><b>8.2.1</b> The Importance Of Understanding The Relationship Among Variables</a></li>
+<li class="chapter" data-level="8.2.2" data-path="introduction-to-research-design.html"><a href="introduction-to-research-design.html#variables-and-function-in-program-evaluation"><i class="fa fa-check"></i><b>8.2.2</b> Variables And Function In Program Evaluation</a></li>
+<li class="chapter" data-level="8.2.3" data-path="introduction-to-research-design.html"><a href="introduction-to-research-design.html#the-function-of-independent-and-dependent-variables"><i class="fa fa-check"></i><b>8.2.3</b> The Function Of Independent And Dependent Variables</a></li>
+<li class="chapter" data-level="8.2.4" data-path="introduction-to-research-design.html"><a href="introduction-to-research-design.html#other-factors"><i class="fa fa-check"></i><b>8.2.4</b> Other Factors</a></li>
+<li class="chapter" data-level="8.2.5" data-path="introduction-to-research-design.html"><a href="introduction-to-research-design.html#important-characteristics-of-variables-in-research-design"><i class="fa fa-check"></i><b>8.2.5</b> Important Characteristics Of Variables In Research Design</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="introduction-to-research-design.html"><a href="introduction-to-research-design.html#looking-ahead-3"><i class="fa fa-check"></i><b>8.3</b> Looking Ahead</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="validity-and-reliability.html"><a href="validity-and-reliability.html"><i class="fa fa-check"></i><b>9</b> Validity and Reliability</a><ul>
+<li class="chapter" data-level="9.1" data-path="validity-and-reliability.html"><a href="validity-and-reliability.html#research-validity"><i class="fa fa-check"></i><b>9.1</b> Research Validity</a><ul>
+<li class="chapter" data-level="9.1.1" data-path="validity-and-reliability.html"><a href="validity-and-reliability.html#external-validity"><i class="fa fa-check"></i><b>9.1.1</b> External Validity</a></li>
+<li class="chapter" data-level="9.1.2" data-path="validity-and-reliability.html"><a href="validity-and-reliability.html#breaking-down-external-validity"><i class="fa fa-check"></i><b>9.1.2</b> Breaking Down External Validity</a></li>
+<li class="chapter" data-level="9.1.3" data-path="validity-and-reliability.html"><a href="validity-and-reliability.html#pulling-together-the-components-of-external-validity"><i class="fa fa-check"></i><b>9.1.3</b> Pulling Together The Components Of External Validity</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="validity-and-reliability.html"><a href="validity-and-reliability.html#internal-validity"><i class="fa fa-check"></i><b>9.2</b> Internal Validity</a><ul>
+<li class="chapter" data-level="9.2.1" data-path="validity-and-reliability.html"><a href="validity-and-reliability.html#breaking-down-internal-validity"><i class="fa fa-check"></i><b>9.2.1</b> Breaking Down Internal Validity</a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="validity-and-reliability.html"><a href="validity-and-reliability.html#construct-validity"><i class="fa fa-check"></i><b>9.3</b> Construct Validity</a><ul>
+<li class="chapter" data-level="9.3.1" data-path="validity-and-reliability.html"><a href="validity-and-reliability.html#breaking-down-construct-validity"><i class="fa fa-check"></i><b>9.3.1</b> Breaking Down Construct Validity</a></li>
+</ul></li>
+<li class="chapter" data-level="9.4" data-path="validity-and-reliability.html"><a href="validity-and-reliability.html#reliability"><i class="fa fa-check"></i><b>9.4</b> Reliability</a><ul>
+<li class="chapter" data-level="9.4.1" data-path="validity-and-reliability.html"><a href="validity-and-reliability.html#breaking-down-reliability"><i class="fa fa-check"></i><b>9.4.1</b> Breaking Down Reliability</a></li>
+</ul></li>
+<li class="chapter" data-level="9.5" data-path="validity-and-reliability.html"><a href="validity-and-reliability.html#looking-ahead-4"><i class="fa fa-check"></i><b>9.5</b> Looking Ahead</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="introduction-to-methods-of-research-design.html"><a href="introduction-to-methods-of-research-design.html"><i class="fa fa-check"></i><b>10</b> Introduction to Methods Of Research Design</a><ul>
+<li class="chapter" data-level="10.1" data-path="introduction-to-methods-of-research-design.html"><a href="introduction-to-methods-of-research-design.html#methods-of-research-and-the-relation-to-validity-and-reliability"><i class="fa fa-check"></i><b>10.1</b> Methods Of Research And The Relation To Validity And Reliability</a></li>
+<li class="chapter" data-level="10.2" data-path="introduction-to-methods-of-research-design.html"><a href="introduction-to-methods-of-research-design.html#the-relationship-between-variables"><i class="fa fa-check"></i><b>10.2</b> The Relationship Between Variables</a><ul>
+<li class="chapter" data-level="10.2.1" data-path="introduction-to-methods-of-research-design.html"><a href="introduction-to-methods-of-research-design.html#positive-relationship-between-two-variables"><i class="fa fa-check"></i><b>10.2.1</b> Positive Relationship Between Two Variables</a></li>
+<li class="chapter" data-level="10.2.2" data-path="introduction-to-methods-of-research-design.html"><a href="introduction-to-methods-of-research-design.html#negative-relationship-between-two-variables"><i class="fa fa-check"></i><b>10.2.2</b> Negative Relationship Between Two Variables</a></li>
+<li class="chapter" data-level="10.2.3" data-path="introduction-to-methods-of-research-design.html"><a href="introduction-to-methods-of-research-design.html#no-relationship-between-two-variables"><i class="fa fa-check"></i><b>10.2.3</b> No Relationship Between Two Variables</a></li>
+<li class="chapter" data-level="10.2.4" data-path="introduction-to-methods-of-research-design.html"><a href="introduction-to-methods-of-research-design.html#from-relationships-between-variables-to-methods-of-evaluating-relationships"><i class="fa fa-check"></i><b>10.2.4</b> From Relationships Between Variables To Methods Of Evaluating Relationships</a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="introduction-to-methods-of-research-design.html"><a href="introduction-to-methods-of-research-design.html#evaluating-relationships-of-variables-in-programs-and-outcomes"><i class="fa fa-check"></i><b>10.3</b> Evaluating Relationships Of Variables In Programs And Outcomes</a></li>
+<li class="chapter" data-level="10.4" data-path="introduction-to-methods-of-research-design.html"><a href="introduction-to-methods-of-research-design.html#overview-of-research-methods"><i class="fa fa-check"></i><b>10.4</b> Overview Of Research Methods</a><ul>
+<li class="chapter" data-level="10.4.1" data-path="introduction-to-methods-of-research-design.html"><a href="introduction-to-methods-of-research-design.html#non-experimental-methods"><i class="fa fa-check"></i><b>10.4.1</b> Non-Experimental Methods</a></li>
+<li class="chapter" data-level="10.4.2" data-path="introduction-to-methods-of-research-design.html"><a href="introduction-to-methods-of-research-design.html#experimental-methods"><i class="fa fa-check"></i><b>10.4.2</b> Experimental Methods</a></li>
+</ul></li>
+<li class="chapter" data-level="10.5" data-path="introduction-to-methods-of-research-design.html"><a href="introduction-to-methods-of-research-design.html#looking-ahead-5"><i class="fa fa-check"></i><b>10.5</b> Looking Ahead</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="non-experimental-methods-for-program-evaluation-and-research.html"><a href="non-experimental-methods-for-program-evaluation-and-research.html"><i class="fa fa-check"></i><b>11</b> Non-Experimental Methods For Program Evaluation And Research</a><ul>
+<li class="chapter" data-level="11.1" data-path="non-experimental-methods-for-program-evaluation-and-research.html"><a href="non-experimental-methods-for-program-evaluation-and-research.html#observational-methods"><i class="fa fa-check"></i><b>11.1</b> Observational Methods</a><ul>
+<li class="chapter" data-level="11.1.1" data-path="non-experimental-methods-for-program-evaluation-and-research.html"><a href="non-experimental-methods-for-program-evaluation-and-research.html#important-aspects-of-observational-methods"><i class="fa fa-check"></i><b>11.1.1</b> Important Aspects Of Observational methods</a></li>
+<li class="chapter" data-level="11.1.2" data-path="non-experimental-methods-for-program-evaluation-and-research.html"><a href="non-experimental-methods-for-program-evaluation-and-research.html#the-importance-of-using-a-systematic-and-replicable-method"><i class="fa fa-check"></i><b>11.1.2</b> The Importance Of Using A systematic And Replicable Method</a></li>
+</ul></li>
+<li class="chapter" data-level="11.2" data-path="non-experimental-methods-for-program-evaluation-and-research.html"><a href="non-experimental-methods-for-program-evaluation-and-research.html#types-of-observational-methods"><i class="fa fa-check"></i><b>11.2</b> Types Of Observational Methods</a><ul>
+<li class="chapter" data-level="11.2.1" data-path="non-experimental-methods-for-program-evaluation-and-research.html"><a href="non-experimental-methods-for-program-evaluation-and-research.html#collecting-data"><i class="fa fa-check"></i><b>11.2.1</b> Collecting Data</a></li>
+<li class="chapter" data-level="11.2.2" data-path="non-experimental-methods-for-program-evaluation-and-research.html"><a href="non-experimental-methods-for-program-evaluation-and-research.html#qualitative-versus-quantitative-observational-studies"><i class="fa fa-check"></i><b>11.2.2</b> Qualitative Versus Quantitative Observational Studies</a></li>
+</ul></li>
+<li class="chapter" data-level="11.3" data-path="non-experimental-methods-for-program-evaluation-and-research.html"><a href="non-experimental-methods-for-program-evaluation-and-research.html#looking-ahead-6"><i class="fa fa-check"></i><b>11.3</b> Looking Ahead</a></li>
+<li class="chapter" data-level="11.4" data-path="non-experimental-methods-for-program-evaluation-and-research.html"><a href="non-experimental-methods-for-program-evaluation-and-research.html#naturalistic-observation"><i class="fa fa-check"></i><b>11.4</b> Naturalistic Observation</a><ul>
+<li class="chapter" data-level="11.4.1" data-path="non-experimental-methods-for-program-evaluation-and-research.html"><a href="non-experimental-methods-for-program-evaluation-and-research.html#how-the-analysis-plan-affects-our-collection-methods"><i class="fa fa-check"></i><b>11.4.1</b> How The Analysis Plan Affects Our Collection Methods</a></li>
+<li class="chapter" data-level="11.4.2" data-path="non-experimental-methods-for-program-evaluation-and-research.html"><a href="non-experimental-methods-for-program-evaluation-and-research.html#revisiting-pay-raise-and-productivity"><i class="fa fa-check"></i><b>11.4.2</b> Revisiting Pay Raise And Productivity</a></li>
+<li class="chapter" data-level="11.4.3" data-path="non-experimental-methods-for-program-evaluation-and-research.html"><a href="non-experimental-methods-for-program-evaluation-and-research.html#advantages-of-naturalistic-observation"><i class="fa fa-check"></i><b>11.4.3</b> Advantages Of Naturalistic Observation</a></li>
+<li class="chapter" data-level="11.4.4" data-path="non-experimental-methods-for-program-evaluation-and-research.html"><a href="non-experimental-methods-for-program-evaluation-and-research.html#disadvantages-of-naturalistic-observation"><i class="fa fa-check"></i><b>11.4.4</b> Disadvantages Of Naturalistic Observation</a></li>
+<li class="chapter" data-level="11.4.5" data-path="non-experimental-methods-for-program-evaluation-and-research.html"><a href="non-experimental-methods-for-program-evaluation-and-research.html#when-a-researcher-reveals-or-participates-in-the-observation"><i class="fa fa-check"></i><b>11.4.5</b> When A Researcher Reveals Or Participates In The Observation</a></li>
+</ul></li>
+<li class="chapter" data-level="11.5" data-path="non-experimental-methods-for-program-evaluation-and-research.html"><a href="non-experimental-methods-for-program-evaluation-and-research.html#reviewing-naturalistic-observation"><i class="fa fa-check"></i><b>11.5</b> Reviewing Naturalistic Observation</a><ul>
+<li class="chapter" data-level="11.5.1" data-path="non-experimental-methods-for-program-evaluation-and-research.html"><a href="non-experimental-methods-for-program-evaluation-and-research.html#looking-aread"><i class="fa fa-check"></i><b>11.5.1</b> Looking Aread</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="surveys-in-program-evaluation.html"><a href="surveys-in-program-evaluation.html"><i class="fa fa-check"></i><b>12</b> Surveys In Program Evaluation</a><ul>
+<li class="chapter" data-level="12.1" data-path="surveys-in-program-evaluation.html"><a href="surveys-in-program-evaluation.html#surveys-in-organizations"><i class="fa fa-check"></i><b>12.1</b> Surveys In Organizations</a></li>
+<li class="chapter" data-level="12.2" data-path="surveys-in-program-evaluation.html"><a href="surveys-in-program-evaluation.html#developing-a-reliable-and-valid-survey"><i class="fa fa-check"></i><b>12.2</b> Developing A Reliable And Valid Survey</a><ul>
+<li class="chapter" data-level="12.2.1" data-path="surveys-in-program-evaluation.html"><a href="surveys-in-program-evaluation.html#initial-steps-before-developing-a-reliable-and-valid-survey"><i class="fa fa-check"></i><b>12.2.1</b> Initial Steps Before Developing A Reliable And Valid Survey</a></li>
+<li class="chapter" data-level="12.2.2" data-path="surveys-in-program-evaluation.html"><a href="surveys-in-program-evaluation.html#developing-high-quality-survey-questions"><i class="fa fa-check"></i><b>12.2.2</b> Developing High Quality Survey Questions</a></li>
+</ul></li>
+<li class="chapter" data-level="12.3" data-path="surveys-in-program-evaluation.html"><a href="surveys-in-program-evaluation.html#details-of-survey-question-design"><i class="fa fa-check"></i><b>12.3</b> Details Of Survey Question Design</a><ul>
+<li class="chapter" data-level="12.3.1" data-path="surveys-in-program-evaluation.html"><a href="surveys-in-program-evaluation.html#how-to-ovoid-leading-questions"><i class="fa fa-check"></i><b>12.3.1</b> How To Ovoid Leading Questions</a></li>
+<li class="chapter" data-level="12.3.2" data-path="surveys-in-program-evaluation.html"><a href="surveys-in-program-evaluation.html#how-to-create-simple-and-non-complex-questions"><i class="fa fa-check"></i><b>12.3.2</b> How To Create Simple And Non-Complex Questions</a></li>
+<li class="chapter" data-level="12.3.3" data-path="surveys-in-program-evaluation.html"><a href="surveys-in-program-evaluation.html#the-importance-of-presenting-the-optimal-number-of-questions"><i class="fa fa-check"></i><b>12.3.3</b> The Importance Of Presenting The Optimal Number Of Questions</a></li>
+<li class="chapter" data-level="12.3.4" data-path="surveys-in-program-evaluation.html"><a href="surveys-in-program-evaluation.html#ask-about-only-one-thing-at-a-time"><i class="fa fa-check"></i><b>12.3.4</b> Ask About Only One Thing At A Time</a></li>
+<li class="chapter" data-level="12.3.5" data-path="surveys-in-program-evaluation.html"><a href="surveys-in-program-evaluation.html#how-should-questions-be-ordered-in-a-survey"><i class="fa fa-check"></i><b>12.3.5</b> How Should Questions Be Ordered In A Survey</a></li>
+<li class="chapter" data-level="12.3.6" data-path="surveys-in-program-evaluation.html"><a href="surveys-in-program-evaluation.html#types-of-survey-aswers"><i class="fa fa-check"></i><b>12.3.6</b> Types Of Survey Aswers</a></li>
+</ul></li>
+<li class="chapter" data-level="12.4" data-path="surveys-in-program-evaluation.html"><a href="surveys-in-program-evaluation.html#review-general-principles-in-survey-design"><i class="fa fa-check"></i><b>12.4</b> Review General principles In Survey Design</a><ul>
+<li class="chapter" data-level="12.4.1" data-path="surveys-in-program-evaluation.html"><a href="surveys-in-program-evaluation.html#looking-ahead-7"><i class="fa fa-check"></i><b>12.4.1</b> Looking Ahead</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="interviewing-methods.html"><a href="interviewing-methods.html"><i class="fa fa-check"></i><b>13</b> Interviewing Methods</a><ul>
+<li class="chapter" data-level="13.1" data-path="interviewing-methods.html"><a href="interviewing-methods.html#collecting-data-in-person"><i class="fa fa-check"></i><b>13.1</b> Collecting Data In Person</a></li>
+<li class="chapter" data-level="13.2" data-path="interviewing-methods.html"><a href="interviewing-methods.html#looking-ahead-8"><i class="fa fa-check"></i><b>13.2</b> Looking Ahead</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="coding-systems.html"><a href="coding-systems.html"><i class="fa fa-check"></i><b>14</b> Coding Systems</a><ul>
+<li class="chapter" data-level="14.1" data-path="coding-systems.html"><a href="coding-systems.html#how-to-develop-a-coding-system"><i class="fa fa-check"></i><b>14.1</b> How To Develop A Coding System</a><ul>
+<li class="chapter" data-level="14.1.1" data-path="coding-systems.html"><a href="coding-systems.html#an-example-of-how-to-code"><i class="fa fa-check"></i><b>14.1.1</b> An Example Of How To Code</a></li>
+</ul></li>
+<li class="chapter" data-level="14.2" data-path="coding-systems.html"><a href="coding-systems.html#looking-ahead-9"><i class="fa fa-check"></i><b>14.2</b> Looking Ahead</a></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="introduction-to-experimental-methods.html"><a href="introduction-to-experimental-methods.html"><i class="fa fa-check"></i><b>15</b> Introduction To Experimental Methods</a><ul>
+<li class="chapter" data-level="15.1" data-path="introduction-to-experimental-methods.html"><a href="introduction-to-experimental-methods.html#experimental-methods-vs.-non-experimental-methods"><i class="fa fa-check"></i><b>15.1</b> Experimental Methods Vs. Non-Experimental Methods</a><ul>
+<li class="chapter" data-level="15.1.1" data-path="introduction-to-experimental-methods.html"><a href="introduction-to-experimental-methods.html#what-makes-an-experiment"><i class="fa fa-check"></i><b>15.1.1</b> What Makes An Experiment?</a></li>
+</ul></li>
+<li class="chapter" data-level="15.2" data-path="introduction-to-experimental-methods.html"><a href="introduction-to-experimental-methods.html#looking-ahead-10"><i class="fa fa-check"></i><b>15.2</b> Looking Ahead</a></li>
+<li class="chapter" data-level="15.3" data-path="introduction-to-experimental-methods.html"><a href="introduction-to-experimental-methods.html#types-of-experimental-design"><i class="fa fa-check"></i><b>15.3</b> Types Of Experimental Design</a><ul>
+<li class="chapter" data-level="15.3.1" data-path="introduction-to-experimental-methods.html"><a href="introduction-to-experimental-methods.html#measuring-outcome-only"><i class="fa fa-check"></i><b>15.3.1</b> Measuring Outcome Only</a></li>
+<li class="chapter" data-level="15.3.2" data-path="introduction-to-experimental-methods.html"><a href="introduction-to-experimental-methods.html#measuring-before-the-program-and-the-outcome-after"><i class="fa fa-check"></i><b>15.3.2</b> Measuring Before The Program And The Outcome After</a></li>
+</ul></li>
+<li class="chapter" data-level="15.4" data-path="introduction-to-experimental-methods.html"><a href="introduction-to-experimental-methods.html#looking-ahead-11"><i class="fa fa-check"></i><b>15.4</b> Looking Ahead</a></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="advanced-experimental-design.html"><a href="advanced-experimental-design.html"><i class="fa fa-check"></i><b>16</b> Advanced Experimental Design</a><ul>
+<li class="chapter" data-level="16.1" data-path="advanced-experimental-design.html"><a href="advanced-experimental-design.html#the-solomon-four-group-experimental-designs"><i class="fa fa-check"></i><b>16.1</b> The Solomon Four-Group Experimental Designs</a></li>
+<li class="chapter" data-level="16.2" data-path="advanced-experimental-design.html"><a href="advanced-experimental-design.html#between-subject-design-and-within-subjectrepeated-measures-design"><i class="fa fa-check"></i><b>16.2</b> Between Subject Design And Within Subject/Repeated Measures Design</a><ul>
+<li class="chapter" data-level="16.2.1" data-path="advanced-experimental-design.html"><a href="advanced-experimental-design.html#advantages-and-disadvantages"><i class="fa fa-check"></i><b>16.2.1</b> Advantages And Disadvantages</a></li>
+</ul></li>
+<li class="chapter" data-level="16.3" data-path="advanced-experimental-design.html"><a href="advanced-experimental-design.html#looking-ahead-12"><i class="fa fa-check"></i><b>16.3</b> Looking Ahead</a></li>
+</ul></li>
+<li class="chapter" data-level="17" data-path="counterfactuals-and-quasi-experiments.html"><a href="counterfactuals-and-quasi-experiments.html"><i class="fa fa-check"></i><b>17</b> Counterfactuals And Quasi-Experiments</a><ul>
+<li class="chapter" data-level="17.1" data-path="counterfactuals-and-quasi-experiments.html"><a href="counterfactuals-and-quasi-experiments.html#quasi-experiments"><i class="fa fa-check"></i><b>17.1</b> Quasi-Experiments</a><ul>
+<li class="chapter" data-level="17.1.1" data-path="counterfactuals-and-quasi-experiments.html"><a href="counterfactuals-and-quasi-experiments.html#example-of-a-quasi-experiment"><i class="fa fa-check"></i><b>17.1.1</b> Example Of A Quasi-Experiment</a></li>
+<li class="chapter" data-level="17.1.2" data-path="counterfactuals-and-quasi-experiments.html"><a href="counterfactuals-and-quasi-experiments.html#other-types-of-quasi-experiments"><i class="fa fa-check"></i><b>17.1.2</b> Other Types Of Quasi-Experiments</a></li>
+</ul></li>
+<li class="chapter" data-level="17.2" data-path="counterfactuals-and-quasi-experiments.html"><a href="counterfactuals-and-quasi-experiments.html#introduction-to-counterfactuals"><i class="fa fa-check"></i><b>17.2</b> Introduction To Counterfactuals</a><ul>
+<li class="chapter" data-level="17.2.1" data-path="counterfactuals-and-quasi-experiments.html"><a href="counterfactuals-and-quasi-experiments.html#general-possible-counterfactuals"><i class="fa fa-check"></i><b>17.2.1</b> General Possible Counterfactuals</a></li>
+</ul></li>
+<li class="chapter" data-level="17.3" data-path="counterfactuals-and-quasi-experiments.html"><a href="counterfactuals-and-quasi-experiments.html#types-of-quasi-experimental-design"><i class="fa fa-check"></i><b>17.3</b> Types Of Quasi-Experimental Design</a><ul>
+<li class="chapter" data-level="17.3.1" data-path="counterfactuals-and-quasi-experiments.html"><a href="counterfactuals-and-quasi-experiments.html#the-relationship-betweend-counterfactuals-and-quasi-experimental-design"><i class="fa fa-check"></i><b>17.3.1</b> The relationship Betweend Counterfactuals And Quasi-Experimental Design</a></li>
+<li class="chapter" data-level="17.3.2" data-path="counterfactuals-and-quasi-experiments.html"><a href="counterfactuals-and-quasi-experiments.html#difference-in-differece-models"><i class="fa fa-check"></i><b>17.3.2</b> Difference In Differece Models</a></li>
+</ul></li>
+<li class="chapter" data-level="17.4" data-path="counterfactuals-and-quasi-experiments.html"><a href="counterfactuals-and-quasi-experiments.html#weak-counterfactuals"><i class="fa fa-check"></i><b>17.4</b> Weak Counterfactuals</a></li>
+<li class="chapter" data-level="17.5" data-path="counterfactuals-and-quasi-experiments.html"><a href="counterfactuals-and-quasi-experiments.html#looking-ahead-13"><i class="fa fa-check"></i><b>17.5</b> Looking Ahead</a></li>
+</ul></li>
+<li class="part"><span><b>III APPLIED REGRESSION</b></span></li>
+<li class="chapter" data-level="18" data-path="difference-in-difference-models.html"><a href="difference-in-difference-models.html"><i class="fa fa-check"></i><b>18</b> Difference-in-Difference Models</a><ul>
+<li class="chapter" data-level="18.1" data-path="difference-in-difference-models.html"><a href="difference-in-difference-models.html#example"><i class="fa fa-check"></i><b>18.1</b> Example</a><ul>
+<li class="chapter" data-level="18.1.1" data-path="difference-in-difference-models.html"><a href="difference-in-difference-models.html#gains-realized-by-comparison-group-the-first-difference"><i class="fa fa-check"></i><b>18.1.1</b> Gains Realized by Comparison Group (The First Difference)</a></li>
+<li class="chapter" data-level="18.1.2" data-path="difference-in-difference-models.html"><a href="difference-in-difference-models.html#gains-realized-by-the-treatment-group-the-second-difference"><i class="fa fa-check"></i><b>18.1.2</b> Gains Realized by the Treatment Group (The Second Difference)</a></li>
+<li class="chapter" data-level="18.1.3" data-path="difference-in-difference-models.html"><a href="difference-in-difference-models.html#realized-gains-minus-expected-gains-diff-in-diff"><i class="fa fa-check"></i><b>18.1.3</b> Realized Gains Minus Expected Gains (Diff-in-Diff)</a></li>
+</ul></li>
+<li class="chapter" data-level="18.2" data-path="difference-in-difference-models.html"><a href="difference-in-difference-models.html#the-counterfactual"><i class="fa fa-check"></i><b>18.2</b> The Counterfactual</a></li>
+<li class="chapter" data-level="18.3" data-path="difference-in-difference-models.html"><a href="difference-in-difference-models.html#difference-in-difference-models-1"><i class="fa fa-check"></i><b>18.3</b> Difference-in-Difference Models</a><ul>
+<li class="chapter" data-level="18.3.1" data-path="difference-in-difference-models.html"><a href="difference-in-difference-models.html#example-1"><i class="fa fa-check"></i><b>18.3.1</b> Example</a></li>
+<li class="chapter" data-level="18.3.2" data-path="difference-in-difference-models.html"><a href="difference-in-difference-models.html#interpretation"><i class="fa fa-check"></i><b>18.3.2</b> Interpretation</a></li>
+<li class="chapter" data-level="18.3.3" data-path="difference-in-difference-models.html"><a href="difference-in-difference-models.html#summary-of-hypothesis-tested"><i class="fa fa-check"></i><b>18.3.3</b> Summary of Hypothesis Tested</a></li>
+<li class="chapter" data-level="18.3.4" data-path="difference-in-difference-models.html"><a href="difference-in-difference-models.html#three-cases"><i class="fa fa-check"></i><b>18.3.4</b> Three Cases</a></li>
+<li class="chapter" data-level="18.3.5" data-path="difference-in-difference-models.html"><a href="difference-in-difference-models.html#multiple-treatment-groups"><i class="fa fa-check"></i><b>18.3.5</b> Multiple Treatment Groups</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="19" data-path="interactions-with-slopes.html"><a href="interactions-with-slopes.html"><i class="fa fa-check"></i><b>19</b> Interactions with Slopes</a><ul>
+<li class="chapter" data-level="19.1" data-path="interactions-with-slopes.html"><a href="interactions-with-slopes.html#one-slope---one-intercept-model"><i class="fa fa-check"></i><b>19.1</b> One Slope - One Intercept Model</a></li>
+<li class="chapter" data-level="19.2" data-path="interactions-with-slopes.html"><a href="interactions-with-slopes.html#three-types-of-hybrids"><i class="fa fa-check"></i><b>19.2</b> Three Types of Hybrids</a></li>
+<li class="chapter" data-level="19.3" data-path="interactions-with-slopes.html"><a href="interactions-with-slopes.html#one-slope---three-intercepts"><i class="fa fa-check"></i><b>19.3</b> One Slope - Three Intercepts</a></li>
+<li class="chapter" data-level="19.4" data-path="interactions-with-slopes.html"><a href="interactions-with-slopes.html#three-slopes---three-intercepts"><i class="fa fa-check"></i><b>19.4</b> Three Slopes - Three Intercepts</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://webapp4.asu.edu/programs/t5/majorinfo/ASU00/PPPGEMS/graduate/false" target="blank">ASU</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Program Evaluation: Methods and Design</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="difference-in-difference-models" class="section level1">
+<h1><span class="header-section-number">Chapter 18</span> Difference-in-Difference Models</h1>
+<p>The next lecture introduces an important concept in regression analysis called an “interaction”.</p>
+<p>As we will see, this regression technique is important in Program Evaluation because it is used to test for program effects when we don’t have the luxery of a true randomized experiment (treatment and control groups are identical except for the treatment), but we do have a strong research design (a treatment and comparision group, and both pre and post-treatment measures).</p>
+<p>This type of design is called a difference-in-difference model. It is one of the most robust and flexible quasi-experimental designs that we have. We can analyze difference-in-difference data using a standard OLS regression model with interactions.</p>
+<div id="example" class="section level2">
+<h2><span class="header-section-number">18.1</span> Example</h2>
+<p>Let’s start with a basic example of a tutoring program within a school. We have test scores from two groups of boys in 3rd grade at a local elementary school. It has been determined that some of the boys have received inadequate preparation for the current math curriculum, so they have been offered additional tutoring. The other boys receive regular classroom instruction throughout the year. The average scores for each group in the pre and post periods look like this:</p>
+<p><img src="Foundations_of_Program_Evaluation_files/figure-html/unnamed-chunk-24-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<div id="gains-realized-by-comparison-group-the-first-difference" class="section level3">
+<h3><span class="header-section-number">18.1.1</span> Gains Realized by Comparison Group (The First Difference)</h3>
+<p>As we try to measure the impact of a specific program we have to keep in mind that other factors may influence outcomes over time. These are often referred to as secular trends, or changes that we expect to see independent of the intervention.</p>
+<p><span class="math display">\[ \textrm{Trend} = C2 - C1 = 95 - 75 = 20 \]</span></p>
+</div>
+<div id="gains-realized-by-the-treatment-group-the-second-difference" class="section level3">
+<h3><span class="header-section-number">18.1.2</span> Gains Realized by the Treatment Group (The Second Difference)</h3>
+<p>If we want to determine program impact we can measure the change in the treatment group based upon our outcome level before receiving the treatment and after receiving the treatment. This shows total change over the treatment period. It will also contain both changes attributable to program impact, as well as general changes attributable to trend.</p>
+<p><span class="math display">\[ \textrm{Treatment Group Gains} = T2 - T1 = 85 - 55 = 30\]</span></p>
+</div>
+<div id="realized-gains-minus-expected-gains-diff-in-diff" class="section level3">
+<h3><span class="header-section-number">18.1.3</span> Realized Gains Minus Expected Gains (Diff-in-Diff)</h3>
+<p>In order to isolate program impacts we must subtract out the gains that we would expect the treatment group to make independent of the program. The total gain minus the gain from trend is called the difference-in-difference estimate.</p>
+<p><span class="math display">\[ \textrm{Treatment Gains - Trend} = (T2 - T1) - (C2 - C1) = 30 - 20 = 10 \]</span>
+In this case we can see that the tutoring program is leading to gains of an extra ten points more than what we would expect from a typical third grader over the year not enrolled in the program.</p>
+</div>
+</div>
+<div id="the-counterfactual" class="section level2">
+<h2><span class="header-section-number">18.2</span> The Counterfactual</h2>
+<p>Any time we measure the impact of a program we must compare the final state of the treatment group to some other state of the world. The sensible question is to ask, what would this group look like if it had not received the treatment?</p>
+<blockquote>
+<p>The counterfactual tells us what the treatment group would look like if there was no program impact.</p>
+</blockquote>
+<p>If we have the luxury of performing a randomized experiment then from the statistical standpoint the control group embodies the counterfactual. If randomized is done successfully the only difference between the treatment and control group will be, on average, whether the members received the treatment or not. This simplifies our lives because after the study we can attibute all of the differences in group means to the program effects.</p>
+<p><img src="Foundations_of_Program_Evaluation_files/figure-html/unnamed-chunk-25-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<p>In most cases, however, we do not have the opportunity or ability to conduct a true experiment. Instead, we need to create a reasonable comparision group that we can use for counterfactual analysis, and we can use this group to observe changes we expect to see indepedent of the treatment. This is the first difference, or the trend in the example above.</p>
+<p>Since our treatment group and our comparison group might not have identical pre-treatment characteristics the counterfactual must account for these differences. The proper way to think about this is:</p>
+<p><span class="math display">\[ \textrm{Counterfactual} = T1 + Trend \]</span></p>
+<p><img src="Foundations_of_Program_Evaluation_files/figure-html/unnamed-chunk-26-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<p>Any time we calculate a program treatment effect there is an explicit or an implied counterfactual. The problematic evaluations are usually ones in which they are unclear about the counterfactual in the study.</p>
+</div>
+<div id="difference-in-difference-models-1" class="section level2">
+<h2><span class="header-section-number">18.3</span> Difference-in-Difference Models</h2>
+<p>The formal difference-in-difference estimate uses a regression model to examine program effects. It is a slightly odd regression because all of the variables in the model are dummy variables. The model is written as follows:</p>
+<p><span class="math display">\[ Y = b_{0} + b_{1} \cdot Treat + b_{2} \cdot Post + b_{3} \cdot Treat \cdot Post + e \]</span></p>
+<p>The data looks something like this:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">y</th>
+<th align="left">intercept</th>
+<th align="left">treat</th>
+<th align="left">post</th>
+<th align="left">treat_post</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">y1</td>
+<td align="left">1</td>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left">0</td>
+</tr>
+<tr class="even">
+<td align="left">y2</td>
+<td align="left">1</td>
+<td align="left">0</td>
+<td align="left">1</td>
+<td align="left">0</td>
+</tr>
+<tr class="odd">
+<td align="left">y3</td>
+<td align="left">1</td>
+<td align="left">1</td>
+<td align="left">0</td>
+<td align="left">0</td>
+</tr>
+<tr class="even">
+<td align="left">y4</td>
+<td align="left">1</td>
+<td align="left">1</td>
+<td align="left">1</td>
+<td align="left">1</td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left">A</td>
+<td align="left">B</td>
+<td align="left">C</td>
+<td align="left">D</td>
+</tr>
+</tbody>
+</table>
+<p>In this example, y1 to y4 represent some measured level of the outcome. The intercept in the model is a vector of all 1’s. And each other variable is a dummy variable. Note that the last term in this model, <em>treat_post</em> is an interaction effect. It is created by multiplying the variables <em>treat</em> and <em>post</em>.</p>
+<div id="example-1" class="section level3">
+<h3><span class="header-section-number">18.3.1</span> Example</h3>
+<p>Let’s consider the following case:</p>
+<p><img src="Foundations_of_Program_Evaluation_files/figure-html/unnamed-chunk-28-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<p>Now let us estimate this model using our difference-in-difference regression, which gives us the following results:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="right">moxy</th>
+<th align="right">treat</th>
+<th align="right">post</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">20</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+<tr class="even">
+<td align="right">20</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+<tr class="odd">
+<td align="right">20</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+<tr class="even">
+<td align="right">20</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+<tr class="odd">
+<td align="right">20</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+<tr class="even">
+<td align="right">20</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+</tbody>
+</table>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1"></a>
+<a class="sourceLine" id="cb5-2" data-line-number="2">m0 &lt;-<span class="st"> </span><span class="kw">lm</span>( moxy <span class="op">~</span><span class="st"> </span>C1 <span class="op">+</span><span class="st"> </span>C2 <span class="op">+</span><span class="st"> </span>T1 <span class="op">+</span><span class="st"> </span>T2 <span class="op">-</span><span class="st"> </span><span class="dv">1</span> )</a>
+<a class="sourceLine" id="cb5-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb5-4" data-line-number="4">m1 &lt;-<span class="st"> </span><span class="kw">lm</span>( moxy <span class="op">~</span><span class="st"> </span>treat )</a>
+<a class="sourceLine" id="cb5-5" data-line-number="5"></a>
+<a class="sourceLine" id="cb5-6" data-line-number="6">m2 &lt;-<span class="st"> </span><span class="kw">lm</span>( moxy <span class="op">~</span><span class="st"> </span>post )</a>
+<a class="sourceLine" id="cb5-7" data-line-number="7"></a>
+<a class="sourceLine" id="cb5-8" data-line-number="8">m3 &lt;-<span class="st"> </span><span class="kw">lm</span>( moxy <span class="op">~</span><span class="st"> </span>treat <span class="op">+</span><span class="st"> </span>post )</a>
+<a class="sourceLine" id="cb5-9" data-line-number="9"></a>
+<a class="sourceLine" id="cb5-10" data-line-number="10">m4 &lt;-<span class="st"> </span><span class="kw">lm</span>( moxy <span class="op">~</span><span class="st"> </span>treat <span class="op">+</span><span class="st"> </span>post <span class="op">+</span><span class="st"> </span>treat<span class="op">*</span>post )</a>
+<a class="sourceLine" id="cb5-11" data-line-number="11"></a>
+<a class="sourceLine" id="cb5-12" data-line-number="12"><span class="co"># library( stargazer )</span></a>
+<a class="sourceLine" id="cb5-13" data-line-number="13"></a>
+<a class="sourceLine" id="cb5-14" data-line-number="14"><span class="kw">stargazer</span>( m4, <span class="dt">type=</span><span class="st">&#39;html&#39;</span>, <span class="dt">digits=</span><span class="dv">0</span>,</a>
+<a class="sourceLine" id="cb5-15" data-line-number="15">           <span class="dt">omit.stat=</span><span class="kw">c</span>(<span class="st">&quot;f&quot;</span>,<span class="st">&quot;rsq&quot;</span>,<span class="st">&quot;adj.rsq&quot;</span>,<span class="st">&quot;ser&quot;</span>),</a>
+<a class="sourceLine" id="cb5-16" data-line-number="16">           <span class="dt">intercept.bottom =</span> <span class="ot">FALSE</span>,</a>
+<a class="sourceLine" id="cb5-17" data-line-number="17">           <span class="dt">covariate.labels =</span> <span class="kw">c</span>(<span class="st">&quot;b0: Intercept (A)&quot;</span>, <span class="st">&quot;b1: Treatment Group (B)&quot;</span>,</a>
+<a class="sourceLine" id="cb5-18" data-line-number="18">                                <span class="st">&quot;b2: Post-Period (C)&quot;</span>, <span class="st">&quot;b3: Treat x Post (D)&quot;</span> ) )</a></code></pre></div>
+<table style="text-align:center">
+<tr>
+<td colspan="2" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+<em>Dependent variable:</em>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td colspan="1" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+moxy
+</td>
+</tr>
+<tr>
+<td colspan="2" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+b0: Intercept (A)
+</td>
+<td>
+20<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(0)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+b1: Treatment Group (B)
+</td>
+<td>
+15<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(0)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+b2: Post-Period (C)
+</td>
+<td>
+10<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(0)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+b3: Treat x Post (D)
+</td>
+<td>
+20<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(0)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td colspan="2" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Observations
+</td>
+<td>
+400
+</td>
+</tr>
+<tr>
+<td colspan="2" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<em>Note:</em>
+</td>
+<td style="text-align:right">
+<sup><em></sup>p&lt;0.1; <sup><strong></sup>p&lt;0.05; <sup></strong></em></sup>p&lt;0.01
+</td>
+</tr>
+</table>
+<p>It takes a little bit of knowledge to make sense of the results. The important insight is that each coefficient represents a component of the outcome, so you need to add components together to get the actual group means.</p>
+<p>The other important insight is that each coefficient represents a distinctive statistical test.</p>
+<p>Recall that we can conduct a t-test using a regression model by including a dummy variable. The coefficient in the regression model will represent the group mean difference, and the significance level will be identical to a normal t-test.</p>
+<p>When you test a difference in means between two groups it is called a contrast. Since we have multiple dummy variables in our model we have multiple contrasts. To understand each test you must understand the implied reference group of each test.</p>
+<p><img src="Foundations_of_Program_Evaluation_files/figure-html/unnamed-chunk-31-1.png" width="70%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="interpretation" class="section level3">
+<h3><span class="header-section-number">18.3.2</span> Interpretation</h3>
+<p>For example, the Comparison Group during the first period of the study has a mean outcome of 20. Since we have included a dummy variable representing our Treatment Group in the model, the omitted category is the Comparison Group, so it ends up in the intercept <span class="math inline">\(b_{0}\)</span> in our regression model. Similarly, since we have a dummy variable representing the Post-Intervention time period, the omitted category is Pre-Intervention, which also defaults to the intercept. A on the diagram above then represents the non-Treatment, non-Post Intervention group, or the Comparison Group in the Pre-Intervention period.</p>
+<p>Similar to other regression models, each coefficient has an associated level of significance. Similar to other regressions we have run, this level of significance represents a hypothesis test of whether the coefficient is equal to zero. In the typical case with a continuous numerical measure, if the slope is equal to zero it represents no relationship. In this case it is a t-test of whether the mean of the base group is equal to zero.</p>
+<p>The Comparison Group during the second time period has a mean outcome of 30. We don’t have a coefficient for Comparison Group Time=2 specifically in our model, so we must construct the group mean from other coefficients. We can see that the group can be represented by adding up A + C on the diagram, or adding the coefficient <span class="math inline">\(b_{2}\)</span> to the intercept (10 + 20) to arrive at the group mean of 30.</p>
+<p>Similarly, we can find the group mean for the Treatment Group at Time=1 by adding the coefficient <span class="math inline">\(b_{1}\)</span> to the base group, 20 + 15, to get 35. This is represented by A + B in the diagram above.</p>
+<p>Let’s pause for a moment and consider the statistical significant associated with coefficients <span class="math inline">\(b_{1}\)</span> and <span class="math inline">\(b_{2}\)</span>. Here is where the reference group becomes important. Since each coefficient represents the difference between the group mean and the reference group, the hypothesis is a test of whether the outcome in those groups differ.</p>
+<p>Since <span class="math inline">\(b_{1}\)</span> is 15, the coefficient represents a test of whether <span class="math inline">\(T1 - C1 = 0\)</span>. In other words, did the Treatment and Comparison groups differ significantly in the first time period?</p>
+<p>Since <span class="math inline">\(b_{2}\)</span> is 10, the coefficient represents a test of whether <span class="math inline">\(C2 - C1 = 0\)</span>. In other words, did the Comparison group change significantly between the first and second time periods?</p>
+<p>Now the last contrast is the tricky one. To make sense of this one we need to think about the reference group for this contrast. Note that we can create a Post-Test Treatment group by adding <span class="math inline">\(b_{0} + b_{1} + b_{2}\)</span> (A + B + C on the diagram), but this only comes to 20 + 10 + 15, or 45. The actual mean outcome measured for group T2 is 65. So how do we arrive at this number?</p>
+<p>Recall that <span class="math inline">\(b_{3}\)</span> represents the coefficient from an <em>interaction</em> effect. The interpretation is an interaction is that the whole is greater than the sum of the parts. When an interaction is present, we observe an impact larger than the impact of two independent direct effects (the gains from being in the Treatment group, and the expected gains from the secular trend, in this case).</p>
+<p>The measure <span class="math inline">\(b_{0} + b_{1} + b_{2}\)</span> tells us where we should expect the group mean of T2 to reside (the counterfactual), and the coefficient <span class="math inline">\(b_{3}\)</span> tells us whether the actual group mean is different, i.e. whether we experiences a treatment effect from this program. We see in the model that <span class="math inline">\(b_{3}=20\)</span>, meaning the observed group mean is 20 points higher than we would expect if the treatment did not work.</p>
+</div>
+<div id="summary-of-hypothesis-tested" class="section level3">
+<h3><span class="header-section-number">18.3.3</span> Summary of Hypothesis Tested</h3>
+<p>Is the Comparison Group in Time=1 different from zero?</p>
+<ul>
+<li>Coefficient <span class="math inline">\(b_{0}\)</span></li>
+<li><span class="math inline">\(Null: C1 = 0\)</span></li>
+</ul>
+<p>Is the Treatment Group different from the Comparison Group in Time=1?</p>
+<ul>
+<li>Coefficient <span class="math inline">\(b_{1}\)</span></li>
+<li><span class="math inline">\(Null: T1 - C1 = 0\)</span></li>
+</ul>
+<p>Is the Comparision Group in Time=2 different than the Comparison Group in Time=1? I.e. is there a secular trend?</p>
+<ul>
+<li>Coefficient <span class="math inline">\(b_{2}\)</span></li>
+<li><span class="math inline">\(Null: C2 - C1 = 0\)</span></li>
+</ul>
+<p>Is the Treatment Group in Time=2 different from the counterfactual? Does the program have impact?</p>
+<ul>
+<li>Coefficient <span class="math inline">\(b_{3}\)</span></li>
+<li><span class="math inline">\(Null: (T2-T1) - (C2-C1) = 0\)</span></li>
+</ul>
+</div>
+<div id="three-cases" class="section level3">
+<h3><span class="header-section-number">18.3.4</span> Three Cases</h3>
+<p>Let us consider three cases where statistical significance might be of interest.</p>
+<p><img src="Foundations_of_Program_Evaluation_files/figure-html/unnamed-chunk-32-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<p>The regression results would be as follows:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1"></a>
+<a class="sourceLine" id="cb6-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb6-3" data-line-number="3"><span class="co"># m1 &lt;- lm( moxy ~ treat + post + treat*post )</span></a>
+<a class="sourceLine" id="cb6-4" data-line-number="4"><span class="co"># m2 &lt;- lm( moxy ~ treat + post + treat*post )</span></a>
+<a class="sourceLine" id="cb6-5" data-line-number="5"><span class="co"># m3 &lt;- lm( moxy ~ treat + post + treat*post )</span></a>
+<a class="sourceLine" id="cb6-6" data-line-number="6"></a>
+<a class="sourceLine" id="cb6-7" data-line-number="7"></a>
+<a class="sourceLine" id="cb6-8" data-line-number="8"></a>
+<a class="sourceLine" id="cb6-9" data-line-number="9"><span class="kw">stargazer</span>( m1, m2, m3, <span class="dt">type=</span><span class="st">&#39;html&#39;</span>, <span class="dt">digits=</span><span class="dv">1</span>,</a>
+<a class="sourceLine" id="cb6-10" data-line-number="10">           <span class="dt">omit.stat=</span><span class="kw">c</span>(<span class="st">&quot;f&quot;</span>,<span class="st">&quot;rsq&quot;</span>,<span class="st">&quot;adj.rsq&quot;</span>,<span class="st">&quot;ser&quot;</span>),</a>
+<a class="sourceLine" id="cb6-11" data-line-number="11">           <span class="dt">intercept.bottom =</span> <span class="ot">FALSE</span>,</a>
+<a class="sourceLine" id="cb6-12" data-line-number="12">           <span class="dt">covariate.labels =</span> <span class="kw">c</span>(<span class="st">&quot;Intercept (A)&quot;</span>, <span class="st">&quot;Treatment Group (B)&quot;</span>,</a>
+<a class="sourceLine" id="cb6-13" data-line-number="13">                                <span class="st">&quot;Post-Period (C)&quot;</span>, <span class="st">&quot;Treat x Post (D)&quot;</span> ) )</a></code></pre></div>
+<table style="text-align:center">
+<tr>
+<td colspan="4" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td colspan="3">
+<em>Dependent variable:</em>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td colspan="3" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td colspan="3">
+moxy
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(1)
+</td>
+<td>
+(2)
+</td>
+<td>
+(3)
+</td>
+</tr>
+<tr>
+<td colspan="4" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Intercept (A)
+</td>
+<td>
+20.0<sup>***</sup>
+</td>
+<td>
+20.0<sup>***</sup>
+</td>
+<td>
+20.0<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(1.4)
+</td>
+<td>
+(1.4)
+</td>
+<td>
+(1.4)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Treatment Group (B)
+</td>
+<td>
+10.0<sup>***</sup>
+</td>
+<td>
+-0.0
+</td>
+<td>
+10.0<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(1.9)
+</td>
+<td>
+(1.9)
+</td>
+<td>
+(1.9)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Post-Period (C)
+</td>
+<td>
+-0.0
+</td>
+<td>
+5.0<sup>**</sup>
+</td>
+<td>
+10.0<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(1.9)
+</td>
+<td>
+(1.9)
+</td>
+<td>
+(1.9)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Treat x Post (D)
+</td>
+<td>
+10.0<sup>***</sup>
+</td>
+<td>
+15.0<sup>***</sup>
+</td>
+<td>
+0.0
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(2.7)
+</td>
+<td>
+(2.7)
+</td>
+<td>
+(2.7)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td colspan="4" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Observations
+</td>
+<td>
+84
+</td>
+<td>
+84
+</td>
+<td>
+84
+</td>
+</tr>
+<tr>
+<td colspan="4" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<em>Note:</em>
+</td>
+<td colspan="3" style="text-align:right">
+<sup><em></sup>p&lt;0.1; <sup><strong></sup>p&lt;0.05; <sup></strong></em></sup>p&lt;0.01
+</td>
+</tr>
+</table>
+<p>Note the lack of significance for the specific hypotheses in each case.</p>
+<p>Case 1: When <span class="math inline">\(b_{2}\)</span> is not significant, it tells us there is no secular trend in the data.</p>
+<p>Case 2: When <span class="math inline">\(b_{1}\)</span> is not significant, it tells us there is no different between the measured outcomes of the treatment and comparison groups during the first time period.</p>
+<p>Case 3: When <span class="math inline">\(b_{3}\)</span> is not significant, it tells us that all gains observed in the treatment group are coming from the secular trend and not the program.</p>
+</div>
+<div id="multiple-treatment-groups" class="section level3">
+<h3><span class="header-section-number">18.3.5</span> Multiple Treatment Groups</h3>
+<p>Sometimes your study may contain multiple treatment groups.</p>
+<p><img src="Foundations_of_Program_Evaluation_files/figure-html/unnamed-chunk-35-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<p>In order to specify the regression we again must omit one group, which will become the reference group in the study. In this case we will omit Treatement C as the reference group.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" data-line-number="1"></a>
+<a class="sourceLine" id="cb7-2" data-line-number="2">      </a>
+<a class="sourceLine" id="cb7-3" data-line-number="3">A1 &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="dv">20</span>,<span class="dv">40</span>)</a>
+<a class="sourceLine" id="cb7-4" data-line-number="4">A2 &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="dv">40</span>,<span class="dv">60</span>)</a>
+<a class="sourceLine" id="cb7-5" data-line-number="5">B1 &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="dv">10</span>,<span class="dv">30</span>)</a>
+<a class="sourceLine" id="cb7-6" data-line-number="6">B2 &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="dv">30</span>,<span class="dv">50</span>)</a>
+<a class="sourceLine" id="cb7-7" data-line-number="7">C1 &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="dv">15</span>,<span class="dv">35</span>)</a>
+<a class="sourceLine" id="cb7-8" data-line-number="8">C2 &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="dv">20</span>,<span class="dv">40</span>)</a>
+<a class="sourceLine" id="cb7-9" data-line-number="9"></a>
+<a class="sourceLine" id="cb7-10" data-line-number="10"></a>
+<a class="sourceLine" id="cb7-11" data-line-number="11">moxy &lt;-<span class="st"> </span><span class="kw">c</span>(A1,A2,B1,B2,C1,C2)</a>
+<a class="sourceLine" id="cb7-12" data-line-number="12">GroupA &lt;-<span class="st"> </span><span class="kw">rep</span>( <span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">0</span>), <span class="dt">each=</span><span class="dv">42</span> )</a>
+<a class="sourceLine" id="cb7-13" data-line-number="13">GroupB &lt;-<span class="st"> </span><span class="kw">rep</span>( <span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">0</span>), <span class="dt">each=</span><span class="dv">42</span> )</a>
+<a class="sourceLine" id="cb7-14" data-line-number="14">GroupC &lt;-<span class="st"> </span><span class="kw">rep</span>( <span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">1</span>), <span class="dt">each=</span><span class="dv">42</span> )</a>
+<a class="sourceLine" id="cb7-15" data-line-number="15">post &lt;-<span class="st"> </span><span class="kw">rep</span>( <span class="kw">c</span>(<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">1</span>), <span class="dt">each=</span><span class="dv">21</span> )</a>
+<a class="sourceLine" id="cb7-16" data-line-number="16"></a>
+<a class="sourceLine" id="cb7-17" data-line-number="17"></a>
+<a class="sourceLine" id="cb7-18" data-line-number="18">m1 &lt;-<span class="st"> </span><span class="kw">lm</span>( moxy <span class="op">~</span><span class="st"> </span>post <span class="op">+</span><span class="st"> </span>GroupA <span class="op">+</span><span class="st"> </span>GroupB  <span class="op">+</span><span class="st"> </span>GroupA<span class="op">*</span>post <span class="op">+</span><span class="st"> </span>GroupB<span class="op">*</span>post )</a>
+<a class="sourceLine" id="cb7-19" data-line-number="19"></a>
+<a class="sourceLine" id="cb7-20" data-line-number="20"></a>
+<a class="sourceLine" id="cb7-21" data-line-number="21"></a>
+<a class="sourceLine" id="cb7-22" data-line-number="22"><span class="kw">stargazer</span>( m1, <span class="dt">type=</span><span class="st">&#39;html&#39;</span>, <span class="dt">digits=</span><span class="dv">1</span>,</a>
+<a class="sourceLine" id="cb7-23" data-line-number="23">           <span class="dt">omit.stat=</span><span class="kw">c</span>(<span class="st">&quot;f&quot;</span>,<span class="st">&quot;rsq&quot;</span>,<span class="st">&quot;adj.rsq&quot;</span>,<span class="st">&quot;ser&quot;</span>),</a>
+<a class="sourceLine" id="cb7-24" data-line-number="24">           <span class="dt">intercept.bottom =</span> <span class="ot">FALSE</span>,</a>
+<a class="sourceLine" id="cb7-25" data-line-number="25">           <span class="dt">covariate.labels =</span> <span class="kw">c</span>(<span class="st">&quot;b0: Intercept&quot;</span>, <span class="st">&quot;b1: Post&quot;</span>,<span class="st">&quot;b2: Treatment A&quot;</span>,</a>
+<a class="sourceLine" id="cb7-26" data-line-number="26">                                <span class="st">&quot;b3: Treatment B&quot;</span>, <span class="st">&quot;b4: A x Post&quot;</span>, <span class="st">&quot;b5: B x Post&quot;</span> ) )</a></code></pre></div>
+<table style="text-align:center">
+<tr>
+<td colspan="2" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+<em>Dependent variable:</em>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td colspan="1" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+moxy
+</td>
+</tr>
+<tr>
+<td colspan="2" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+b0: Intercept
+</td>
+<td>
+25.0<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(1.4)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+b1: Post
+</td>
+<td>
+5.0<sup>**</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(1.9)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+b2: Treatment A
+</td>
+<td>
+5.0<sup>**</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(1.9)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+b3: Treatment B
+</td>
+<td>
+-5.0<sup>**</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(1.9)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+b4: A x Post
+</td>
+<td>
+15.0<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(2.7)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+b5: B x Post
+</td>
+<td>
+15.0<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(2.7)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td colspan="2" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Observations
+</td>
+<td>
+126
+</td>
+</tr>
+<tr>
+<td colspan="2" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<em>Note:</em>
+</td>
+<td style="text-align:right">
+<sup><em></sup>p&lt;0.1; <sup><strong></sup>p&lt;0.05; <sup></strong></em></sup>p&lt;0.01
+</td>
+</tr>
+</table>
+<p>Note that you will again build group means from their component parts. For example, Treatment A can be represented as <span class="math inline">\(b_{0} + b_{2}\)</span> in period one, and <span class="math inline">\(b_{0} + b_{1} + b_{2} + b_{4}\)</span> for period two.</p>
+<p>The main thing to note is that the counterfactual has now become the gains that you expect in the omitted group. It makes sense in this case to omit the group with the least gains because then you can interpret the program effects <span class="math inline">\(b_{3}\)</span> or <span class="math inline">\(b_{4}\)</span> as gains you expect over the least effective treatment option.</p>
+<p>Note that the coefficient <span class="math inline">\(b_{1}\)</span> associated with the Post-Treatment period is no longer interpretted as trend.</p>
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="counterfactuals-and-quasi-experiments.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="interactions-with-slopes.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/DS4PS/program-evaluation-course/edit/master/Specification-Part-II.RMD",
+"text": "Edit"
+},
+"download": ["Foundations of Program Evaluation.pdf", "Foundations of Program Evaluation.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

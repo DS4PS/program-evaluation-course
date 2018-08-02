@@ -1,0 +1,37 @@
+# Interviewing Methods
+
+
+Interviews are very closely related to surveys in research and evaluation. In general all of the principles from survey design apply to interviewing techniques. It is important to ask simple questions, not ask leading questions, consider the number of questions, and ask only one thing in each questions. The order of the questions and the types of responses are also just as important in interviews.
+
+
+## Collecting Data In Person
+
+Interviews have some advantages. One advantage is question probes. As mentioned with survey questions, sometimes people misinterpret the questions or do not actually answer with the information in which the researcher is interested. Because the interviewer is face-to-face there is the opportunity to ask additional questions when this occurs. This is not meant to be a method to get the answer that the research wants, but rather get an answer that is appropriate for the question being asked.
+
+
+Sometimes a person may be more comfortable answering directly to a person. However, the opposite can also be true. With surveys there is some level of anonymity. When being face-to-face there is less privacy. The researcher still must keep the data anonymous. 
+
+
+Another challenge, as with observational studies, there is often a level of interpretation. Luckily with interviews they can be structured more like a survey to limit the interpretation. Another challenge is the demeanor of the interviewer. It is very important for the interviewer to appear neutral and not to have any facial expressions or reactions that may affect how a person responds. Interviews are interpersonal interactions and much care should be take to not let characteristics of the interviewer bias the responses. This why, as with observational studies, preparation, training, and practice is essential before beginning interviews. This also involves a well prepared systematic coding system.
+
+
+## Looking Ahead
+
+We have covered many details of how to create good questions for asking people directly, whether in a survey format or in an interview setting. We have moved to a closer interaction between the respondents in organizations and the researchers. This presents many potential opportunities, yet also presents new challenges. Surveys and interviews are methods that often can provide additional information.
+
+
+- We will begin to discuss types of methods that are more experimental in nature
+
+- We will begin with simple experimental designs and progress to more complex designs
+
+- We will discuss the advantages and disadvantages of experimental methods in program evaluation
+
+
+
+
+
+
+
+
+
+
