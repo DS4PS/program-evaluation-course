@@ -1,0 +1,185 @@
+---
+title: "Research Design Unit 2"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+
+## Unit 2
+
+Validity And Reliability In Research Design And Program Evaluation
+
+
+
+## Is Research Valid?
+
+As we have discussed, program evaluation uses research and statistical analysis to provide what should be the best possible evidence that a program that has been implemented is actually having an impact. Because the quality of research is very important to obtain the best results, it is important to consider the formal understanding of what makes quality research. It is often important in research design and analysis to formally systematize the research and analysis process. 
+
+
+## Is Research Valid?
+
+One very important aspect of all research is validity. If we spend time and money on a program and then evaluated it we must be concerned about validity. A very simple question to ask is 'What use is the research if the methods and results are not valid? At this point it is extremely important to discuss what is formally meant by validity in research.
+
+
+
+## Research Validity
+
+There are several types of validity that are important. However, three are especially integral to research quality. The following are the three types that we will focus on the most:
+
+-External Validity
+
+-Internal Validity
+
+-Construct Validity
+
+
+
+## External Validity
+
+In all fields, research does not exist in a vaccum. This is very true for organizations and research methods must consider this. For example, a program may be implemented across an organization, company, or agency. However, all of these may have offices throughout a region, country, or the world. One of the important concepts that involves external validity is does the research results or evaluation of the program apply in the same way for each of these?
+
+
+##  External Validity
+
+Because organizations are diverse and often located in many places, the concept of generalizability is very important. The basic questions are: Do the results of the evaluation or analysis apply to different locations or settings. Consider that the different locations may involve different states or countries, and these different areas may have different cultures and traditions. Therefore, the results from a study in one location may not always accurately describe the effects of the implemented program in all locations. 
+
+
+## External Validity
+
+In more formal terms external validity tells you if your results can be generalized to different measures, people, settings, and times.
+
+-Cook & Campbell 1979, Steckler & McLeroy -2008
+
+
+## Breaking Down External Validity
+
+What Does It Mean To Generalize To Different Measures?
+
+Measures are a developed method to collect data, such as surveys, observations, experiments, quasi-experiments, etc. (We will discuss the details of theys later in this course). However, in organizations it is often the case that our methods involve data that come from archival or previously collected data. Let us assume we were collecting data to evaluate a program using surveys and by observing the behavior and productivity of people in an organization. If we designed another survey or method of observing that was intended to measure the same concepts or type of data would we get the same results as we originally did. If so then we have high external validity. However, if we get very different results then our measures have lower external validity.
+
+
+## Breaking Down External Validity
+
+What Does It Mean To Generalize To Different People?
+
+As we previously mentioned organizations may have many locations, but also have many people. People vary on many characteristics, such as education, personality, experience, etc. When we evaluate and analyze a program often we can not measure the effect it has on the complete organization. Recall from Statistical Foundations of Program Evaluation that often we must rely on a sample of the entire population. Therefore, our results are estimated from a sample or subset. 
+
+
+## Breaking Down External Validity
+
+What Generalizing To Different People Means Continued?
+
+If we cannot generalize our results to the entire organization or population then the evaluation may have limited use. Therefore, researchers often attempt to maximize external validity in order to implement successful programs with a variety of people or employees in the future. 
+
+
+## Breaking Down External Validity
+
+What Does It Mean To Generalizing To Different Settings?
+
+Similarly to previous factors of external validity, the evaluation and analysis of the program is often limited to a subsets of locations. As mentioned different locations may have different factors and cultures. Cultures could be different in places like different offices or geographical regions. These differences may also introduce different variables that can factor into the evaluation. Therefore, the different settings must be considered when evaluating and interpreting the generalization of the program and results.
+
+
+## Breaking Down External Validity
+
+What Does It Mean To Generalize To Different Times?
+
+Finally, evaluations and analyses are often limited to a specific time or time range. Things may change over time and can influence the success of a program. While the evaluation may be a longitudinal study over a long period of time, the analysis can be used to predict the success in the future. However, it is important to consider the various different and changing factors in the future.
+
+
+## Pulling Together The Components Of External Validity
+
+When considering the components of external validity there is a common theme. Research is often conducted in a limited or restricted environment. This may limit the measure or how we conduct the study, who is studied, where it is studied, and when it is studied. Therefore, external validity is an important concern of researchers
+
+## Is External Validity Always Important
+
+There is a caveat to consider sometimes when thinking about external validity. The researcher must consider the goal of the program evaluation. Perhaps we are only concerned with what is happening currently at a specific location. In this case external validity may not be the primary concern. Another possibility is that the evaluation of the program is not attempting to show what does typically happen, but rather what could happen. Sometimes showing that certain results are possible is important to understand. To further explore this please refer to Mook's "In Defense Of External Invalidity" -1983. In general with all research the purpose of the research is always an underlying consideration.
+
+
+
+## Internal Validity
+
+Another very important type of validity is internal validity. When evaluating a program it is often extremely important to be sure that the program actually had an effect. In other words, we would like to know that implementing the program acually caused the changes of the outcome in the organization. Unfortunately, causality is not always easy to be confident in, especially when evaluating a program that has already been implemented.
+
+
+## Internal Validity
+
+More formally, internal validity is the extent to which we can be confident that the program (independent variable/input) caused the change or effect (dependent variable/outcome.) There are several things to consider when infering the cause and effect between the independent variable and dependent variable. 
+
+
+## Breaking Down Internal Validity
+
+One important thing to consider is did the effect happen completely after the program was implemented? It is possible that the resulting change or effect in the organization began before the program began. Sometimes we may not know this. This is another reason to consider this in research design. For example, assume that we implement a program to improve productivity, such as pay increase in the example from Statistical Foundations To Program Evaluation. We use historical data as the baseline for productivity and see an increase after the pay increase. It is possible that the increase in productivity actually began before the pay increase began, but after we measured the baseline productivity. Therefore, there is a chance that the pay increase did not actually cause the increase in productivity. Rather, the program coincided with a productivity increase that was already in progress. One caution though is that the program may have had an impact also. This could be an example of an omitted variable. 
+
+
+
+## Breaking Down Internal Validity
+
+As we see, just because the program was implemented before we measured the change it does not alwayse mean that the program caused the effect. This leads to one of the most important factors to consider. Is there another explanation for the effect measured after the program was implemented. In other words, are there alternative explanations or other variables that actually caused the effect. Other terms for this is a confound or third variable effect. This basically means that there was something that was unmeasured that actually explains the effect, which is similar to the example of productivity increasing before the program was implemented, but the baseline was measured before the productivity increase. Therefore, there could be one or more other variables that actually cause the increase in productivity.
+
+
+## Breaking Down Internal Validity
+
+One important way to increase internal validity is to add a control variable. This is basically comparing the group of people that experience the program to a group of people that did not. One thing this could show is that the effect of the program was seen in the group of people that experienced the program, but not in those that did not. However, it is possible that there was a small effect in the control, but the group of people that experienced the program showed a larger effect. Both of these cases could indicate that the program had a causal effect. However, there is still a possiblity that the program did not cause the effect. There still could be an alternative explanation or confounding variables.
+
+
+## Breaking Down Internal Validity
+
+We will see in the second course in Statistical Foundations Of Program Evaluation various statistical methods that are used to try to tease out causality. However, one way to be confident about the causal relationship and internal validity is to randomly assign participants to different conditions of the program or independent variable. If we take the simple case of increasing pay to evaluate the increase of productivity, some people in the organization would not receive a pay increase and some people would receive a pay increase. However, it is not enough to simply divide the groups in half.
+
+## Breaking Down Internal Validity
+
+Consider that we divided the people in the organization into the control group and the program group (sometimes called the experimental group or treatment group). A simple way would be to assign the people that arrived to the organization one day to the treatment group that receiveda pay increase and the remaining people that arrived to the control group that did not receive a pay increase. After evaluating the differnce between the treatment and control group, we observed that the treatment group had a higher productivity increase. Can we now infer causality?
+
+
+## Breaking Down Internal Validity
+
+Why would this example have lower internal validity and result in less confidence in pay increases causing increases productivity? Perhaps the people that arrive ealier have higher motivation or some other factor that relates to higher productivity. This would mean that the experimental group was inherently different than the control group. Because of this the goal is to create groups that are the same on all factors except for the pay increase or the category of the independeent variable. In research the method that is often used is randomly assign each person to the experimental group or the cotrol group. This basically creates two groups that are identical on average. We will discuss this further in this course. 
+
+
+
+## Construct Validity
+
+The third type of validity that we will discuss in this unit is construct validity. In order to collect data we must have a sytematic way of measuring the concept in which we are interested, such as surveys, interviews, or systematic observation. Therefore, it is important to be sure that the measure or method we use to collect the data actually is measuring what we intend to be measured.
+
+
+## Breaking Down Construct Validity
+
+Let us consider an example of measuring satisfaction in an organiatzion. We could potentially do this with a survey or interview. When developing the measurements to be used we must be sure that we are measuring what we intend to measure. For example, we may be interested in overall statisfaction or current satisfaction the day of the data collection. If we are actually interested in overall satisfaction, we must create a measure that actually provides data for overall satisfaction and not the current satisfaction of the day. This is essentially construct validity. This is important because the results would be misleading if we were not measuring the concept that is intended, and therefore we would have low construct validity. 
+
+
+## Reliability
+
+Another important factor in conducting research is the reliability of our measures. It is similar to validity, but represents the consistency of our measures. A reliable measure basically means that if you conduct the test or study with the same measure you should get very close to the same results multiple times, especially with the same participant. This is sometimes called test-retest reliability.
+
+
+## Breaking Down Reliability
+
+Because we want our measures to be consistent we aim to have small measurement error. As we discussed in the Statistical Foundation of Program Evaluation, minimizing error is important. If there is too much measurement error it is likely not going to be a very reliable measure. 
+
+## Breaking Down Reliability
+
+How can we test reliability? One way would be to see how correlated multiple tests are using our measure. The goal would be to have a high correlation to support our measure being reliable. If it was 0 then they would not be correlated and essentially each test does not have a strong relationship. If it is negative then each test is essentially showing an opposite relationship, which yields very different results each time you test with your measure. Therefore, a strong positive correlation supports a high relationship between each test with our measure and our measure likely has high reliability.
+
+
+## Looking Forward
+
+-Now that we have discussed some of the basic and essential underlying concepts in research we will begin to discuss the different methods for research design.
+
+-We will discuss the intricate details of each method to learn how to develop our specific methods for the research and evaluation.
+
+-We have many different types of research methods and will discuss the pros and cons of each type, and relate those pros and cons to the purpose of the research.
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,144 @@
+---
+title: "Unit 6"
+output: ioslides_presentation
+---
+
+
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = FALSE)
+
+```
+
+
+
+
+
+## Unit 6
+
+Introduction To Using Surveys For Program Evaluation
+
+
+## Overview Of Surveys In Program Evaluation
+
+In the previous two units we discussed how to observer organization for research and evaluation. The advantage to observation is that in many cases the organizations would be observed in a manner that was natural. Toward the end we discussed how researchers may want to reveal the research to the people being evaluated. We saw advantages and disadvantages. However, we moved toward actually asking people about the functioning, interactions, and behaviors in organizations, in addition to interpretations and meaning. We now will move further toward researching by directly interacting and inquiring about the organization.
+
+
+## How Surveys Can Be Used In Organizations
+
+Surveys can be another useful tool in research design and evaluation. Sometimes when a researcher must know something about the people and the organization a great way to find out is to simply ask questions. Often this will yield information that is difficult to know when simply observing.
+
+
+## How Surveys Can Be Used In Organization
+
+A researcher can be very direct when collecting data with surveys. This can provide a precise level of data that is very useful in evaluation. There is still some level of interpretation, but because the information comes directly from people in the organization there is a deeper level of the information and data obtained from a survey.
+
+
+## Developing A Reliable And Valid Survey
+
+We have been discussing the need for systematic and replicable methods in observational studies. The same is also very true and very important for survey design. It is easy to overlook certain aspects in developing a survey and individual questions, but much attention to detail and consideration must be taken for a survey to yield high quality and valid data.
+
+
+## Developing A Reliable And Valid Survey
+
+Several important steps must be taken before beginning any development in all research methods. The following are important determinations that must be made. What is the research question? Is there and if so what is the hypothesis? What is the goal of the research? Who are the people that are being surveyed? Are there any characteristics of the people being surveyed that may be important to understand? How does the survey planned to be analyzed?
+
+These are questions that are integral to developing a quality survey.
+
+
+## Initial Steps Before Developing A Reliable And Valid Survey
+
+It is always a good idea to start with the research question. Until a researcher know the question that is being investigated it is difficult to have a direction and plan for developing the research. In program evaluation a typical question may simply be did the program achieve the anticipated outcome? However, the evaluation may also be concerned with what the processes are in the organization once the program was implemented. There could also be many other research questions, such as how was individual performance affected, what was the response of the participants to the program, or how do the participants in the organization feel about the future of the program or the organization as a whole. There may be many other research questions that are dependent on the program and the organization.
+
+
+
+## Initial Steps Before Developing A Reliable And Valid Survey
+
+The next important step is to determine if there is a hypothesis. In program evaluation it is usually related to successful outcomes of the program. However, it is also possible that the evaluation could be conducted before the outcomes are known and can be measured. This could lead to an exploratory survey that will determine the responses and status of the organization before the program has reached a point to show exact outcomes. An exploratory study may not have a specific hypothesis, but rather is exploring the state of the people, processes, and the organization.
+
+
+## Initial Steps Before Developing A Reliable And Valid Survey
+
+If there is a hypothesis than this will be important in developing a survey. Recall that a hypothesis is an anticipated result of a research project based on the variables and factors being studied. Hypotheses are typically not in a vacuum, but rather are developed over time based on prior studies and knowledge of how variables are related from a long history of research. Often specific hypotheses are being tested for the first time based on the prior research. In program evaluation the hypothesis may have been tested prior, but now the same or similar program is being implemented and therefore the anticipated results and hypotheses are not necessarily unique to a specific program evaluation study.
+
+
+## Initial Steps Before Developing A Reliable And Valid Survey
+
+If there is a hypothesis this will lead to specific data that must be obtained from the survey questions. If the appropriate data is not obtained through the survey questions, it will be impossible to investigate the hypothesis. Without the appropriate or quality data the analysis cannot be successful. Therefore, the researcher must keep the hypothesis in mind when developing the survey in order to have reliable and valid data to investigate the hypothesis. There is a caution here. Sometimes a researcher will develop a survey that is meant to confirm rather than investigate the hypothesis or the outcome of a program. This not only violates ethics, but also will yield results in which the organization cannot be confident. All good research searches for alternative explanations, factors that may disprove the hypothesis in addition to believing the hypothesis and outcomes will be supported by the data. 
+
+
+## Initial Steps Before Developing A Reliable And Valid Survey
+
+A related step is to determine the goal of the research and evaluation. Perhaps the goal is exploratory and not meant to investigate the hypothesis, which can affect the types of questions on the survey. Perhaps, as in the suggested reading by Mook, the goal is not to show what is happening, but rather that something simply can happen under certain conditions. This can be very informative for future programs that will be implemented. 
+
+
+## Initial Steps Before Developing A Reliable And Valid Survey
+
+It is also very important to understand who is being researched and what particular characteristics both they and the organization possess. Without knowing who will complete the survey it can be difficult to develop the survey questions. A part of this are the characteristics. For example, does everyone speak the same language? Are there differences in educational levels and experience? Finally, what is the culture of the organization? All of these factors are important in order to collect quality data. If these factor are ignored it is possible that people may interpret questions in different ways.
+
+
+## Initial Steps Before Developing A Reliable And Valid Survey
+
+Finally, as we discussed in the last unit it is essential to have an analysis plan. As we will see there are many types of questions and responses that require different analysis techniques. This will continue to be a theme throughout this course for every research and evaluation method that is explored.
+
+
+## Developing High Quality Survey Questions
+
+Now that we have some important first steps covered we can begin to cover how to actually create a survey. When creating the survey it is important to remember that people will be answering the survey questions. Therefore, it is important to understand how to be sure that the questions are interpreted the correct way and also limitations that people have.
+
+
+## Developing High Quality Survey Questions
+
+We have covered interpretation to some extent already. An important goal of survey design is that everyone interprets the questions in the same way. In everyday life we ask questions and we are often misinterpreted. To obtain reliable data it is important that the questions are easily interpretable. It is important to contemplate carefully about any other possible interpretations of each single question. If you recall construct validity, it is important that we are measuring what we intend do measure as researchers. We must spend much time eliminating alternative interpretations. This is never perfect, because human beings always can interpret things in different ways. If we can minimize this we will have better questions and data.
+
+
+## Developing High Quality Survey Questions
+
+Another concern is that people have limitations to their cognitive capacity, attention spans, and interest in the survey. This is why it is always good to have simple questions that are not too complex if possible. If a person must spend time thinking about what the question is asking that person is not thinking about the true honest answer. This can cause fatigue while attempting to answer the question and may lead to lower quality answers and data.
+
+## Developing High Quality Survey Questions
+
+Because of the limitations with people it is also important not to ask too many questions or questions that are not necessary for the research and evaluation. This can also cause fatigue and often leads to people automatically answering the questions without effortfully thinking about their answers. However, we will see that sometimes we must violate this principle in order to have a reliable and valid survey.
+
+
+## Developing High Quality Survey Questions
+
+The next point basically comes from the point of knowing to whom you are asking the questions and their characteristics. If there are certain characteristics of the people or the organizational culture it can cause not only misinterpretation, but also difficulties understanding certain types of questions that are good for some people and organizations, but not necessarily all.
+
+## Developing High Quality Survey Questions
+
+Therefore, always keep the questions simple, clear and to the point. This is also related to limitations in all people, but people and organizations do vary and it is important to create questions that are simple and easily understandable for the particular participants and organization. However, this applies to all participants. Simple, clear and to the point will keep the data reliable. If at all possible the questions should be as simple as the researcher can make them. This does not mean that this is done at the expense of the purpose and meaning of the question, but much care and time should be taken to keep the questions simple.
+
+
+## Developing High Quality Survey Questions
+
+Another important concept that applies to all survey questions is to be sure the question asks about only one thing at a time. Many researchers fall into the trap of asking about more than one thing in a question. The issue is that a person may not be able to respond to two things in the same way. 
+
+
+
+
+
+## Developing High Quality Survey Questions
+
+Finally, it is always important not to bias the data in anyway. We previously discussed that it is important to not conduct research in a manner that will ultimately bias the results and confirm a hypotheses because the question can only support the hypothesis. If it does not attempt to look for alternative explanations or even try to disprove the hypothesis then the researcher is designing the survey that is likely to lead to only one outcome: supporting the hypothesis.
+
+
+## Developing High Quality Survey Questions
+
+In survey questions there is something called a leading question. This is where the question contains information or is worded in a way that biases the respondent to be more likely to answer in a particular way. When this occurs the question leads to answer in ways that may not be entirely the truth because there would be conflict between the information in the question and the natural and truthful answer. The underlying concept is that questions should always be created in an objective manner.
+
+
+## Overview Of General principles In Survey Design
+
+We have covered some very important principles that should always be considered when developing surveys. As we have seen there are many things to consider before question have actually been created. This is also an underlying theme: much preparatory work is needed before creating the first question.
+
+
+## Looking Forward
+
+- We will continue to discuss how to best design a survey.
+
+- We will discuss important procedures that should be used when developing specific questions.
+
+- We will expand upon these procedures and principles and apply them to using interviews for program evaluation.
+

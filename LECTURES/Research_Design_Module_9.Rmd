@@ -1,0 +1,98 @@
+---
+title: "Unit 9"
+output: ioslides_presentation
+---
+
+
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = FALSE)
+
+```
+
+
+
+
+
+## Unit 9
+
+Introduction To Experimental Methods
+
+
+## Experimental Methods Vs. Non-Experimental Methods
+
+In the last few units we covered various non-experimental methods. These methods involved either observing behaviors, interactions, and the functioning of organizations or directly asking people questions in organizations. These can be very useful tools in evaluation. 
+
+
+## Experimental Methods Vs. Non-Experimental Methods
+
+Non-experimental methods have some limitations as we discussed previously. A key limitation is that there are many variables and factors that are unobservable and difficult to measure. When you can observe the variables there is often an interpretation that is needed. One other limitation that is not as much of a problem in experimental methods, is the amount of control that the researcher has over the research and evaluation in non-experimental methods.
+
+
+## What Makes An Experiment?
+
+What makes an experiment a true experiment. There are several things that are important. There is one very important aspect that is necessary for a research study or evaluation to be an experiment. In an experiment the researcher manipulates the independent variable. By manipulation it means that the researcher assigns the condition of the independent variable in which each person or participant will be or experience in the experiment.
+
+
+## What Makes An Experiment?
+
+Let us again return to the example of pay raise and productivity. We discussed how we could simply obtain the pay and any amount of raise for each member of the organization. In this case the researcher is simply using pay data that exists with no influence by the researcher. In and experiment the researcher would manipulate or assign the pay raise or no pay raise to each person. This is one way that the researcher has more control in an experiment than in non-experimental methods.
+
+
+## What Makes An Experiment?
+
+Related to the assignment or manipulation of the independent variable is the experimental or treatment group. If a researcher is interested in the affect of things, such as pay raise, class size, increased taxes, etc. then the people that experience changes in these or a specific level of these would be in the experimental/treatment group. These are specific levels of the independent variable that are assigned to each person by the researcher. The researcher may assign half of the people to receive a pay raise, or smaller class sizes, or higher taxes. These are experimental groups. One ethical caution is that it may not be ethical to experiment by changing class sizes or increasing taxes due to the potential harm that people could experience.
+
+
+## What Makes An Experiment?
+
+Another important aspect of a good experiment is that it has a control. Control is a word that you will hear used in slightly different ways in research design and statistics/regression. For example we just discussed that in an experiment the researcher has more control. This means that there are not as many unobservable variables or aspects of the study that are outside of the control of the researcher. In the case of an experiment it has a very specific meaning. It is a group that does not experience the treatment and are not in the experimental group. Basically, the control group does not experience any change. These would be people that did not receive a pay raise or did not experience a program in an organization.
+
+
+## What Makes An Experiment?
+
+What is the purpose of a control group and why is it important? We may wonder why not simply use an experimental or treatment group. For example, we may only be interested investigating if pay raises increase productivity. A researcher increases pay and observe an increase in productivity. It seems that it does have the desired effect. If you recall when discussing pay raise in earlier units, there could have been some other alternative explanation. Therefore, we could not be 100% confident that pay raise was the cause. It may have been motivation, it may have been employee morale, it may have been, changes in management, or it could be one of many possible factors that resulted in increased productivity.
+
+
+## What Makes An Experiment?
+
+The control group is one way that helps to show that the experimental treatment had an an actual effect in the outcome of a program. The control group allows for a comparison of the experimental group that actually experienced the treatment with the control group that did not. One other thing to note is that because there are many reasons that you could see an effect from the treatment, such as increased productivity when pay increases. It is possible for many reasons that productivity increased. By comparing the productivity levels of the experimental/treatment group with the control group you can see if there was actually a difference.
+
+## What Makes An Experiment?
+
+There are several possibilities if people with a pay raise became more productive. First, the experimental/treatment group that received the pay raise had increased productivity and the control group did not. This would indicate an effect and pay is related to productivity. Second, it is possible that the experimental/treatment group became more productive, but the control group had the same amount of increase in productivity. This would indicate that potentially something other than pay caused the productivity increase. Finally, it is possible that the experimental/treatment group increased productivity, but the control group also increased. However, the experimental/treatment group increase at a higher rate. This would indicate that pay had an effect, but there may also be other factors. This is a topic we will discuss in details called counterfacutals. 
+
+
+## What Makes An Experiment?
+
+So far we have discussed some key factors that every experiment should have. The researcher manipulates the independent variable, which determines which participants will receive the level of the independent variable. Next, we discussed the control group and how it is needed to have confidence that the treatment or program accounts for the change in the dependent variable or the outcome. However, there is one important factor that is needed to have confidence in being able to infer causality between the independent variable/input and the dependent variable/outcome.
+
+
+## What Makes An Experiment?
+
+Recall that if a researcher simply assigned a pay raise to the first half of people that showed up to the organization one day and did not for the second people that arrived there could be other factors involved. We also discussed that perhaps people that get to work first have more motivation, which could account for the productivity. Let us assume that the motivation difference is true. The underlying problem here is that the two groups were different on other factors. What this means is if we are looking at only the independent variable of pay everything else should be the same between groups. When they are not the same, it means that the treatment group with higher pay also has higher motivation and the control group has lower pay and also lower motivation. If they are different on two variables at the same time there is no way to tell which factor or variable accounts for the productivity change.
+
+
+## What Makes An Experiment?
+
+There is one very simple solution that is very common in research. This is the method of randomly assigning participants in the research or evaluation to one of the two groups: the control group or the experimental group. How would this work? In an experiment the goal is to have only one thing that is different between the two groups and that is the level of the independent variable or treatment/program. If everything else is the same and there is an effect in the outcome then the only thing that can account for this is the treatment or program. This is because everyone is exactly the same except for the treatment.
+
+
+## What Makes An Experiment?
+
+Randomization is a great method to create equal groups. However, it is important to note that the groups are equal on average. There is not a significant difference between the groups and therefore they are statistically the same. Once this is achieved the researcher can infer that there was a causal relationship between the program (pay raise) and the outcome (productivity). There are two points of caution. It is possible that the randomization failed for some reason. You could flip a coin 100 times and get 90 heads. That is not what is expected, but could happen. This is the reason that you want to record any other important variables and compare the two groups to be sure that there is no statistical difference. The other reason is that there may be omitted variables that were not measured. As we discussed in the previous course omitted variables can change the results. Randomization may not be perfect, but if done correctly will let the researcher be confident in the results.
+
+
+## Overview Of Experiments
+
+We have covered the general principles and components of simple experiments. These principles and components are very important for all experiments. Sometimes there are limitations with some of these, but there are methods to mitigate some of the effects of the limitations. The key components are the manipulation of the independent variable by the researcher, the control group, and the random assignment of the independent variable.
+
+
+## Looking Forward
+
+- We will begin to discuss the specific details of different types of experiments.
+
+- We will discuss the advantages and disadvantages of different types of experiments.
+
+- We will discuss the details of how to properly conduct an experiment.

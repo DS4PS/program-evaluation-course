@@ -9,10 +9,13 @@ In unit 1 we introduced the general purpose of statistics and quantitative metho
 
 In unit 2 we will provide a more formal definition of how statistics is used and what it can tell us about a program
 
+<<<<<<< HEAD
 ```{r knitr-logo, out.width='32.8%', fig.cap='Three knitr logos included in the document from an external PNG image file.'}
 knitr::include_graphics('figures/Positive_Relationship_Plot_Corr.png')
 ```
 
+=======
+>>>>>>> 5d68bb14f564c362a7e0a687aaf0f0e6a427b81f
 
 ### Reminder from Unit 1: Advantages of Statistical Evaluation 
 

@@ -455,6 +455,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="one-slope---one-intercept-model" class="section level2">
 <h2><span class="header-section-number">19.1</span> One Slope - One Intercept Model</h2>
 <p>Let’s start with a basic model and build up to a more complicated model. We can first test whether the fertilizer has any impact on corn growth, ignoring the different types of hybrids for now:</p>
+<<<<<<< HEAD
 <div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" data-line-number="1"></a>
 <a class="sourceLine" id="cb9-2" data-line-number="2"></a>
 <a class="sourceLine" id="cb9-3" data-line-number="3"><span class="kw">plot</span>( fertilizer, height, <span class="dt">col=</span><span class="kw">gray</span>(<span class="fl">0.5</span>,<span class="fl">0.5</span>), <span class="dt">bty=</span><span class="st">&quot;n&quot;</span>, <span class="dt">cex=</span><span class="dv">2</span>, <span class="dt">pch=</span><span class="dv">19</span>,</a>
@@ -471,6 +472,24 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <a class="sourceLine" id="cb10-5" data-line-number="5"></a>
 <a class="sourceLine" id="cb10-6" data-line-number="6"><span class="kw">stargazer</span>( m<span class="fl">.00</span>, <span class="dt">type=</span><span class="st">&quot;html&quot;</span>, </a>
 <a class="sourceLine" id="cb10-7" data-line-number="7">           <span class="dt">digits=</span><span class="dv">2</span>, <span class="dt">omit.stat =</span> <span class="kw">c</span>(<span class="st">&quot;ser&quot;</span>) )</a></code></pre></div>
+=======
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" data-line-number="1"></a>
+<a class="sourceLine" id="cb8-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb8-3" data-line-number="3"><span class="kw">plot</span>( fertilizer, height, <span class="dt">col=</span><span class="kw">gray</span>(<span class="fl">0.5</span>,<span class="fl">0.5</span>), <span class="dt">bty=</span><span class="st">&quot;n&quot;</span>, <span class="dt">cex=</span><span class="dv">2</span>, <span class="dt">pch=</span><span class="dv">19</span>,</a>
+<a class="sourceLine" id="cb8-4" data-line-number="4">      <span class="dt">xlab=</span><span class="st">&quot;Fertilizer Intensity&quot;</span>, <span class="dt">ylab=</span><span class="st">&quot;Height of Corn&quot;</span>, </a>
+<a class="sourceLine" id="cb8-5" data-line-number="5">      <span class="dt">main=</span><span class="st">&quot;Effect of Fertilizer on Corn Growth: Three Hybrid Types&quot;</span>)</a>
+<a class="sourceLine" id="cb8-6" data-line-number="6"></a>
+<a class="sourceLine" id="cb8-7" data-line-number="7"><span class="kw">abline</span>( <span class="kw">lm</span>( height <span class="op">~</span><span class="st"> </span>fertilizer ), <span class="dt">col=</span><span class="st">&quot;darkred&quot;</span>, <span class="dt">lwd=</span><span class="dv">2</span> )</a></code></pre></div>
+<p><img src="Foundations_of_Program_Evaluation_files/figure-html/unnamed-chunk-38-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<p>We can see that we have a positive slope, which is statistically significant. So our fertilize does seem to have a positive effect on the corn.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" data-line-number="1"></a>
+<a class="sourceLine" id="cb9-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb9-3" data-line-number="3">m<span class="fl">.00</span> &lt;-<span class="st"> </span><span class="kw">lm</span>( height <span class="op">~</span><span class="st"> </span>fertilizer )</a>
+<a class="sourceLine" id="cb9-4" data-line-number="4"></a>
+<a class="sourceLine" id="cb9-5" data-line-number="5"></a>
+<a class="sourceLine" id="cb9-6" data-line-number="6"><span class="kw">stargazer</span>( m<span class="fl">.00</span>, <span class="dt">type=</span><span class="st">&quot;html&quot;</span>, </a>
+<a class="sourceLine" id="cb9-7" data-line-number="7">           <span class="dt">digits=</span><span class="dv">2</span>, <span class="dt">omit.stat =</span> <span class="kw">c</span>(<span class="st">&quot;ser&quot;</span>) )</a></code></pre></div>
+>>>>>>> 5d68bb14f564c362a7e0a687aaf0f0e6a427b81f
 <table style="text-align:center">
 <tr>
 <td colspan="2" style="border-bottom: 1px solid black">
@@ -595,6 +614,7 @@ F Statistic
 <div id="three-types-of-hybrids" class="section level2">
 <h2><span class="header-section-number">19.2</span> Three Types of Hybrids</h2>
 <p>Let’s now consider the strength of each type of hybrid.</p>
+<<<<<<< HEAD
 <div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb11-1" data-line-number="1"></a>
 <a class="sourceLine" id="cb11-2" data-line-number="2"></a>
 <a class="sourceLine" id="cb11-3" data-line-number="3"><span class="kw">palette</span>( <span class="kw">c</span>( <span class="kw">adjustcolor</span>( <span class="st">&quot;forestgreen&quot;</span>, <span class="dt">alpha.f=</span><span class="fl">0.5</span>), </a>
@@ -604,18 +624,38 @@ F Statistic
 <a class="sourceLine" id="cb11-7" data-line-number="7"><span class="kw">plot</span>( fertilizer, height, <span class="dt">col=</span><span class="kw">factor</span>(type), <span class="dt">pch=</span><span class="dv">19</span>, <span class="dt">bty=</span><span class="st">&quot;n&quot;</span>, <span class="dt">cex=</span><span class="dv">2</span>,</a>
 <a class="sourceLine" id="cb11-8" data-line-number="8">      <span class="dt">xlab=</span><span class="st">&quot;Fertilizer Intensity&quot;</span>, <span class="dt">ylab=</span><span class="st">&quot;Height of Corn&quot;</span>, </a>
 <a class="sourceLine" id="cb11-9" data-line-number="9">      <span class="dt">main=</span><span class="st">&quot;Effect of Fertilizer on Corn Growth: Three Hybrid Types&quot;</span>)</a></code></pre></div>
+=======
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" data-line-number="1"></a>
+<a class="sourceLine" id="cb10-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb10-3" data-line-number="3"><span class="kw">palette</span>( <span class="kw">c</span>( <span class="kw">adjustcolor</span>( <span class="st">&quot;forestgreen&quot;</span>, <span class="dt">alpha.f=</span><span class="fl">0.5</span>), </a>
+<a class="sourceLine" id="cb10-4" data-line-number="4">            <span class="kw">adjustcolor</span>( <span class="st">&quot;darkorange3&quot;</span>, <span class="dt">alpha.f=</span><span class="fl">0.5</span>),</a>
+<a class="sourceLine" id="cb10-5" data-line-number="5">            <span class="kw">adjustcolor</span>( <span class="st">&quot;darkmagenta&quot;</span>, <span class="dt">alpha.f=</span><span class="fl">0.5</span>) ) )</a>
+<a class="sourceLine" id="cb10-6" data-line-number="6">            </a>
+<a class="sourceLine" id="cb10-7" data-line-number="7"><span class="kw">plot</span>( fertilizer, height, <span class="dt">col=</span><span class="kw">factor</span>(type), <span class="dt">pch=</span><span class="dv">19</span>, <span class="dt">bty=</span><span class="st">&quot;n&quot;</span>, <span class="dt">cex=</span><span class="dv">2</span>,</a>
+<a class="sourceLine" id="cb10-8" data-line-number="8">      <span class="dt">xlab=</span><span class="st">&quot;Fertilizer Intensity&quot;</span>, <span class="dt">ylab=</span><span class="st">&quot;Height of Corn&quot;</span>, </a>
+<a class="sourceLine" id="cb10-9" data-line-number="9">      <span class="dt">main=</span><span class="st">&quot;Effect of Fertilizer on Corn Growth: Three Hybrid Types&quot;</span>)</a></code></pre></div>
+>>>>>>> 5d68bb14f564c362a7e0a687aaf0f0e6a427b81f
 <p><img src="Foundations_of_Program_Evaluation_files/figure-html/unnamed-chunk-40-1.png" width="70%" style="display: block; margin: auto;" /></p>
 </div>
 <div id="one-slope---three-intercepts" class="section level2">
 <h2><span class="header-section-number">19.3</span> One Slope - Three Intercepts</h2>
 <p>Let’s extend our original model slightly by still examinig the impact of fertilizer on corn height, but let’s allow each variety to have its own intercept term. We can do this by adding a dummy variable for each hybrid type.</p>
 <p><img src="Foundations_of_Program_Evaluation_files/figure-html/unnamed-chunk-41-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<<<<<<< HEAD
 <div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" data-line-number="1"></a>
 <a class="sourceLine" id="cb12-2" data-line-number="2"></a>
 <a class="sourceLine" id="cb12-3" data-line-number="3"><span class="kw">stargazer</span>( m<span class="fl">.01</span>, m<span class="fl">.02</span>, m<span class="fl">.03</span>, m<span class="fl">.04</span>, <span class="dt">type=</span><span class="st">&quot;html&quot;</span>, </a>
 <a class="sourceLine" id="cb12-4" data-line-number="4">           <span class="dt">digits=</span><span class="dv">2</span>, </a>
 <a class="sourceLine" id="cb12-5" data-line-number="5">          <span class="dt">omit.stat=</span><span class="kw">c</span>(<span class="st">&quot;f&quot;</span>,<span class="st">&quot;adj.rsq&quot;</span>,<span class="st">&quot;ser&quot;</span>),</a>
 <a class="sourceLine" id="cb12-6" data-line-number="6">           <span class="dt">intercept.bottom =</span> <span class="ot">FALSE</span> ) </a></code></pre></div>
+=======
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb11-1" data-line-number="1"></a>
+<a class="sourceLine" id="cb11-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb11-3" data-line-number="3"><span class="kw">stargazer</span>( m<span class="fl">.01</span>, m<span class="fl">.02</span>, m<span class="fl">.03</span>, m<span class="fl">.04</span>, <span class="dt">type=</span><span class="st">&quot;html&quot;</span>, </a>
+<a class="sourceLine" id="cb11-4" data-line-number="4">           <span class="dt">digits=</span><span class="dv">2</span>, </a>
+<a class="sourceLine" id="cb11-5" data-line-number="5">          <span class="dt">omit.stat=</span><span class="kw">c</span>(<span class="st">&quot;f&quot;</span>,<span class="st">&quot;adj.rsq&quot;</span>,<span class="st">&quot;ser&quot;</span>),</a>
+<a class="sourceLine" id="cb11-6" data-line-number="6">           <span class="dt">intercept.bottom =</span> <span class="ot">FALSE</span> ) </a></code></pre></div>
+>>>>>>> 5d68bb14f564c362a7e0a687aaf0f0e6a427b81f
 <table style="text-align:center">
 <tr>
 <td colspan="5" style="border-bottom: 1px solid black">
@@ -937,11 +977,19 @@ R<sup>2</sup>
 <h2><span class="header-section-number">19.4</span> Three Slopes - Three Intercepts</h2>
 <p>If we want to make our model a little more flexible we can add interaction terms. In the previous cases we interacted the post-treatment period with the treatment category to identify program impacts. In this case we can interact the level of treatment with the corn type in order to determine the unique reponse of each hybrid to the fertilizer.</p>
 <p><img src="Foundations_of_Program_Evaluation_files/figure-html/unnamed-chunk-43-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<<<<<<< HEAD
 <div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb13-1" data-line-number="1"></a>
 <a class="sourceLine" id="cb13-2" data-line-number="2"><span class="kw">stargazer</span>( m<span class="fl">.04</span>, m<span class="fl">.05</span>, m<span class="fl">.06</span>, m<span class="fl">.07</span>, <span class="dt">type=</span><span class="st">&quot;html&quot;</span>, </a>
 <a class="sourceLine" id="cb13-3" data-line-number="3">           <span class="dt">digits=</span><span class="dv">2</span>, </a>
 <a class="sourceLine" id="cb13-4" data-line-number="4">           <span class="dt">omit.stat=</span><span class="kw">c</span>(<span class="st">&quot;f&quot;</span>,<span class="st">&quot;adj.rsq&quot;</span>,<span class="st">&quot;ser&quot;</span>),</a>
 <a class="sourceLine" id="cb13-5" data-line-number="5">           <span class="dt">intercept.bottom =</span> <span class="ot">FALSE</span> )        </a></code></pre></div>
+=======
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" data-line-number="1"></a>
+<a class="sourceLine" id="cb12-2" data-line-number="2"><span class="kw">stargazer</span>( m<span class="fl">.04</span>, m<span class="fl">.05</span>, m<span class="fl">.06</span>, m<span class="fl">.07</span>, <span class="dt">type=</span><span class="st">&quot;html&quot;</span>, </a>
+<a class="sourceLine" id="cb12-3" data-line-number="3">           <span class="dt">digits=</span><span class="dv">2</span>, </a>
+<a class="sourceLine" id="cb12-4" data-line-number="4">           <span class="dt">omit.stat=</span><span class="kw">c</span>(<span class="st">&quot;f&quot;</span>,<span class="st">&quot;adj.rsq&quot;</span>,<span class="st">&quot;ser&quot;</span>),</a>
+<a class="sourceLine" id="cb12-5" data-line-number="5">           <span class="dt">intercept.bottom =</span> <span class="ot">FALSE</span> )        </a></code></pre></div>
+>>>>>>> 5d68bb14f564c362a7e0a687aaf0f0e6a427b81f
 <table style="text-align:center">
 <tr>
 <td colspan="5" style="border-bottom: 1px solid black">

@@ -1,0 +1,136 @@
+---
+title: "Unit 4"
+output: ioslides_presentation
+---
+
+
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = FALSE)
+
+```
+
+
+
+
+
+## Unit 4
+
+Non-Experimental Methods For Program Evaluation And Research
+
+
+## Overview of Non-Experimental Methods
+
+When evaluating and researching programs non-experimental methods are often used. As we discussed briefly in the last unit non-experimental methods are the only method that may be able to be used. This can be due to several reasons, such as ethical considerations, the data that is being used is not original data that is collected as part of the research, or the impact of the evaluation process may be intrusive and have negative impacts on the organization. Therefore, researchers are often limited to certain methods. One thing to note is that non-experimental methods are different than experiments because experiments involve the researcher directly manipulating the independent variable and usually involves random assignment of the participants to a particular level or value of the independent variable. We will cover experiments in the future.
+
+
+## Observational Methods
+
+In general and simple terms, observational methods involve what the name implies. It involves factors such as the researcher observing behavior, organizational processes, characteristics of the organization, and characteristics of the people in the organization.
+
+
+## Observational Methods
+
+
+Below are some general characteristics of observational methods.
+
+-Observing behavior in the field. The field typically means the real world.
+
+-Can be qualitative or quantitative.
+
+-Qualitative simply describes the behavior and the researcher interprets the description.
+
+-Quantitative assigns numerical values to types of behavior and variables. Statistical analysis is used.
+
+
+## Important Aspects Of Observational methods
+
+The evaluation and research usually occurs in the real world or the field, as opposed to direct questioning of people in the organization or in a laboratory study. Because of this it usually simply observing and recording natural behavior without manipulation or control of the independent variable. 
+
+
+## Important Aspects Of Observational methods
+
+Because the researcher is observing behavior usually there are no limitations or restriction on how the organization functions or on the people being observed and how they behave. Because of this the natural functioning of the organization and behaviors are observed, and can provide much important information and data. This also allows to observation of natural processes of the organization and behaviors.
+
+
+## The Importance Of Using A systematic And Replicable Method
+
+Previously we discussed reliability. One of the aspects of reliability was that if you conducted the study several times you would get similar results. Using methods that are systematic and replicable is important, especially when collecting and coding the data. Coding data is important in observational studies because usually the researcher is simply observing behavior, rather than actually getting responses or data directly from the participants. In these types of studies the researcher must observe behavior and code it in a way that can be used for analysis. For example, if the researcher is observing the interactions of people the researcher must be able to determine exactly what type of interaction occurs and other things, such why and what is the meaning of the interaction.
+
+
+## The Importance Of Using A systematic And Replicable Method
+
+Therefore, the coding must be systematic. It should not simply be what the researcher's opinion is, but rather be scientific and objective. This can be difficult in observational studies because the researcher is often limited with how much specific and personal data that can be collected. For example, if you wanted to know what a person was thinking, often in an observational study this does not involve interactions with the participants or even asking the participants what they were thinking. Therefore, the researcher must interpret the interactions in an unbiased way and an objective way.
+
+
+## The Importance Of Using A systematic And Replicable Method
+
+Being replicable usually refers to the fact that you create the system of coding in such a manning that other people will be able to use the same system and get very similar results, if not exactly the same results. This helps to remove any bias and ensure objectivity. We will discuss coding further.
+
+
+## Types Of Observational Methods
+
+Often in program evaluation, we are interested in learning about the processes and how an organization functions. Because of this the researcher may use what is referred to as a field study where natural functioning of an organization and people are simply observed to collect data. 
+
+
+## Ways To Use Observational Studies In Practice: Collecting Data
+
+Because observational study often only use observing the organization there are many important things to consider. As we have just discussed it is important to develop the coding system. Before the data can be coded the data must be observed and recorded. It is very important to develop a detailed and specific plan to observe and record the data. A researcher must have a system that that is practical and manageable. This is very similar to having operational variables that we discussed previously. 
+
+
+## Ways To Use Observational Studies In Practice: Collecting Data
+
+This system should be prepared and practiced before the data is actually collected. The researcher should not simply go and begin to observe people without proper preparation. One aspect of all research is that a good research or evaluation takes much time before the research begins. Sometimes this is years.
+
+
+## Qualitative Versus Quantitative Observational Studies
+
+In general there are two types of using observational studies. The two types are qualitative and quantitative. Basically, if you conduct a qualitative study there is very rarely an actual statistical or econometric analysis. One very common method is a detailed description of everything has occurred, including behaviors and interactions of people in the organization, interpretations of characteristics, such as intentions or bodily expressions, and how the organization functions. In some cases this may involve what is called ethnography. However, that is not the focus of this course. Ethnography may include reports of how often or the number of occurrences of any thing that happens that is of interest.
+
+
+## Qualitative Versus Quantitative Observational Studies
+
+One important aspect with qualitative data is that the data must often be interpreted by the researcher. This is because the researcher is not directly collecting data, but recording the actual things that are occurring at the organization. While there should be a systematic method to increase objectivity and decrease bias, this often provides the possibility for researchers to be less objective and potentially introduce error. Anytime that someone must interpret data it must be processed by the mind and interpretations can often vary dependent on many factors, including who is doing the interpreting, environmental factors and the setting in which the observation is conducted. There are many ways that these factors can create different interpretation, which may lead to bias and error.
+
+
+## Qualitative Versus Quantitative Observational Studies
+
+One other type of qualitative study is a case study. Often this involves only one person or possibly several. Case studies can be very detailed, but lack the ability to make many observations with a sufficiently large sample. This can cause problems with external validity and generalization because the data do not come from a larger diverse group of people.
+
+
+## Qualitative Versus Quantitative Observational Studies
+
+Quantitative analysis involves using numerical values as the data and can use statistical methods. Often it is possible to quantify behaviors and processes that are simply observed. One common way is to code the frequency of something observed. For example, a researcher could observe how many times a negation in an organization is successful versus the number of times it is not. This frequency can then be statistically analyzed. 
+
+
+## Qualitative Versus Quantitative Observational Studies
+
+It is often possible to create categories of a variable, such as positive interactions, negative interactions, or neutral interactions. This can be used in a regression as dummy variables or similarly in an ANOVA/analysis of variance. Demographics can also be coded into categorical variables. 
+
+
+## Overview Of Observational Methods
+
+We have introduced specific details and considerations when conducting observational studies. Observational studies can be very useful in evaluating organizations. We also over viewed the importance of using systematic and replicable systems. This will help to be sure that our evaluation is objective and scientific in nature, which increases the confidence we can have in the results and outcome of the program.
+
+
+## Overview Of Observational Methods
+
+We discussed the ways to collect quality data by observation. As can be seen, the overall goal is collecting quality data that will yield meaningful results. Finally, we discussed how the data could be analyzed either qualitatively or quantitatively.
+
+
+## Looking Foward
+
+- We will continue to discuss observational methods and several pros and cons.
+
+- When considering the pros and cons we will discuss potential improvements.
+
+- We will continue with how to develop and use surveys to collect data for evaluation.
+
+
+
+
+
+
+
+
