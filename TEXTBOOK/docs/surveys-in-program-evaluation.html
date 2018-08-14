@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Program Evaluation: Methods and Design</title>
+  <meta name="description" content="This text serves as reference material for a course sequence in applied regression analysis and research design offered at an advanced undergraduate or master’s level for students in applied social science.">
+  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Program Evaluation: Methods and Design" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This text serves as reference material for a course sequence in applied regression analysis and research design offered at an advanced undergraduate or master’s level for students in applied social science." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Program Evaluation: Methods and Design" />
+  
+  <meta name="twitter:description" content="This text serves as reference material for a course sequence in applied regression analysis and research design offered at an advanced undergraduate or master’s level for students in applied social science." />
+  
+
+<meta name="author" content="Joshua Manning, Jesse Lecy">
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="non-experimental-methods-for-program-evaluation-and-research.html">
+<link rel="next" href="interviewing-methods.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="custom.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="https://ds4ps.github.io/course_website/">Data Science I</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome</a></li>
+<li class="part"><span><b>I REGRESSION</b></span></li>
+<li class="chapter" data-level="1" data-path="r-markdown.html"><a href="r-markdown.html"><i class="fa fa-check"></i><b>1</b> R Markdown</a><ul>
+<li class="chapter" data-level="1.1" data-path="r-markdown.html"><a href="r-markdown.html#including-plots"><i class="fa fa-check"></i><b>1.1</b> Including Plots</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="program-impact.html"><a href="program-impact.html"><i class="fa fa-check"></i><b>2</b> Program Impact</a><ul>
+<li class="chapter" data-level="2.0.1" data-path="program-impact.html"><a href="program-impact.html#why-do-we-use-statistical-models-for-program-evaluation"><i class="fa fa-check"></i><b>2.0.1</b> Why do we use statistical models for program evaluation?</a></li>
+<li class="chapter" data-level="2.0.2" data-path="program-impact.html"><a href="program-impact.html#reminder-from-unit-1-advantages-of-statistical-evaluation"><i class="fa fa-check"></i><b>2.0.2</b> Reminder from Unit 1: Advantages of Statistical Evaluation</a></li>
+<li class="chapter" data-level="2.1" data-path="program-impact.html"><a href="program-impact.html#the-regression-equation"><i class="fa fa-check"></i><b>2.1</b> The Regression Equation</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="program-impact.html"><a href="program-impact.html#hypothetical-example-of-interpreting-the-regression-equation"><i class="fa fa-check"></i><b>2.1.1</b> Hypothetical Example of Interpreting the Regression Equation</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="program-impact.html"><a href="program-impact.html#confidence-intervals"><i class="fa fa-check"></i><b>2.2</b> Confidence Intervals</a></li>
+<li class="chapter" data-level="2.3" data-path="program-impact.html"><a href="program-impact.html#confidence-intervals-for-hypothesis-testing"><i class="fa fa-check"></i><b>2.3</b> Confidence Intervals For Hypothesis Testing</a></li>
+<li class="chapter" data-level="2.4" data-path="program-impact.html"><a href="program-impact.html#the-standard-error"><i class="fa fa-check"></i><b>2.4</b> The Standard Error</a></li>
+<li class="chapter" data-level="2.5" data-path="program-impact.html"><a href="program-impact.html#the-variance-and-standard-deviation-of-the-mean"><i class="fa fa-check"></i><b>2.5</b> The Variance and Standard Deviation Of The Mean</a><ul>
+<li class="chapter" data-level="2.5.1" data-path="program-impact.html"><a href="program-impact.html#hand-calculation-of-the-variance"><i class="fa fa-check"></i><b>2.5.1</b> Hand Calculation Of The Variance</a></li>
+</ul></li>
+<li class="chapter" data-level="2.6" data-path="program-impact.html"><a href="program-impact.html#the-standard-error-of-the-sample-mean"><i class="fa fa-check"></i><b>2.6</b> The Standard Error Of The Sample Mean</a><ul>
+<li class="chapter" data-level="2.6.1" data-path="program-impact.html"><a href="program-impact.html#calculating-the-standard-error-of-the-mean"><i class="fa fa-check"></i><b>2.6.1</b> Calculating The Standard Error Of The Mean</a></li>
+<li class="chapter" data-level="2.6.2" data-path="program-impact.html"><a href="program-impact.html#hand-calculating-the-mean-and-standard-error-of-samples."><i class="fa fa-check"></i><b>2.6.2</b> Hand Calculating The Mean And Standard Error Of Samples.</a></li>
+<li class="chapter" data-level="2.6.3" data-path="program-impact.html"><a href="program-impact.html#calculating-the-standard-error"><i class="fa fa-check"></i><b>2.6.3</b> Calculating The Standard Error</a></li>
+<li class="chapter" data-level="2.6.4" data-path="program-impact.html"><a href="program-impact.html#recap-of-the-standard-error"><i class="fa fa-check"></i><b>2.6.4</b> Recap Of The Standard Error</a></li>
+</ul></li>
+<li class="chapter" data-level="2.7" data-path="program-impact.html"><a href="program-impact.html#summary-what-we-covered-in-this-unit"><i class="fa fa-check"></i><b>2.7</b> Summary: What we covered in this unit</a><ul>
+<li class="chapter" data-level="2.7.1" data-path="program-impact.html"><a href="program-impact.html#looking-ahead"><i class="fa fa-check"></i><b>2.7.1</b> Looking Ahead</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="confidence-intervals-1.html"><a href="confidence-intervals-1.html"><i class="fa fa-check"></i><b>3</b> Confidence Intervals</a><ul>
+<li class="chapter" data-level="3.1" data-path="confidence-intervals-1.html"><a href="confidence-intervals-1.html#how-the-size-of-the-standard-error-represents-confidence"><i class="fa fa-check"></i><b>3.1</b> How The Size Of The Standard Error Represents Confidence</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="confidence-intervals-1.html"><a href="confidence-intervals-1.html#factors-that-influence-the-size-of-the-standard-error"><i class="fa fa-check"></i><b>3.1.1</b> Factors That Influence The Size Of The Standard Error</a></li>
+<li class="chapter" data-level="3.1.2" data-path="confidence-intervals-1.html"><a href="confidence-intervals-1.html#the-standard-error-of-the-mean-equation"><i class="fa fa-check"></i><b>3.1.2</b> The Standard Error Of The Mean Equation</a></li>
+<li class="chapter" data-level="3.1.3" data-path="confidence-intervals-1.html"><a href="confidence-intervals-1.html#factors-that-influence-the-size-of-the-standard-error-in-regression"><i class="fa fa-check"></i><b>3.1.3</b> Factors That Influence The Size Of The Standard Error In Regression</a></li>
+<li class="chapter" data-level="3.1.4" data-path="confidence-intervals-1.html"><a href="confidence-intervals-1.html#the-residual-in-regression"><i class="fa fa-check"></i><b>3.1.4</b> The Residual In Regression</a></li>
+<li class="chapter" data-level="3.1.5" data-path="confidence-intervals-1.html"><a href="confidence-intervals-1.html#factors-that-influence-the-size-of-the-standard-error-in-regression-1"><i class="fa fa-check"></i><b>3.1.5</b> Factors That Influence The Size Of The Standard Error In Regression</a></li>
+<li class="chapter" data-level="3.1.6" data-path="confidence-intervals-1.html"><a href="confidence-intervals-1.html#the-variance-and-standard-deviation-of-the-regression-slope-equation"><i class="fa fa-check"></i><b>3.1.6</b> The Variance And Standard Deviation Of The Regression Slope Equation</a></li>
+<li class="chapter" data-level="3.1.7" data-path="confidence-intervals-1.html"><a href="confidence-intervals-1.html#the-standard-error-of-the-regression-slope-equation"><i class="fa fa-check"></i><b>3.1.7</b> The Standard Error Of The Regression Slope Equation</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="confidence-intervals-1.html"><a href="confidence-intervals-1.html#standard-errors-and-confidence-intervals"><i class="fa fa-check"></i><b>3.2</b> Standard Errors And Confidence Intervals</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="confidence-intervals-1.html"><a href="confidence-intervals-1.html#calculating-the-confidence-interval-of-the-mean"><i class="fa fa-check"></i><b>3.2.1</b> Calculating The Confidence Interval Of The Mean</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="the-regression-residual.html"><a href="the-regression-residual.html"><i class="fa fa-check"></i><b>4</b> The Regression Residual</a><ul>
+<li class="chapter" data-level="4.1" data-path="the-regression-residual.html"><a href="the-regression-residual.html#regression-residuals-and-errors"><i class="fa fa-check"></i><b>4.1</b> Regression Residuals And Errors</a></li>
+<li class="chapter" data-level="4.2" data-path="the-regression-residual.html"><a href="the-regression-residual.html#the-residual-in-regression-1"><i class="fa fa-check"></i><b>4.2</b> The Residual In Regression</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="the-regression-residual.html"><a href="the-regression-residual.html#interpreting-and-using-the-residual-in-regression"><i class="fa fa-check"></i><b>4.2.1</b> Interpreting And Using The Residual In Regression</a></li>
+<li class="chapter" data-level="4.2.2" data-path="the-regression-residual.html"><a href="the-regression-residual.html#how-the-residual-describes-over-performing-and-under-performing"><i class="fa fa-check"></i><b>4.2.2</b> How The Residual Describes Over-performing and Under-performing</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="the-regression-residual.html"><a href="the-regression-residual.html#how-do-we-know-the-best-fitting-regression-line-for-our-data"><i class="fa fa-check"></i><b>4.3</b> How Do We Know The Best Fitting Regression Line For Our Data</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="the-regression-residual.html"><a href="the-regression-residual.html#the-calculation-of-the-regression-line"><i class="fa fa-check"></i><b>4.3.1</b> The Calculation Of The Regression Line</a></li>
+<li class="chapter" data-level="4.3.2" data-path="the-regression-residual.html"><a href="the-regression-residual.html#implications-of-squaring-residuals"><i class="fa fa-check"></i><b>4.3.2</b> Implications Of Squaring Residuals</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="the-regression-residual.html"><a href="the-regression-residual.html#the-regression-coefficient-equations-estimates"><i class="fa fa-check"></i><b>4.4</b> The Regression Coefficient Equations Estimates</a></li>
+<li class="chapter" data-level="4.5" data-path="the-regression-residual.html"><a href="the-regression-residual.html#looking-forward"><i class="fa fa-check"></i><b>4.5</b> Looking Forward</a></li>
+<li class="chapter" data-level="4.6" data-path="the-regression-residual.html"><a href="the-regression-residual.html#figure-example"><i class="fa fa-check"></i><b>4.6</b> Figure Example</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="the-regression-slope.html"><a href="the-regression-slope.html"><i class="fa fa-check"></i><b>5</b> The Regression Slope</a><ul>
+<li class="chapter" data-level="5.1" data-path="the-regression-slope.html"><a href="the-regression-slope.html#variance-revisited"><i class="fa fa-check"></i><b>5.1</b> Variance Revisited</a></li>
+<li class="chapter" data-level="5.2" data-path="the-regression-slope.html"><a href="the-regression-slope.html#the-standard-deviation-revisited"><i class="fa fa-check"></i><b>5.2</b> The Standard Deviation Revisited</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="the-regression-slope.html"><a href="the-regression-slope.html#squared-residuals"><i class="fa fa-check"></i><b>5.2.1</b> Squared Residuals</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="the-regression-slope.html"><a href="the-regression-slope.html#covariance"><i class="fa fa-check"></i><b>5.3</b> Covariance</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="the-regression-slope.html"><a href="the-regression-slope.html#calculating-the-covariance"><i class="fa fa-check"></i><b>5.3.1</b> Calculating The Covariance</a></li>
+<li class="chapter" data-level="5.3.2" data-path="the-regression-slope.html"><a href="the-regression-slope.html#positive-correlation"><i class="fa fa-check"></i><b>5.3.2</b> Positive Correlation</a></li>
+<li class="chapter" data-level="5.3.3" data-path="the-regression-slope.html"><a href="the-regression-slope.html#negative-corrleation"><i class="fa fa-check"></i><b>5.3.3</b> Negative Corrleation</a></li>
+<li class="chapter" data-level="5.3.4" data-path="the-regression-slope.html"><a href="the-regression-slope.html#low-correlation"><i class="fa fa-check"></i><b>5.3.4</b> Low Correlation</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="the-regression-slope.html"><a href="the-regression-slope.html#the-slope"><i class="fa fa-check"></i><b>5.4</b> The Slope</a></li>
+<li class="chapter" data-level="5.5" data-path="the-regression-slope.html"><a href="the-regression-slope.html#looking-ahead-1"><i class="fa fa-check"></i><b>5.5</b> Looking Ahead</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="explaining-variance.html"><a href="explaining-variance.html"><i class="fa fa-check"></i><b>6</b> Explaining Variance</a><ul>
+<li class="chapter" data-level="6.1" data-path="explaining-variance.html"><a href="explaining-variance.html#r-squared"><i class="fa fa-check"></i><b>6.1</b> R-Squared</a></li>
+<li class="chapter" data-level="6.2" data-path="explaining-variance.html"><a href="explaining-variance.html#hand-calculation-of-the-regression"><i class="fa fa-check"></i><b>6.2</b> Hand Calculation Of The Regression</a></li>
+<li class="chapter" data-level="6.3" data-path="explaining-variance.html"><a href="explaining-variance.html#partitioning-the-variance-of-y"><i class="fa fa-check"></i><b>6.3</b> Partitioning The Variance Of Y</a><ul>
+<li class="chapter" data-level="6.3.1" data-path="explaining-variance.html"><a href="explaining-variance.html#the-relationship-of-r-squared-and-partitioned-variance"><i class="fa fa-check"></i><b>6.3.1</b> The Relationship Of R-Squared And Partitioned Variance</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="explaining-variance.html"><a href="explaining-variance.html#looking-ahead-2"><i class="fa fa-check"></i><b>6.4</b> Looking Ahead</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="ballentine-venn-diagrams.html"><a href="ballentine-venn-diagrams.html"><i class="fa fa-check"></i><b>7</b> Ballentine Venn Diagrams</a><ul>
+<li class="chapter" data-level="7.0.1" data-path="ballentine-venn-diagrams.html"><a href="ballentine-venn-diagrams.html#concepts-that-bellentine-venn-diagrams-can-represent"><i class="fa fa-check"></i><b>7.0.1</b> Concepts That Bellentine Venn Diagrams Can Represent</a></li>
+<li class="chapter" data-level="7.0.2" data-path="ballentine-venn-diagrams.html"><a href="ballentine-venn-diagrams.html#variance"><i class="fa fa-check"></i><b>7.0.2</b> Variance</a></li>
+<li class="chapter" data-level="7.1" data-path="ballentine-venn-diagrams.html"><a href="ballentine-venn-diagrams.html#covariance-1"><i class="fa fa-check"></i><b>7.1</b> Covariance</a></li>
+<li class="chapter" data-level="7.2" data-path="ballentine-venn-diagrams.html"><a href="ballentine-venn-diagrams.html#correlation"><i class="fa fa-check"></i><b>7.2</b> Correlation</a></li>
+<li class="chapter" data-level="7.3" data-path="ballentine-venn-diagrams.html"><a href="ballentine-venn-diagrams.html#slope"><i class="fa fa-check"></i><b>7.3</b> Slope</a></li>
+<li class="chapter" data-level="7.4" data-path="ballentine-venn-diagrams.html"><a href="ballentine-venn-diagrams.html#r-square-and-the-regression-residual"><i class="fa fa-check"></i><b>7.4</b> R-Square and the Regression Residual</a></li>
+<li class="chapter" data-level="7.5" data-path="ballentine-venn-diagrams.html"><a href="ballentine-venn-diagrams.html#the-standard-error-1"><i class="fa fa-check"></i><b>7.5</b> The Standard Error</a></li>
+<li class="chapter" data-level="7.6" data-path="ballentine-venn-diagrams.html"><a href="ballentine-venn-diagrams.html#defining-other-variables-for-future-units"><i class="fa fa-check"></i><b>7.6</b> Defining Other Variables For Future Units</a></li>
+<li class="chapter" data-level="7.7" data-path="ballentine-venn-diagrams.html"><a href="ballentine-venn-diagrams.html#ahead"><i class="fa fa-check"></i><b>7.7</b> Ahead</a></li>
+</ul></li>
+<li class="part"><span><b>II RESEARCH DESIGN</b></span></li>
+<li class="chapter" data-level="8" data-path="introduction-to-research-design.html"><a href="introduction-to-research-design.html"><i class="fa fa-check"></i><b>8</b> Introduction To Research Design</a><ul>
+<li class="chapter" data-level="8.1" data-path="introduction-to-research-design.html"><a href="introduction-to-research-design.html#why-do-we-need-quality-research-design-and-methods"><i class="fa fa-check"></i><b>8.1</b> Why Do We Need Quality Research Design And Methods?</a><ul>
+<li class="chapter" data-level="8.1.1" data-path="introduction-to-research-design.html"><a href="introduction-to-research-design.html#overview-of-research-design"><i class="fa fa-check"></i><b>8.1.1</b> Overview Of Research Design</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="introduction-to-research-design.html"><a href="introduction-to-research-design.html#why-do-we-conduct-studies-to-evalueate-programs"><i class="fa fa-check"></i><b>8.2</b> Why Do We Conduct Studies To Evalueate Programs</a><ul>
+<li class="chapter" data-level="8.2.1" data-path="introduction-to-research-design.html"><a href="introduction-to-research-design.html#the-importance-of-understanding-the-relationship-among-variables"><i class="fa fa-check"></i><b>8.2.1</b> The Importance Of Understanding The Relationship Among Variables</a></li>
+<li class="chapter" data-level="8.2.2" data-path="introduction-to-research-design.html"><a href="introduction-to-research-design.html#variables-and-function-in-program-evaluation"><i class="fa fa-check"></i><b>8.2.2</b> Variables And Function In Program Evaluation</a></li>
+<li class="chapter" data-level="8.2.3" data-path="introduction-to-research-design.html"><a href="introduction-to-research-design.html#the-function-of-independent-and-dependent-variables"><i class="fa fa-check"></i><b>8.2.3</b> The Function Of Independent And Dependent Variables</a></li>
+<li class="chapter" data-level="8.2.4" data-path="introduction-to-research-design.html"><a href="introduction-to-research-design.html#other-factors"><i class="fa fa-check"></i><b>8.2.4</b> Other Factors</a></li>
+<li class="chapter" data-level="8.2.5" data-path="introduction-to-research-design.html"><a href="introduction-to-research-design.html#important-characteristics-of-variables-in-research-design"><i class="fa fa-check"></i><b>8.2.5</b> Important Characteristics Of Variables In Research Design</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="introduction-to-research-design.html"><a href="introduction-to-research-design.html#looking-ahead-3"><i class="fa fa-check"></i><b>8.3</b> Looking Ahead</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="validity-and-reliability.html"><a href="validity-and-reliability.html"><i class="fa fa-check"></i><b>9</b> Validity and Reliability</a><ul>
+<li class="chapter" data-level="9.1" data-path="validity-and-reliability.html"><a href="validity-and-reliability.html#research-validity"><i class="fa fa-check"></i><b>9.1</b> Research Validity</a><ul>
+<li class="chapter" data-level="9.1.1" data-path="validity-and-reliability.html"><a href="validity-and-reliability.html#external-validity"><i class="fa fa-check"></i><b>9.1.1</b> External Validity</a></li>
+<li class="chapter" data-level="9.1.2" data-path="validity-and-reliability.html"><a href="validity-and-reliability.html#breaking-down-external-validity"><i class="fa fa-check"></i><b>9.1.2</b> Breaking Down External Validity</a></li>
+<li class="chapter" data-level="9.1.3" data-path="validity-and-reliability.html"><a href="validity-and-reliability.html#pulling-together-the-components-of-external-validity"><i class="fa fa-check"></i><b>9.1.3</b> Pulling Together The Components Of External Validity</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="validity-and-reliability.html"><a href="validity-and-reliability.html#internal-validity"><i class="fa fa-check"></i><b>9.2</b> Internal Validity</a><ul>
+<li class="chapter" data-level="9.2.1" data-path="validity-and-reliability.html"><a href="validity-and-reliability.html#breaking-down-internal-validity"><i class="fa fa-check"></i><b>9.2.1</b> Breaking Down Internal Validity</a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="validity-and-reliability.html"><a href="validity-and-reliability.html#construct-validity"><i class="fa fa-check"></i><b>9.3</b> Construct Validity</a><ul>
+<li class="chapter" data-level="9.3.1" data-path="validity-and-reliability.html"><a href="validity-and-reliability.html#breaking-down-construct-validity"><i class="fa fa-check"></i><b>9.3.1</b> Breaking Down Construct Validity</a></li>
+</ul></li>
+<li class="chapter" data-level="9.4" data-path="validity-and-reliability.html"><a href="validity-and-reliability.html#reliability"><i class="fa fa-check"></i><b>9.4</b> Reliability</a><ul>
+<li class="chapter" data-level="9.4.1" data-path="validity-and-reliability.html"><a href="validity-and-reliability.html#breaking-down-reliability"><i class="fa fa-check"></i><b>9.4.1</b> Breaking Down Reliability</a></li>
+</ul></li>
+<li class="chapter" data-level="9.5" data-path="validity-and-reliability.html"><a href="validity-and-reliability.html#looking-ahead-4"><i class="fa fa-check"></i><b>9.5</b> Looking Ahead</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="introduction-to-methods-of-research-design.html"><a href="introduction-to-methods-of-research-design.html"><i class="fa fa-check"></i><b>10</b> Introduction to Methods Of Research Design</a><ul>
+<li class="chapter" data-level="10.1" data-path="introduction-to-methods-of-research-design.html"><a href="introduction-to-methods-of-research-design.html#methods-of-research-and-the-relation-to-validity-and-reliability"><i class="fa fa-check"></i><b>10.1</b> Methods Of Research And The Relation To Validity And Reliability</a></li>
+<li class="chapter" data-level="10.2" data-path="introduction-to-methods-of-research-design.html"><a href="introduction-to-methods-of-research-design.html#the-relationship-between-variables"><i class="fa fa-check"></i><b>10.2</b> The Relationship Between Variables</a><ul>
+<li class="chapter" data-level="10.2.1" data-path="introduction-to-methods-of-research-design.html"><a href="introduction-to-methods-of-research-design.html#positive-relationship-between-two-variables"><i class="fa fa-check"></i><b>10.2.1</b> Positive Relationship Between Two Variables</a></li>
+<li class="chapter" data-level="10.2.2" data-path="introduction-to-methods-of-research-design.html"><a href="introduction-to-methods-of-research-design.html#negative-relationship-between-two-variables"><i class="fa fa-check"></i><b>10.2.2</b> Negative Relationship Between Two Variables</a></li>
+<li class="chapter" data-level="10.2.3" data-path="introduction-to-methods-of-research-design.html"><a href="introduction-to-methods-of-research-design.html#no-relationship-between-two-variables"><i class="fa fa-check"></i><b>10.2.3</b> No Relationship Between Two Variables</a></li>
+<li class="chapter" data-level="10.2.4" data-path="introduction-to-methods-of-research-design.html"><a href="introduction-to-methods-of-research-design.html#from-relationships-between-variables-to-methods-of-evaluating-relationships"><i class="fa fa-check"></i><b>10.2.4</b> From Relationships Between Variables To Methods Of Evaluating Relationships</a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="introduction-to-methods-of-research-design.html"><a href="introduction-to-methods-of-research-design.html#evaluating-relationships-of-variables-in-programs-and-outcomes"><i class="fa fa-check"></i><b>10.3</b> Evaluating Relationships Of Variables In Programs And Outcomes</a></li>
+<li class="chapter" data-level="10.4" data-path="introduction-to-methods-of-research-design.html"><a href="introduction-to-methods-of-research-design.html#overview-of-research-methods"><i class="fa fa-check"></i><b>10.4</b> Overview Of Research Methods</a><ul>
+<li class="chapter" data-level="10.4.1" data-path="introduction-to-methods-of-research-design.html"><a href="introduction-to-methods-of-research-design.html#non-experimental-methods"><i class="fa fa-check"></i><b>10.4.1</b> Non-Experimental Methods</a></li>
+<li class="chapter" data-level="10.4.2" data-path="introduction-to-methods-of-research-design.html"><a href="introduction-to-methods-of-research-design.html#experimental-methods"><i class="fa fa-check"></i><b>10.4.2</b> Experimental Methods</a></li>
+</ul></li>
+<li class="chapter" data-level="10.5" data-path="introduction-to-methods-of-research-design.html"><a href="introduction-to-methods-of-research-design.html#looking-ahead-5"><i class="fa fa-check"></i><b>10.5</b> Looking Ahead</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="non-experimental-methods-for-program-evaluation-and-research.html"><a href="non-experimental-methods-for-program-evaluation-and-research.html"><i class="fa fa-check"></i><b>11</b> Non-Experimental Methods For Program Evaluation And Research</a><ul>
+<li class="chapter" data-level="11.1" data-path="non-experimental-methods-for-program-evaluation-and-research.html"><a href="non-experimental-methods-for-program-evaluation-and-research.html#observational-methods"><i class="fa fa-check"></i><b>11.1</b> Observational Methods</a><ul>
+<li class="chapter" data-level="11.1.1" data-path="non-experimental-methods-for-program-evaluation-and-research.html"><a href="non-experimental-methods-for-program-evaluation-and-research.html#important-aspects-of-observational-methods"><i class="fa fa-check"></i><b>11.1.1</b> Important Aspects Of Observational methods</a></li>
+<li class="chapter" data-level="11.1.2" data-path="non-experimental-methods-for-program-evaluation-and-research.html"><a href="non-experimental-methods-for-program-evaluation-and-research.html#the-importance-of-using-a-systematic-and-replicable-method"><i class="fa fa-check"></i><b>11.1.2</b> The Importance Of Using A systematic And Replicable Method</a></li>
+</ul></li>
+<li class="chapter" data-level="11.2" data-path="non-experimental-methods-for-program-evaluation-and-research.html"><a href="non-experimental-methods-for-program-evaluation-and-research.html#types-of-observational-methods"><i class="fa fa-check"></i><b>11.2</b> Types Of Observational Methods</a><ul>
+<li class="chapter" data-level="11.2.1" data-path="non-experimental-methods-for-program-evaluation-and-research.html"><a href="non-experimental-methods-for-program-evaluation-and-research.html#collecting-data"><i class="fa fa-check"></i><b>11.2.1</b> Collecting Data</a></li>
+<li class="chapter" data-level="11.2.2" data-path="non-experimental-methods-for-program-evaluation-and-research.html"><a href="non-experimental-methods-for-program-evaluation-and-research.html#qualitative-versus-quantitative-observational-studies"><i class="fa fa-check"></i><b>11.2.2</b> Qualitative Versus Quantitative Observational Studies</a></li>
+</ul></li>
+<li class="chapter" data-level="11.3" data-path="non-experimental-methods-for-program-evaluation-and-research.html"><a href="non-experimental-methods-for-program-evaluation-and-research.html#looking-ahead-6"><i class="fa fa-check"></i><b>11.3</b> Looking Ahead</a></li>
+<li class="chapter" data-level="11.4" data-path="non-experimental-methods-for-program-evaluation-and-research.html"><a href="non-experimental-methods-for-program-evaluation-and-research.html#naturalistic-observation"><i class="fa fa-check"></i><b>11.4</b> Naturalistic Observation</a><ul>
+<li class="chapter" data-level="11.4.1" data-path="non-experimental-methods-for-program-evaluation-and-research.html"><a href="non-experimental-methods-for-program-evaluation-and-research.html#how-the-analysis-plan-affects-our-collection-methods"><i class="fa fa-check"></i><b>11.4.1</b> How The Analysis Plan Affects Our Collection Methods</a></li>
+<li class="chapter" data-level="11.4.2" data-path="non-experimental-methods-for-program-evaluation-and-research.html"><a href="non-experimental-methods-for-program-evaluation-and-research.html#revisiting-pay-raise-and-productivity"><i class="fa fa-check"></i><b>11.4.2</b> Revisiting Pay Raise And Productivity</a></li>
+<li class="chapter" data-level="11.4.3" data-path="non-experimental-methods-for-program-evaluation-and-research.html"><a href="non-experimental-methods-for-program-evaluation-and-research.html#advantages-of-naturalistic-observation"><i class="fa fa-check"></i><b>11.4.3</b> Advantages Of Naturalistic Observation</a></li>
+<li class="chapter" data-level="11.4.4" data-path="non-experimental-methods-for-program-evaluation-and-research.html"><a href="non-experimental-methods-for-program-evaluation-and-research.html#disadvantages-of-naturalistic-observation"><i class="fa fa-check"></i><b>11.4.4</b> Disadvantages Of Naturalistic Observation</a></li>
+<li class="chapter" data-level="11.4.5" data-path="non-experimental-methods-for-program-evaluation-and-research.html"><a href="non-experimental-methods-for-program-evaluation-and-research.html#when-a-researcher-reveals-or-participates-in-the-observation"><i class="fa fa-check"></i><b>11.4.5</b> When A Researcher Reveals Or Participates In The Observation</a></li>
+</ul></li>
+<li class="chapter" data-level="11.5" data-path="non-experimental-methods-for-program-evaluation-and-research.html"><a href="non-experimental-methods-for-program-evaluation-and-research.html#reviewing-naturalistic-observation"><i class="fa fa-check"></i><b>11.5</b> Reviewing Naturalistic Observation</a><ul>
+<li class="chapter" data-level="11.5.1" data-path="non-experimental-methods-for-program-evaluation-and-research.html"><a href="non-experimental-methods-for-program-evaluation-and-research.html#looking-aread"><i class="fa fa-check"></i><b>11.5.1</b> Looking Aread</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="surveys-in-program-evaluation.html"><a href="surveys-in-program-evaluation.html"><i class="fa fa-check"></i><b>12</b> Surveys In Program Evaluation</a><ul>
+<li class="chapter" data-level="12.1" data-path="surveys-in-program-evaluation.html"><a href="surveys-in-program-evaluation.html#surveys-in-organizations"><i class="fa fa-check"></i><b>12.1</b> Surveys In Organizations</a></li>
+<li class="chapter" data-level="12.2" data-path="surveys-in-program-evaluation.html"><a href="surveys-in-program-evaluation.html#developing-a-reliable-and-valid-survey"><i class="fa fa-check"></i><b>12.2</b> Developing A Reliable And Valid Survey</a><ul>
+<li class="chapter" data-level="12.2.1" data-path="surveys-in-program-evaluation.html"><a href="surveys-in-program-evaluation.html#initial-steps-before-developing-a-reliable-and-valid-survey"><i class="fa fa-check"></i><b>12.2.1</b> Initial Steps Before Developing A Reliable And Valid Survey</a></li>
+<li class="chapter" data-level="12.2.2" data-path="surveys-in-program-evaluation.html"><a href="surveys-in-program-evaluation.html#developing-high-quality-survey-questions"><i class="fa fa-check"></i><b>12.2.2</b> Developing High Quality Survey Questions</a></li>
+</ul></li>
+<li class="chapter" data-level="12.3" data-path="surveys-in-program-evaluation.html"><a href="surveys-in-program-evaluation.html#details-of-survey-question-design"><i class="fa fa-check"></i><b>12.3</b> Details Of Survey Question Design</a><ul>
+<li class="chapter" data-level="12.3.1" data-path="surveys-in-program-evaluation.html"><a href="surveys-in-program-evaluation.html#how-to-ovoid-leading-questions"><i class="fa fa-check"></i><b>12.3.1</b> How To Ovoid Leading Questions</a></li>
+<li class="chapter" data-level="12.3.2" data-path="surveys-in-program-evaluation.html"><a href="surveys-in-program-evaluation.html#how-to-create-simple-and-non-complex-questions"><i class="fa fa-check"></i><b>12.3.2</b> How To Create Simple And Non-Complex Questions</a></li>
+<li class="chapter" data-level="12.3.3" data-path="surveys-in-program-evaluation.html"><a href="surveys-in-program-evaluation.html#the-importance-of-presenting-the-optimal-number-of-questions"><i class="fa fa-check"></i><b>12.3.3</b> The Importance Of Presenting The Optimal Number Of Questions</a></li>
+<li class="chapter" data-level="12.3.4" data-path="surveys-in-program-evaluation.html"><a href="surveys-in-program-evaluation.html#ask-about-only-one-thing-at-a-time"><i class="fa fa-check"></i><b>12.3.4</b> Ask About Only One Thing At A Time</a></li>
+<li class="chapter" data-level="12.3.5" data-path="surveys-in-program-evaluation.html"><a href="surveys-in-program-evaluation.html#how-should-questions-be-ordered-in-a-survey"><i class="fa fa-check"></i><b>12.3.5</b> How Should Questions Be Ordered In A Survey</a></li>
+<li class="chapter" data-level="12.3.6" data-path="surveys-in-program-evaluation.html"><a href="surveys-in-program-evaluation.html#types-of-survey-aswers"><i class="fa fa-check"></i><b>12.3.6</b> Types Of Survey Aswers</a></li>
+</ul></li>
+<li class="chapter" data-level="12.4" data-path="surveys-in-program-evaluation.html"><a href="surveys-in-program-evaluation.html#review-general-principles-in-survey-design"><i class="fa fa-check"></i><b>12.4</b> Review General principles In Survey Design</a><ul>
+<li class="chapter" data-level="12.4.1" data-path="surveys-in-program-evaluation.html"><a href="surveys-in-program-evaluation.html#looking-ahead-7"><i class="fa fa-check"></i><b>12.4.1</b> Looking Ahead</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="interviewing-methods.html"><a href="interviewing-methods.html"><i class="fa fa-check"></i><b>13</b> Interviewing Methods</a><ul>
+<li class="chapter" data-level="13.1" data-path="interviewing-methods.html"><a href="interviewing-methods.html#collecting-data-in-person"><i class="fa fa-check"></i><b>13.1</b> Collecting Data In Person</a></li>
+<li class="chapter" data-level="13.2" data-path="interviewing-methods.html"><a href="interviewing-methods.html#looking-ahead-8"><i class="fa fa-check"></i><b>13.2</b> Looking Ahead</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="coding-systems.html"><a href="coding-systems.html"><i class="fa fa-check"></i><b>14</b> Coding Systems</a><ul>
+<li class="chapter" data-level="14.1" data-path="coding-systems.html"><a href="coding-systems.html#how-to-develop-a-coding-system"><i class="fa fa-check"></i><b>14.1</b> How To Develop A Coding System</a><ul>
+<li class="chapter" data-level="14.1.1" data-path="coding-systems.html"><a href="coding-systems.html#an-example-of-how-to-code"><i class="fa fa-check"></i><b>14.1.1</b> An Example Of How To Code</a></li>
+</ul></li>
+<li class="chapter" data-level="14.2" data-path="coding-systems.html"><a href="coding-systems.html#looking-ahead-9"><i class="fa fa-check"></i><b>14.2</b> Looking Ahead</a></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="introduction-to-experimental-methods.html"><a href="introduction-to-experimental-methods.html"><i class="fa fa-check"></i><b>15</b> Introduction To Experimental Methods</a><ul>
+<li class="chapter" data-level="15.1" data-path="introduction-to-experimental-methods.html"><a href="introduction-to-experimental-methods.html#experimental-methods-vs.-non-experimental-methods"><i class="fa fa-check"></i><b>15.1</b> Experimental Methods Vs. Non-Experimental Methods</a><ul>
+<li class="chapter" data-level="15.1.1" data-path="introduction-to-experimental-methods.html"><a href="introduction-to-experimental-methods.html#what-makes-an-experiment"><i class="fa fa-check"></i><b>15.1.1</b> What Makes An Experiment?</a></li>
+</ul></li>
+<li class="chapter" data-level="15.2" data-path="introduction-to-experimental-methods.html"><a href="introduction-to-experimental-methods.html#looking-ahead-10"><i class="fa fa-check"></i><b>15.2</b> Looking Ahead</a></li>
+<li class="chapter" data-level="15.3" data-path="introduction-to-experimental-methods.html"><a href="introduction-to-experimental-methods.html#types-of-experimental-design"><i class="fa fa-check"></i><b>15.3</b> Types Of Experimental Design</a><ul>
+<li class="chapter" data-level="15.3.1" data-path="introduction-to-experimental-methods.html"><a href="introduction-to-experimental-methods.html#measuring-outcome-only"><i class="fa fa-check"></i><b>15.3.1</b> Measuring Outcome Only</a></li>
+<li class="chapter" data-level="15.3.2" data-path="introduction-to-experimental-methods.html"><a href="introduction-to-experimental-methods.html#measuring-before-the-program-and-the-outcome-after"><i class="fa fa-check"></i><b>15.3.2</b> Measuring Before The Program And The Outcome After</a></li>
+</ul></li>
+<li class="chapter" data-level="15.4" data-path="introduction-to-experimental-methods.html"><a href="introduction-to-experimental-methods.html#looking-ahead-11"><i class="fa fa-check"></i><b>15.4</b> Looking Ahead</a></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="advanced-experimental-design.html"><a href="advanced-experimental-design.html"><i class="fa fa-check"></i><b>16</b> Advanced Experimental Design</a><ul>
+<li class="chapter" data-level="16.1" data-path="advanced-experimental-design.html"><a href="advanced-experimental-design.html#the-solomon-four-group-experimental-designs"><i class="fa fa-check"></i><b>16.1</b> The Solomon Four-Group Experimental Designs</a></li>
+<li class="chapter" data-level="16.2" data-path="advanced-experimental-design.html"><a href="advanced-experimental-design.html#between-subject-design-and-within-subjectrepeated-measures-design"><i class="fa fa-check"></i><b>16.2</b> Between Subject Design And Within Subject/Repeated Measures Design</a><ul>
+<li class="chapter" data-level="16.2.1" data-path="advanced-experimental-design.html"><a href="advanced-experimental-design.html#advantages-and-disadvantages"><i class="fa fa-check"></i><b>16.2.1</b> Advantages And Disadvantages</a></li>
+</ul></li>
+<li class="chapter" data-level="16.3" data-path="advanced-experimental-design.html"><a href="advanced-experimental-design.html#looking-ahead-12"><i class="fa fa-check"></i><b>16.3</b> Looking Ahead</a></li>
+</ul></li>
+<li class="chapter" data-level="17" data-path="counterfactuals-and-quasi-experiments.html"><a href="counterfactuals-and-quasi-experiments.html"><i class="fa fa-check"></i><b>17</b> Counterfactuals And Quasi-Experiments</a><ul>
+<li class="chapter" data-level="17.1" data-path="counterfactuals-and-quasi-experiments.html"><a href="counterfactuals-and-quasi-experiments.html#quasi-experiments"><i class="fa fa-check"></i><b>17.1</b> Quasi-Experiments</a><ul>
+<li class="chapter" data-level="17.1.1" data-path="counterfactuals-and-quasi-experiments.html"><a href="counterfactuals-and-quasi-experiments.html#example-of-a-quasi-experiment"><i class="fa fa-check"></i><b>17.1.1</b> Example Of A Quasi-Experiment</a></li>
+<li class="chapter" data-level="17.1.2" data-path="counterfactuals-and-quasi-experiments.html"><a href="counterfactuals-and-quasi-experiments.html#other-types-of-quasi-experiments"><i class="fa fa-check"></i><b>17.1.2</b> Other Types Of Quasi-Experiments</a></li>
+</ul></li>
+<li class="chapter" data-level="17.2" data-path="counterfactuals-and-quasi-experiments.html"><a href="counterfactuals-and-quasi-experiments.html#introduction-to-counterfactuals"><i class="fa fa-check"></i><b>17.2</b> Introduction To Counterfactuals</a><ul>
+<li class="chapter" data-level="17.2.1" data-path="counterfactuals-and-quasi-experiments.html"><a href="counterfactuals-and-quasi-experiments.html#general-possible-counterfactuals"><i class="fa fa-check"></i><b>17.2.1</b> General Possible Counterfactuals</a></li>
+</ul></li>
+<li class="chapter" data-level="17.3" data-path="counterfactuals-and-quasi-experiments.html"><a href="counterfactuals-and-quasi-experiments.html#types-of-quasi-experimental-design"><i class="fa fa-check"></i><b>17.3</b> Types Of Quasi-Experimental Design</a><ul>
+<li class="chapter" data-level="17.3.1" data-path="counterfactuals-and-quasi-experiments.html"><a href="counterfactuals-and-quasi-experiments.html#the-relationship-betweend-counterfactuals-and-quasi-experimental-design"><i class="fa fa-check"></i><b>17.3.1</b> The relationship Betweend Counterfactuals And Quasi-Experimental Design</a></li>
+<li class="chapter" data-level="17.3.2" data-path="counterfactuals-and-quasi-experiments.html"><a href="counterfactuals-and-quasi-experiments.html#difference-in-differece-models"><i class="fa fa-check"></i><b>17.3.2</b> Difference In Differece Models</a></li>
+</ul></li>
+<li class="chapter" data-level="17.4" data-path="counterfactuals-and-quasi-experiments.html"><a href="counterfactuals-and-quasi-experiments.html#weak-counterfactuals"><i class="fa fa-check"></i><b>17.4</b> Weak Counterfactuals</a></li>
+<li class="chapter" data-level="17.5" data-path="counterfactuals-and-quasi-experiments.html"><a href="counterfactuals-and-quasi-experiments.html#looking-ahead-13"><i class="fa fa-check"></i><b>17.5</b> Looking Ahead</a></li>
+</ul></li>
+<li class="part"><span><b>III APPLIED REGRESSION</b></span></li>
+<li class="chapter" data-level="18" data-path="difference-in-difference-models.html"><a href="difference-in-difference-models.html"><i class="fa fa-check"></i><b>18</b> Difference-in-Difference Models</a><ul>
+<li class="chapter" data-level="18.1" data-path="difference-in-difference-models.html"><a href="difference-in-difference-models.html#example"><i class="fa fa-check"></i><b>18.1</b> Example</a><ul>
+<li class="chapter" data-level="18.1.1" data-path="difference-in-difference-models.html"><a href="difference-in-difference-models.html#gains-realized-by-comparison-group-the-first-difference"><i class="fa fa-check"></i><b>18.1.1</b> Gains Realized by Comparison Group (The First Difference)</a></li>
+<li class="chapter" data-level="18.1.2" data-path="difference-in-difference-models.html"><a href="difference-in-difference-models.html#gains-realized-by-the-treatment-group-the-second-difference"><i class="fa fa-check"></i><b>18.1.2</b> Gains Realized by the Treatment Group (The Second Difference)</a></li>
+<li class="chapter" data-level="18.1.3" data-path="difference-in-difference-models.html"><a href="difference-in-difference-models.html#realized-gains-minus-expected-gains-diff-in-diff"><i class="fa fa-check"></i><b>18.1.3</b> Realized Gains Minus Expected Gains (Diff-in-Diff)</a></li>
+</ul></li>
+<li class="chapter" data-level="18.2" data-path="difference-in-difference-models.html"><a href="difference-in-difference-models.html#the-counterfactual"><i class="fa fa-check"></i><b>18.2</b> The Counterfactual</a></li>
+<li class="chapter" data-level="18.3" data-path="difference-in-difference-models.html"><a href="difference-in-difference-models.html#difference-in-difference-models-1"><i class="fa fa-check"></i><b>18.3</b> Difference-in-Difference Models</a><ul>
+<li class="chapter" data-level="18.3.1" data-path="difference-in-difference-models.html"><a href="difference-in-difference-models.html#example-1"><i class="fa fa-check"></i><b>18.3.1</b> Example</a></li>
+<li class="chapter" data-level="18.3.2" data-path="difference-in-difference-models.html"><a href="difference-in-difference-models.html#interpretation"><i class="fa fa-check"></i><b>18.3.2</b> Interpretation</a></li>
+<li class="chapter" data-level="18.3.3" data-path="difference-in-difference-models.html"><a href="difference-in-difference-models.html#summary-of-hypothesis-tested"><i class="fa fa-check"></i><b>18.3.3</b> Summary of Hypothesis Tested</a></li>
+<li class="chapter" data-level="18.3.4" data-path="difference-in-difference-models.html"><a href="difference-in-difference-models.html#three-cases"><i class="fa fa-check"></i><b>18.3.4</b> Three Cases</a></li>
+<li class="chapter" data-level="18.3.5" data-path="difference-in-difference-models.html"><a href="difference-in-difference-models.html#multiple-treatment-groups"><i class="fa fa-check"></i><b>18.3.5</b> Multiple Treatment Groups</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="19" data-path="interactions-with-slopes.html"><a href="interactions-with-slopes.html"><i class="fa fa-check"></i><b>19</b> Interactions with Slopes</a><ul>
+<li class="chapter" data-level="19.1" data-path="interactions-with-slopes.html"><a href="interactions-with-slopes.html#one-slope---one-intercept-model"><i class="fa fa-check"></i><b>19.1</b> One Slope - One Intercept Model</a></li>
+<li class="chapter" data-level="19.2" data-path="interactions-with-slopes.html"><a href="interactions-with-slopes.html#three-types-of-hybrids"><i class="fa fa-check"></i><b>19.2</b> Three Types of Hybrids</a></li>
+<li class="chapter" data-level="19.3" data-path="interactions-with-slopes.html"><a href="interactions-with-slopes.html#one-slope---three-intercepts"><i class="fa fa-check"></i><b>19.3</b> One Slope - Three Intercepts</a></li>
+<li class="chapter" data-level="19.4" data-path="interactions-with-slopes.html"><a href="interactions-with-slopes.html#three-slopes---three-intercepts"><i class="fa fa-check"></i><b>19.4</b> Three Slopes - Three Intercepts</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://webapp4.asu.edu/programs/t5/majorinfo/ASU00/PPPGEMS/graduate/false" target="blank">ASU</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Program Evaluation: Methods and Design</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="surveys-in-program-evaluation" class="section level1">
+<h1><span class="header-section-number">Chapter 12</span> Surveys In Program Evaluation</h1>
+<p>In the previous two units we discussed how to observer organization for research and evaluation. The advantage to observation is that in many cases the organizations would be observed in a manner that was natural. Toward the end we discussed how researchers may want to reveal the research to the people being evaluated. We saw advantages and disadvantages. However, we moved toward actually asking people about the functioning, interactions, and behaviors in organizations, in addition to interpretations and meaning. We now will move further toward researching by directly interacting and inquiring about the organization.</p>
+<div id="surveys-in-organizations" class="section level2">
+<h2><span class="header-section-number">12.1</span> Surveys In Organizations</h2>
+<p>Surveys can be another useful tool in research design and evaluation. Sometimes when a researcher must know something about the people and the organization a great way to find out is to simply ask questions. Often this will yield information that is difficult to know when simply observing.</p>
+<p>A researcher can be very direct when collecting data with surveys. This can provide a precise level of data that is very useful in evaluation. There is still some level of interpretation, but because the information comes directly from people in the organization there is a deeper level of the information and data obtained from a survey.</p>
+</div>
+<div id="developing-a-reliable-and-valid-survey" class="section level2">
+<h2><span class="header-section-number">12.2</span> Developing A Reliable And Valid Survey</h2>
+<p>We have been discussing the need for systematic and replicable methods in observational studies. The same is also very true and very important for survey design. It is easy to overlook certain aspects in developing a survey and individual questions, but much attention to detail and consideration must be taken for a survey to yield high quality and valid data.</p>
+<p>Several important steps must be taken before beginning any development in all research methods. The following are important determinations that must be made. What is the research question? Is there and if so what is the hypothesis? What is the goal of the research? Who are the people that are being surveyed? Are there any characteristics of the people being surveyed that may be important to understand? How does the survey planned to be analyzed?</p>
+<p>These are questions that are integral to developing a quality survey.</p>
+<div id="initial-steps-before-developing-a-reliable-and-valid-survey" class="section level3">
+<h3><span class="header-section-number">12.2.1</span> Initial Steps Before Developing A Reliable And Valid Survey</h3>
+<p>It is always a good idea to start with the research question. Until a researcher know the question that is being investigated it is difficult to have a direction and plan for developing the research. In program evaluation a typical question may simply be did the program achieve the anticipated outcome? However, the evaluation may also be concerned with what the processes are in the organization once the program was implemented. There could also be many other research questions, such as how was individual performance affected, what was the response of the participants to the program, or how do the participants in the organization feel about the future of the program or the organization as a whole. There may be many other research questions that are dependent on the program and the organization.</p>
+<p>The next important step is to determine if there is a hypothesis. In program evaluation it is usually related to successful outcomes of the program. However, it is also possible that the evaluation could be conducted before the outcomes are known and can be measured. This could lead to an exploratory survey that will determine the responses and status of the organization before the program has reached a point to show exact outcomes. An exploratory study may not have a specific hypothesis, but rather is exploring the state of the people, processes, and the organization.</p>
+<p>If there is a hypothesis than this will be important in developing a survey. Recall that a hypothesis is an anticipated result of a research project based on the variables and factors being studied. Hypotheses are typically not in a vacuum, but rather are developed over time based on prior studies and knowledge of how variables are related from a long history of research. Often specific hypotheses are being tested for the first time based on the prior research. In program evaluation the hypothesis may have been tested prior, but now the same or similar program is being implemented and therefore the anticipated results and hypotheses are not necessarily unique to a specific program evaluation study.</p>
+<p>If there is a hypothesis this will lead to specific data that must be obtained from the survey questions. If the appropriate data is not obtained through the survey questions, it will be impossible to investigate the hypothesis. Without the appropriate or quality data the analysis cannot be successful. Therefore, the researcher must keep the hypothesis in mind when developing the survey in order to have reliable and valid data to investigate the hypothesis. There is a caution here. Sometimes a researcher will develop a survey that is meant to confirm rather than investigate the hypothesis or the outcome of a program. This not only violates ethics, but also will yield results in which the organization cannot be confident. All good research searches for alternative explanations, factors that may disprove the hypothesis in addition to believing the hypothesis and outcomes will be supported by the data.</p>
+<p>A related step is to determine the goal of the research and evaluation. Perhaps the goal is exploratory and not meant to investigate the hypothesis, which can affect the types of questions on the survey. Perhaps, as in the suggested reading by Mook, the goal is not to show what is happening, but rather that something simply can happen under certain conditions. This can be very informative for future programs that will be implemented.</p>
+<p>It is also very important to understand who is being researched and what particular characteristics both they and the organization possess. Without knowing who will complete the survey it can be difficult to develop the survey questions. A part of this are the characteristics. For example, does everyone speak the same language? Are there differences in educational levels and experience? Finally, what is the culture of the organization? All of these factors are important in order to collect quality data. If these factor are ignored it is possible that people may interpret questions in different ways.</p>
+<p>Finally, as we discussed in the last unit it is essential to have an analysis plan. As we will see there are many types of questions and responses that require different analysis techniques. This will continue to be a theme throughout this course for every research and evaluation method that is explored.</p>
+</div>
+<div id="developing-high-quality-survey-questions" class="section level3">
+<h3><span class="header-section-number">12.2.2</span> Developing High Quality Survey Questions</h3>
+<p>Now that we have some important first steps covered we can begin to cover how to actually create a survey. When creating the survey it is important to remember that people will be answering the survey questions. Therefore, it is important to understand how to be sure that the questions are interpreted the correct way and also limitations that people have.</p>
+<p>We have covered interpretation to some extent already. An important goal of survey design is that everyone interprets the questions in the same way. In everyday life we ask questions and we are often misinterpreted. To obtain reliable data it is important that the questions are easily interpretable. It is important to contemplate carefully about any other possible interpretations of each single question. If you recall construct validity, it is important that we are measuring what we intend do measure as researchers. We must spend much time eliminating alternative interpretations. This is never perfect, because human beings always can interpret things in different ways. If we can minimize this we will have better questions and data.</p>
+<p>Another concern is that people have limitations to their cognitive capacity, attention spans, and interest in the survey. This is why it is always good to have simple questions that are not too complex if possible. If a person must spend time thinking about what the question is asking that person is not thinking about the true honest answer. This can cause fatigue while attempting to answer the question and may lead to lower quality answers and data.</p>
+<p>Because of the limitations with people it is also important not to ask too many questions or questions that are not necessary for the research and evaluation. This can also cause fatigue and often leads to people automatically answering the questions without effortfully thinking about their answers. However, we will see that sometimes we must violate this principle in order to have a reliable and valid survey.</p>
+<p>The next point basically comes from the point of knowing to whom you are asking the questions and their characteristics. If there are certain characteristics of the people or the organizational culture it can cause not only misinterpretation, but also difficulties understanding certain types of questions that are good for some people and organizations, but not necessarily all.</p>
+<p>Therefore, always keep the questions simple, clear and to the point. This is also related to limitations in all people, but people and organizations do vary and it is important to create questions that are simple and easily understandable for the particular participants and organization. However, this applies to all participants. Simple, clear and to the point will keep the data reliable. If at all possible the questions should be as simple as the researcher can make them. This does not mean that this is done at the expense of the purpose and meaning of the question, but much care and time should be taken to keep the questions simple.</p>
+<p>Another important concept that applies to all survey questions is to be sure the question asks about only one thing at a time. Many researchers fall into the trap of asking about more than one thing in a question. The issue is that a person may not be able to respond to two things in the same way.</p>
+<p>Finally, it is always important not to bias the data in anyway. We previously discussed that it is important to not conduct research in a manner that will ultimately bias the results and confirm a hypotheses because the question can only support the hypothesis. If it does not attempt to look for alternative explanations or even try to disprove the hypothesis then the researcher is designing the survey that is likely to lead to only one outcome: supporting the hypothesis.</p>
+<p>In survey questions there is something called a leading question. This is where the question contains information or is worded in a way that biases the respondent to be more likely to answer in a particular way. When this occurs the question leads to answer in ways that may not be entirely the truth because there would be conflict between the information in the question and the natural and truthful answer. The underlying concept is that questions should always be created in an objective manner.</p>
+</div>
+</div>
+<div id="details-of-survey-question-design" class="section level2">
+<h2><span class="header-section-number">12.3</span> Details Of Survey Question Design</h2>
+<p>Last unit we left off with the discussion of how the design of a question could lead respondents to likely answer in a particular way. This will add bias and not be ethical. As we continue this theme, objectivity is very important in research design. We can now discuss some of the detail of how questions could be leading.</p>
+<p>In the last unit we covered many of the important principals of survey design. In this unit we will continue to discuss survey design. In this unit we will discuss some more detailed aspects of creating individual questions and also how to create an entire survey that consists of the appropriate questions. We will also take many of these principles and begin discussing interviewing methods.</p>
+<div id="how-to-ovoid-leading-questions" class="section level3">
+<h3><span class="header-section-number">12.3.1</span> How To Ovoid Leading Questions</h3>
+<p>One type of leading question is when the question provides information that would lead to a particular answer. Continuing with the pay raise and productivity example we can see how you could create a leading question. An example question could be: “Past research has shown pay raises can result in higher productivity. Do you feel that you are more productive with your pay raise?”. This is a leading question because it reveals that research already supports the increase in productivity. Because the question tells the respondent that it is already “true” or supported, the respondent may feel like the only correct answer is to say that the pay raise has led to more productivity for the respondent. This is a form of bias.</p>
+<p>Another related example is how the question is worded. An example would be: “Would you like a pay raise to increase productivity?”. While it may be true that most people would, the wording makes it very unlikely that anyone would say no. This is a subtle point. Because most people would like a pay raise it is unlikely that they would say no. Therefore, some people are actually answering about the pay raise and it does not really matter if the productivity were to increase. The same results could occur if the question involved pay raise and lower productivity. This is because pay raise is a positive aspect of the question and creates a bias toward answering yes. A better wording would be to ask: “Please list the top 3 things that you think would increase productivity?”. Now the respondents can answer how they truly feel without bias.</p>
+<p>Finally, there is one other factor that may lead or influence that way a respondent answers a question. It is important to avoid very emotional words. Emotional words could be either positive or negative. People are more likely to agree with emotionally positive words and less likely to agree with emotionally negative words. These words could also potentially elicit emotional responses that in turn affect judgment and the way the question is answered.</p>
+<ul>
+<li>See the work by Jennifer Lerner to learn more about emotions and judgment. See the work by Joshua Greene to learn how presentation of scenarios can affect judgments and responses.</li>
+</ul>
+</div>
+<div id="how-to-create-simple-and-non-complex-questions" class="section level3">
+<h3><span class="header-section-number">12.3.2</span> How To Create Simple And Non-Complex Questions</h3>
+<p>It is also important to avoid complex questions that may not be very simple and clear. As we have discussed, if the respondent is spending time attempting to understand the question then there is less time and effort spent on simply answering how the respondent feels honestly. An example is: “Do you think having increased disposable income would yield an increase a positive valence of affect”. What this question is asking is simple “Do you think having more income would increase happiness?”. Using complicated words creates a question that may be difficult for many to understand and interpret.</p>
+<p>Another issue with keeping questions simple is to avoid negative wording. Negative wording here is dealing with negatives in the grammatical sense. This is not saying you cannot ask questions about negative topics. For example a question could be: “Do you think not increasing pay will lead to not increasing productivity?”. This is a complicated way to ask the question and can cause confusion for the respondent. You could ask the question in a simpler way, such as: “Do you think increasing pay will lead to increasing productivity?” or “Do you think decreasing pay will lead to decreasing productivity?”. There could be subtle differences in the interpretation of the two, but essentially they are asking the same concept, which is the belief in the relationship between pay and productivity.</p>
+<p>One final point that is often confused with negatively worded questions can be seen in the questions that were just presented to reverse the negative wording of having the phrases “increasing pay” increasing productivity&quot; decreasing pay&quot; and “decreasing productivity”. As mentioned, the two words are essentially asking the same thing. However, the difference in interpretation still exists. This is actually a good thing for survey design.</p>
+<p>The question: “Do you think increasing pay will lead to increasing productivity?” is asking about something in a “positive” way semantically. The question: “Do you think decreasing pay will lead to decreasing productivity?” is asking the question in a “negative” way semantically. As previously stated, these questions are actually asking the same thing. Using both semantically “positive” and “negative” questions is very important in a survey. People sometimes tend to respond with agreement more often to questions that are semantically “positive”. Therefore, having both semantically “positive” and “negative” questions in the survey helps to obtain more truthful responses.</p>
+</div>
+<div id="the-importance-of-presenting-the-optimal-number-of-questions" class="section level3">
+<h3><span class="header-section-number">12.3.3</span> The Importance Of Presenting The Optimal Number Of Questions</h3>
+<p>The optimal number of questions to include in a survey is not always a simple decision. As we discussed in the last unit, respondents can experience fatigue if the survey is too long. This can lead to simply answering all of the questions in one way without thinking carefully about how to answer.</p>
+<p>The general principle is to use as few questions as necessary. However, there are cases where you need to include more questions and not fewer. One issue can be if the survey has questions that are all about one topic. It may seem that if this topic is what is being researched than that is sufficient. However, as we discussed researcher demand, the respondents may know exactly what you a trying to evaluate. This can lead to biasing and altering the answers because the purpose of the survey is to obvious.</p>
+<p>A solution is to embed other question among the questions that are important. This will help to avoid the situation where the respondents know what you may be trying to show with the data. While we did discuss the importance of not including questions that are not related to the particular research study, this is an example where it is acceptable and better to add unrelated questions.</p>
+<p>Often it is important to include more than the minimum number of questions and also to ask about similar topics in multiple questions. Consider being asked something once. It is very possible that you provide an answer, but may not be completely certain of how you feel or think about the question. Because of this, asking multiple question about the same topic allows the researcher to get a better overall response of the true underlying feelings and thoughts about the respondents answer.</p>
+<p>There are also statistical and analytical considerations, which are a factor when determining the optimal number of questions. There must be a sufficient number of questions to be able to statistically analyze the data, enough variance to analyze the data, and also enough statistical power to have a chance of obtaining significant results. This is another example of why it is very important to develop an analysis plan before creating the survey or any type of research method.</p>
+</div>
+<div id="ask-about-only-one-thing-at-a-time" class="section level3">
+<h3><span class="header-section-number">12.3.4</span> Ask About Only One Thing At A Time</h3>
+<p>The final principle that was discussed generally in the last unit is to only ask about one thing at a time. A good survey question will never ask about two different things, concepts, etc. in one question. This can create much difficulty in answering the question.</p>
+<p>Let us consider the pay and productivity example. It is possible that people are asked if an increase in pay makes them more productive and improves morale. This seems like a very reasonable question, but on closer examination causes problems. It is very likely that people are more productive and have higher morale with a pay raise. However, some people may view a pay raise as a contractual agreement to work harder and be more productive. It could even lead to lower morale because of factors like stress from the harder work. It is also possible that a pay raise increases morale due to simply appreciating the pay raise, but do not necessarily work any harder. The takeaway is that asking two questions at one time can cause conflict in how to answer and hurts the data.</p>
+</div>
+<div id="how-should-questions-be-ordered-in-a-survey" class="section level3">
+<h3><span class="header-section-number">12.3.5</span> How Should Questions Be Ordered In A Survey</h3>
+<p>We discussed how to decide the optimal number of questions. Now we will discuss the order of questions. The order is very important and can affect the way people respond. One issue is that the respondents should trust the researcher. This will lead to more truthful responses. In an organization, there may be questions that deal with sensitive material, personal interactions, or personal opinions. If the respondents do not fully trust the researcher there is a chance that the respondents will be concerned about answering truthfully to protect themselves. Therefore, it is important not to begin a survey with sensitive or personal questions when possible.</p>
+<p>As previously mentioned, it is sometimes important that the respondents do not see exactly the purpose or hypothesis of the research or evaluation. This is the reason to sometimes embed unrelated questions so not to reveal the purpose or the hypothesis.</p>
+<p>A final concern with the order is how the questions in the beginning of the survey could affect the responses in subsequent questions. For example, a question could ask about how someone feels generally about the quality of the organization. Let us assume that a person answered positively. If there are question later in the survey that ask about details of the organization there is a potential internal conflict in the respondent. For example, the question “How do you feel about management at the organization?” could present a conflict if the answer about the organization in general was positive it may be difficult for someone to respond negatively about management because this could contradict the previous answer about management. Therefore, it is important to consider the effect of questions on related subsequent questions.</p>
+</div>
+<div id="types-of-survey-aswers" class="section level3">
+<h3><span class="header-section-number">12.3.6</span> Types Of Survey Aswers</h3>
+<p>There are many ways that a respondent can answer questions. The type of answers often depends on the goals of the research, the type of analysis that will be conducted, and the type of information that is needed from the evaluation. This is similar to many themes that we have seen. One important thing to keep in mind is that surveys may use different types of answers in one survey when it is needed.</p>
+<p>One way to design survey questions is to have open-ended questions. This is when people can freely respond however they would like. This can be very useful. As with observational studies, there are many things that a researcher may not know. By allowing a free response a researcher can learn many in depth viewpoints and characteristics of the organization and its functioning. This provides potentially much data that can be very valuable and informative.</p>
+<p>There are some disadvantages with open-ended questions. One is that the respondent may not actually answer questions with the information for which is being asked. The answer can stray from the topic. This would yield data that may not be useful for the evaluation. Sometimes restricting the scope of answer may be more productive. However, any restrictions must maintain objectivity and not limit responses in such a way that will bias answers to confirm a hypothesis.</p>
+<p>Open-ended questions have many similarities with observational studies. Open-ended questions must be interpreted by the researcher. As with observational studies, a systematic coding system must exist to be sure that the data is valid and reliable, and also objective. The only difference is that there are now direct questions. This should help to minimize some of the need for interpretation. However, open-ended questions are not as simple to statistically analyze. Therefore, it is very important, as with other methods, to have an analysis plan before creating the survey.</p>
+<p>Another class of answers that are used are involve very simple do you agree or disagree answers and yes or no answers. These can be very useful because the answers are very clear and need no interpretation. These are also much more easy to analyze and can be used with several statistical models, such as regression, ANOVA, and simple comparisons of means. One disadvantage is that there are often cases where a respondent is not precisely in a yes or no category. This can lead to lower quality data because either option is not exactly how the respondent feels.</p>
+<p>Because having only two choices can sometimes be too restrictive and not allow for the true response, a good way is to expand the options. Instead of asking do you agree or disagree, it could be better to provide a scale of options. These may range from 1-5 where 1 is completely disagree and 5 is completely agree. This is called a Likert Scale. Typically these scales are either 1-5 or 1-7. There are other ranges of scales. One important consideration is to use an odd numbered scale. This will provide a middle point where often the option is “neutral, or”neither agree nor disagree“. The other options such as 2 and 4 on a 1-5 scale is often”somewhat disagree&quot; for 2 and “somewhat agree” for 3. This provides a full range of options, while restricting the answers.</p>
+<p>As mentioned, there are other ranges of scales. A researcher should be careful when deciding on the range. If there are too few options then again we encounter the situation of the respondent not being able to answer precisely truthful always. If we have too many options then the respondent may not know exactly how to respond due to too many options to consider. It is also important to label what each number on the scale means. As with keeping questions simple, by not labeling the meaning of each number there is more complexity and need for the respondent to interpret what the number means.</p>
+<p>One final consideration with Likert Scales is that it is important to keep all of the ranges of the scales the same. First, it begins to confuse the respondent when scale ranges change. Second, it is difficult to compare the data from different ranges. However, depending on the type of question there may be a need to have different types of responses, but when using a scale it is best to remain with the same range throughout the survey.</p>
+</div>
+</div>
+<div id="review-general-principles-in-survey-design" class="section level2">
+<h2><span class="header-section-number">12.4</span> Review General principles In Survey Design</h2>
+<p>We have covered some very important principles that should always be considered when developing surveys. As we have seen there are many things to consider before question have actually been created. This is also an underlying theme: much preparatory work is needed before creating the first question.</p>
+<div id="looking-ahead-7" class="section level3">
+<h3><span class="header-section-number">12.4.1</span> Looking Ahead</h3>
+<ul>
+<li><p>We will continue to discuss how to best design a survey.</p></li>
+<li><p>We will discuss important procedures that should be used when developing specific questions.</p></li>
+<li><p>We will expand upon these procedures and principles and apply them to using interviews for program evaluation.</p></li>
+</ul>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="non-experimental-methods-for-program-evaluation-and-research.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="interviewing-methods.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/DS4PS/program-evaluation-course/edit/master/part_02_ch_06.Rmd",
+"text": "Edit"
+},
+"download": ["Foundations of Program Evaluation.pdf", "Foundations of Program Evaluation.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

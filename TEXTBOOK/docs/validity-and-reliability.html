@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Program Evaluation: Methods and Design</title>
+  <meta name="description" content="This text serves as reference material for a course sequence in applied regression analysis and research design offered at an advanced undergraduate or master’s level for students in applied social science.">
+  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Program Evaluation: Methods and Design" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This text serves as reference material for a course sequence in applied regression analysis and research design offered at an advanced undergraduate or master’s level for students in applied social science." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Program Evaluation: Methods and Design" />
+  
+  <meta name="twitter:description" content="This text serves as reference material for a course sequence in applied regression analysis and research design offered at an advanced undergraduate or master’s level for students in applied social science." />
+  
+
+<meta name="author" content="Joshua Manning, Jesse Lecy">
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="introduction-to-research-design.html">
+<link rel="next" href="introduction-to-methods-of-research-design.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="custom.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="https://ds4ps.github.io/course_website/">Data Science I</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome</a></li>
+<li class="part"><span><b>I REGRESSION</b></span></li>
+<li class="chapter" data-level="1" data-path="r-markdown.html"><a href="r-markdown.html"><i class="fa fa-check"></i><b>1</b> R Markdown</a><ul>
+<li class="chapter" data-level="1.1" data-path="r-markdown.html"><a href="r-markdown.html#including-plots"><i class="fa fa-check"></i><b>1.1</b> Including Plots</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="program-impact.html"><a href="program-impact.html"><i class="fa fa-check"></i><b>2</b> Program Impact</a><ul>
+<li class="chapter" data-level="2.0.1" data-path="program-impact.html"><a href="program-impact.html#why-do-we-use-statistical-models-for-program-evaluation"><i class="fa fa-check"></i><b>2.0.1</b> Why do we use statistical models for program evaluation?</a></li>
+<li class="chapter" data-level="2.0.2" data-path="program-impact.html"><a href="program-impact.html#reminder-from-unit-1-advantages-of-statistical-evaluation"><i class="fa fa-check"></i><b>2.0.2</b> Reminder from Unit 1: Advantages of Statistical Evaluation</a></li>
+<li class="chapter" data-level="2.1" data-path="program-impact.html"><a href="program-impact.html#the-regression-equation"><i class="fa fa-check"></i><b>2.1</b> The Regression Equation</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="program-impact.html"><a href="program-impact.html#hypothetical-example-of-interpreting-the-regression-equation"><i class="fa fa-check"></i><b>2.1.1</b> Hypothetical Example of Interpreting the Regression Equation</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="program-impact.html"><a href="program-impact.html#confidence-intervals"><i class="fa fa-check"></i><b>2.2</b> Confidence Intervals</a></li>
+<li class="chapter" data-level="2.3" data-path="program-impact.html"><a href="program-impact.html#confidence-intervals-for-hypothesis-testing"><i class="fa fa-check"></i><b>2.3</b> Confidence Intervals For Hypothesis Testing</a></li>
+<li class="chapter" data-level="2.4" data-path="program-impact.html"><a href="program-impact.html#the-standard-error"><i class="fa fa-check"></i><b>2.4</b> The Standard Error</a></li>
+<li class="chapter" data-level="2.5" data-path="program-impact.html"><a href="program-impact.html#the-variance-and-standard-deviation-of-the-mean"><i class="fa fa-check"></i><b>2.5</b> The Variance and Standard Deviation Of The Mean</a><ul>
+<li class="chapter" data-level="2.5.1" data-path="program-impact.html"><a href="program-impact.html#hand-calculation-of-the-variance"><i class="fa fa-check"></i><b>2.5.1</b> Hand Calculation Of The Variance</a></li>
+</ul></li>
+<li class="chapter" data-level="2.6" data-path="program-impact.html"><a href="program-impact.html#the-standard-error-of-the-sample-mean"><i class="fa fa-check"></i><b>2.6</b> The Standard Error Of The Sample Mean</a><ul>
+<li class="chapter" data-level="2.6.1" data-path="program-impact.html"><a href="program-impact.html#calculating-the-standard-error-of-the-mean"><i class="fa fa-check"></i><b>2.6.1</b> Calculating The Standard Error Of The Mean</a></li>
+<li class="chapter" data-level="2.6.2" data-path="program-impact.html"><a href="program-impact.html#hand-calculating-the-mean-and-standard-error-of-samples."><i class="fa fa-check"></i><b>2.6.2</b> Hand Calculating The Mean And Standard Error Of Samples.</a></li>
+<li class="chapter" data-level="2.6.3" data-path="program-impact.html"><a href="program-impact.html#calculating-the-standard-error"><i class="fa fa-check"></i><b>2.6.3</b> Calculating The Standard Error</a></li>
+<li class="chapter" data-level="2.6.4" data-path="program-impact.html"><a href="program-impact.html#recap-of-the-standard-error"><i class="fa fa-check"></i><b>2.6.4</b> Recap Of The Standard Error</a></li>
+</ul></li>
+<li class="chapter" data-level="2.7" data-path="program-impact.html"><a href="program-impact.html#summary-what-we-covered-in-this-unit"><i class="fa fa-check"></i><b>2.7</b> Summary: What we covered in this unit</a><ul>
+<li class="chapter" data-level="2.7.1" data-path="program-impact.html"><a href="program-impact.html#looking-ahead"><i class="fa fa-check"></i><b>2.7.1</b> Looking Ahead</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="confidence-intervals-1.html"><a href="confidence-intervals-1.html"><i class="fa fa-check"></i><b>3</b> Confidence Intervals</a><ul>
+<li class="chapter" data-level="3.1" data-path="confidence-intervals-1.html"><a href="confidence-intervals-1.html#how-the-size-of-the-standard-error-represents-confidence"><i class="fa fa-check"></i><b>3.1</b> How The Size Of The Standard Error Represents Confidence</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="confidence-intervals-1.html"><a href="confidence-intervals-1.html#factors-that-influence-the-size-of-the-standard-error"><i class="fa fa-check"></i><b>3.1.1</b> Factors That Influence The Size Of The Standard Error</a></li>
+<li class="chapter" data-level="3.1.2" data-path="confidence-intervals-1.html"><a href="confidence-intervals-1.html#the-standard-error-of-the-mean-equation"><i class="fa fa-check"></i><b>3.1.2</b> The Standard Error Of The Mean Equation</a></li>
+<li class="chapter" data-level="3.1.3" data-path="confidence-intervals-1.html"><a href="confidence-intervals-1.html#factors-that-influence-the-size-of-the-standard-error-in-regression"><i class="fa fa-check"></i><b>3.1.3</b> Factors That Influence The Size Of The Standard Error In Regression</a></li>
+<li class="chapter" data-level="3.1.4" data-path="confidence-intervals-1.html"><a href="confidence-intervals-1.html#the-residual-in-regression"><i class="fa fa-check"></i><b>3.1.4</b> The Residual In Regression</a></li>
+<li class="chapter" data-level="3.1.5" data-path="confidence-intervals-1.html"><a href="confidence-intervals-1.html#factors-that-influence-the-size-of-the-standard-error-in-regression-1"><i class="fa fa-check"></i><b>3.1.5</b> Factors That Influence The Size Of The Standard Error In Regression</a></li>
+<li class="chapter" data-level="3.1.6" data-path="confidence-intervals-1.html"><a href="confidence-intervals-1.html#the-variance-and-standard-deviation-of-the-regression-slope-equation"><i class="fa fa-check"></i><b>3.1.6</b> The Variance And Standard Deviation Of The Regression Slope Equation</a></li>
+<li class="chapter" data-level="3.1.7" data-path="confidence-intervals-1.html"><a href="confidence-intervals-1.html#the-standard-error-of-the-regression-slope-equation"><i class="fa fa-check"></i><b>3.1.7</b> The Standard Error Of The Regression Slope Equation</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="confidence-intervals-1.html"><a href="confidence-intervals-1.html#standard-errors-and-confidence-intervals"><i class="fa fa-check"></i><b>3.2</b> Standard Errors And Confidence Intervals</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="confidence-intervals-1.html"><a href="confidence-intervals-1.html#calculating-the-confidence-interval-of-the-mean"><i class="fa fa-check"></i><b>3.2.1</b> Calculating The Confidence Interval Of The Mean</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="the-regression-residual.html"><a href="the-regression-residual.html"><i class="fa fa-check"></i><b>4</b> The Regression Residual</a><ul>
+<li class="chapter" data-level="4.1" data-path="the-regression-residual.html"><a href="the-regression-residual.html#regression-residuals-and-errors"><i class="fa fa-check"></i><b>4.1</b> Regression Residuals And Errors</a></li>
+<li class="chapter" data-level="4.2" data-path="the-regression-residual.html"><a href="the-regression-residual.html#the-residual-in-regression-1"><i class="fa fa-check"></i><b>4.2</b> The Residual In Regression</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="the-regression-residual.html"><a href="the-regression-residual.html#interpreting-and-using-the-residual-in-regression"><i class="fa fa-check"></i><b>4.2.1</b> Interpreting And Using The Residual In Regression</a></li>
+<li class="chapter" data-level="4.2.2" data-path="the-regression-residual.html"><a href="the-regression-residual.html#how-the-residual-describes-over-performing-and-under-performing"><i class="fa fa-check"></i><b>4.2.2</b> How The Residual Describes Over-performing and Under-performing</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="the-regression-residual.html"><a href="the-regression-residual.html#how-do-we-know-the-best-fitting-regression-line-for-our-data"><i class="fa fa-check"></i><b>4.3</b> How Do We Know The Best Fitting Regression Line For Our Data</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="the-regression-residual.html"><a href="the-regression-residual.html#the-calculation-of-the-regression-line"><i class="fa fa-check"></i><b>4.3.1</b> The Calculation Of The Regression Line</a></li>
+<li class="chapter" data-level="4.3.2" data-path="the-regression-residual.html"><a href="the-regression-residual.html#implications-of-squaring-residuals"><i class="fa fa-check"></i><b>4.3.2</b> Implications Of Squaring Residuals</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="the-regression-residual.html"><a href="the-regression-residual.html#the-regression-coefficient-equations-estimates"><i class="fa fa-check"></i><b>4.4</b> The Regression Coefficient Equations Estimates</a></li>
+<li class="chapter" data-level="4.5" data-path="the-regression-residual.html"><a href="the-regression-residual.html#looking-forward"><i class="fa fa-check"></i><b>4.5</b> Looking Forward</a></li>
+<li class="chapter" data-level="4.6" data-path="the-regression-residual.html"><a href="the-regression-residual.html#figure-example"><i class="fa fa-check"></i><b>4.6</b> Figure Example</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="the-regression-slope.html"><a href="the-regression-slope.html"><i class="fa fa-check"></i><b>5</b> The Regression Slope</a><ul>
+<li class="chapter" data-level="5.1" data-path="the-regression-slope.html"><a href="the-regression-slope.html#variance-revisited"><i class="fa fa-check"></i><b>5.1</b> Variance Revisited</a></li>
+<li class="chapter" data-level="5.2" data-path="the-regression-slope.html"><a href="the-regression-slope.html#the-standard-deviation-revisited"><i class="fa fa-check"></i><b>5.2</b> The Standard Deviation Revisited</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="the-regression-slope.html"><a href="the-regression-slope.html#squared-residuals"><i class="fa fa-check"></i><b>5.2.1</b> Squared Residuals</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="the-regression-slope.html"><a href="the-regression-slope.html#covariance"><i class="fa fa-check"></i><b>5.3</b> Covariance</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="the-regression-slope.html"><a href="the-regression-slope.html#calculating-the-covariance"><i class="fa fa-check"></i><b>5.3.1</b> Calculating The Covariance</a></li>
+<li class="chapter" data-level="5.3.2" data-path="the-regression-slope.html"><a href="the-regression-slope.html#positive-correlation"><i class="fa fa-check"></i><b>5.3.2</b> Positive Correlation</a></li>
+<li class="chapter" data-level="5.3.3" data-path="the-regression-slope.html"><a href="the-regression-slope.html#negative-corrleation"><i class="fa fa-check"></i><b>5.3.3</b> Negative Corrleation</a></li>
+<li class="chapter" data-level="5.3.4" data-path="the-regression-slope.html"><a href="the-regression-slope.html#low-correlation"><i class="fa fa-check"></i><b>5.3.4</b> Low Correlation</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="the-regression-slope.html"><a href="the-regression-slope.html#the-slope"><i class="fa fa-check"></i><b>5.4</b> The Slope</a></li>
+<li class="chapter" data-level="5.5" data-path="the-regression-slope.html"><a href="the-regression-slope.html#looking-ahead-1"><i class="fa fa-check"></i><b>5.5</b> Looking Ahead</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="explaining-variance.html"><a href="explaining-variance.html"><i class="fa fa-check"></i><b>6</b> Explaining Variance</a><ul>
+<li class="chapter" data-level="6.1" data-path="explaining-variance.html"><a href="explaining-variance.html#r-squared"><i class="fa fa-check"></i><b>6.1</b> R-Squared</a></li>
+<li class="chapter" data-level="6.2" data-path="explaining-variance.html"><a href="explaining-variance.html#hand-calculation-of-the-regression"><i class="fa fa-check"></i><b>6.2</b> Hand Calculation Of The Regression</a></li>
+<li class="chapter" data-level="6.3" data-path="explaining-variance.html"><a href="explaining-variance.html#partitioning-the-variance-of-y"><i class="fa fa-check"></i><b>6.3</b> Partitioning The Variance Of Y</a><ul>
+<li class="chapter" data-level="6.3.1" data-path="explaining-variance.html"><a href="explaining-variance.html#the-relationship-of-r-squared-and-partitioned-variance"><i class="fa fa-check"></i><b>6.3.1</b> The Relationship Of R-Squared And Partitioned Variance</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="explaining-variance.html"><a href="explaining-variance.html#looking-ahead-2"><i class="fa fa-check"></i><b>6.4</b> Looking Ahead</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="ballentine-venn-diagrams.html"><a href="ballentine-venn-diagrams.html"><i class="fa fa-check"></i><b>7</b> Ballentine Venn Diagrams</a><ul>
+<li class="chapter" data-level="7.0.1" data-path="ballentine-venn-diagrams.html"><a href="ballentine-venn-diagrams.html#concepts-that-bellentine-venn-diagrams-can-represent"><i class="fa fa-check"></i><b>7.0.1</b> Concepts That Bellentine Venn Diagrams Can Represent</a></li>
+<li class="chapter" data-level="7.0.2" data-path="ballentine-venn-diagrams.html"><a href="ballentine-venn-diagrams.html#variance"><i class="fa fa-check"></i><b>7.0.2</b> Variance</a></li>
+<li class="chapter" data-level="7.1" data-path="ballentine-venn-diagrams.html"><a href="ballentine-venn-diagrams.html#covariance-1"><i class="fa fa-check"></i><b>7.1</b> Covariance</a></li>
+<li class="chapter" data-level="7.2" data-path="ballentine-venn-diagrams.html"><a href="ballentine-venn-diagrams.html#correlation"><i class="fa fa-check"></i><b>7.2</b> Correlation</a></li>
+<li class="chapter" data-level="7.3" data-path="ballentine-venn-diagrams.html"><a href="ballentine-venn-diagrams.html#slope"><i class="fa fa-check"></i><b>7.3</b> Slope</a></li>
+<li class="chapter" data-level="7.4" data-path="ballentine-venn-diagrams.html"><a href="ballentine-venn-diagrams.html#r-square-and-the-regression-residual"><i class="fa fa-check"></i><b>7.4</b> R-Square and the Regression Residual</a></li>
+<li class="chapter" data-level="7.5" data-path="ballentine-venn-diagrams.html"><a href="ballentine-venn-diagrams.html#the-standard-error-1"><i class="fa fa-check"></i><b>7.5</b> The Standard Error</a></li>
+<li class="chapter" data-level="7.6" data-path="ballentine-venn-diagrams.html"><a href="ballentine-venn-diagrams.html#defining-other-variables-for-future-units"><i class="fa fa-check"></i><b>7.6</b> Defining Other Variables For Future Units</a></li>
+<li class="chapter" data-level="7.7" data-path="ballentine-venn-diagrams.html"><a href="ballentine-venn-diagrams.html#ahead"><i class="fa fa-check"></i><b>7.7</b> Ahead</a></li>
+</ul></li>
+<li class="part"><span><b>II RESEARCH DESIGN</b></span></li>
+<li class="chapter" data-level="8" data-path="introduction-to-research-design.html"><a href="introduction-to-research-design.html"><i class="fa fa-check"></i><b>8</b> Introduction To Research Design</a><ul>
+<li class="chapter" data-level="8.1" data-path="introduction-to-research-design.html"><a href="introduction-to-research-design.html#why-do-we-need-quality-research-design-and-methods"><i class="fa fa-check"></i><b>8.1</b> Why Do We Need Quality Research Design And Methods?</a><ul>
+<li class="chapter" data-level="8.1.1" data-path="introduction-to-research-design.html"><a href="introduction-to-research-design.html#overview-of-research-design"><i class="fa fa-check"></i><b>8.1.1</b> Overview Of Research Design</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="introduction-to-research-design.html"><a href="introduction-to-research-design.html#why-do-we-conduct-studies-to-evalueate-programs"><i class="fa fa-check"></i><b>8.2</b> Why Do We Conduct Studies To Evalueate Programs</a><ul>
+<li class="chapter" data-level="8.2.1" data-path="introduction-to-research-design.html"><a href="introduction-to-research-design.html#the-importance-of-understanding-the-relationship-among-variables"><i class="fa fa-check"></i><b>8.2.1</b> The Importance Of Understanding The Relationship Among Variables</a></li>
+<li class="chapter" data-level="8.2.2" data-path="introduction-to-research-design.html"><a href="introduction-to-research-design.html#variables-and-function-in-program-evaluation"><i class="fa fa-check"></i><b>8.2.2</b> Variables And Function In Program Evaluation</a></li>
+<li class="chapter" data-level="8.2.3" data-path="introduction-to-research-design.html"><a href="introduction-to-research-design.html#the-function-of-independent-and-dependent-variables"><i class="fa fa-check"></i><b>8.2.3</b> The Function Of Independent And Dependent Variables</a></li>
+<li class="chapter" data-level="8.2.4" data-path="introduction-to-research-design.html"><a href="introduction-to-research-design.html#other-factors"><i class="fa fa-check"></i><b>8.2.4</b> Other Factors</a></li>
+<li class="chapter" data-level="8.2.5" data-path="introduction-to-research-design.html"><a href="introduction-to-research-design.html#important-characteristics-of-variables-in-research-design"><i class="fa fa-check"></i><b>8.2.5</b> Important Characteristics Of Variables In Research Design</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="introduction-to-research-design.html"><a href="introduction-to-research-design.html#looking-ahead-3"><i class="fa fa-check"></i><b>8.3</b> Looking Ahead</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="validity-and-reliability.html"><a href="validity-and-reliability.html"><i class="fa fa-check"></i><b>9</b> Validity and Reliability</a><ul>
+<li class="chapter" data-level="9.1" data-path="validity-and-reliability.html"><a href="validity-and-reliability.html#research-validity"><i class="fa fa-check"></i><b>9.1</b> Research Validity</a><ul>
+<li class="chapter" data-level="9.1.1" data-path="validity-and-reliability.html"><a href="validity-and-reliability.html#external-validity"><i class="fa fa-check"></i><b>9.1.1</b> External Validity</a></li>
+<li class="chapter" data-level="9.1.2" data-path="validity-and-reliability.html"><a href="validity-and-reliability.html#breaking-down-external-validity"><i class="fa fa-check"></i><b>9.1.2</b> Breaking Down External Validity</a></li>
+<li class="chapter" data-level="9.1.3" data-path="validity-and-reliability.html"><a href="validity-and-reliability.html#pulling-together-the-components-of-external-validity"><i class="fa fa-check"></i><b>9.1.3</b> Pulling Together The Components Of External Validity</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="validity-and-reliability.html"><a href="validity-and-reliability.html#internal-validity"><i class="fa fa-check"></i><b>9.2</b> Internal Validity</a><ul>
+<li class="chapter" data-level="9.2.1" data-path="validity-and-reliability.html"><a href="validity-and-reliability.html#breaking-down-internal-validity"><i class="fa fa-check"></i><b>9.2.1</b> Breaking Down Internal Validity</a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="validity-and-reliability.html"><a href="validity-and-reliability.html#construct-validity"><i class="fa fa-check"></i><b>9.3</b> Construct Validity</a><ul>
+<li class="chapter" data-level="9.3.1" data-path="validity-and-reliability.html"><a href="validity-and-reliability.html#breaking-down-construct-validity"><i class="fa fa-check"></i><b>9.3.1</b> Breaking Down Construct Validity</a></li>
+</ul></li>
+<li class="chapter" data-level="9.4" data-path="validity-and-reliability.html"><a href="validity-and-reliability.html#reliability"><i class="fa fa-check"></i><b>9.4</b> Reliability</a><ul>
+<li class="chapter" data-level="9.4.1" data-path="validity-and-reliability.html"><a href="validity-and-reliability.html#breaking-down-reliability"><i class="fa fa-check"></i><b>9.4.1</b> Breaking Down Reliability</a></li>
+</ul></li>
+<li class="chapter" data-level="9.5" data-path="validity-and-reliability.html"><a href="validity-and-reliability.html#looking-ahead-4"><i class="fa fa-check"></i><b>9.5</b> Looking Ahead</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="introduction-to-methods-of-research-design.html"><a href="introduction-to-methods-of-research-design.html"><i class="fa fa-check"></i><b>10</b> Introduction to Methods Of Research Design</a><ul>
+<li class="chapter" data-level="10.1" data-path="introduction-to-methods-of-research-design.html"><a href="introduction-to-methods-of-research-design.html#methods-of-research-and-the-relation-to-validity-and-reliability"><i class="fa fa-check"></i><b>10.1</b> Methods Of Research And The Relation To Validity And Reliability</a></li>
+<li class="chapter" data-level="10.2" data-path="introduction-to-methods-of-research-design.html"><a href="introduction-to-methods-of-research-design.html#the-relationship-between-variables"><i class="fa fa-check"></i><b>10.2</b> The Relationship Between Variables</a><ul>
+<li class="chapter" data-level="10.2.1" data-path="introduction-to-methods-of-research-design.html"><a href="introduction-to-methods-of-research-design.html#positive-relationship-between-two-variables"><i class="fa fa-check"></i><b>10.2.1</b> Positive Relationship Between Two Variables</a></li>
+<li class="chapter" data-level="10.2.2" data-path="introduction-to-methods-of-research-design.html"><a href="introduction-to-methods-of-research-design.html#negative-relationship-between-two-variables"><i class="fa fa-check"></i><b>10.2.2</b> Negative Relationship Between Two Variables</a></li>
+<li class="chapter" data-level="10.2.3" data-path="introduction-to-methods-of-research-design.html"><a href="introduction-to-methods-of-research-design.html#no-relationship-between-two-variables"><i class="fa fa-check"></i><b>10.2.3</b> No Relationship Between Two Variables</a></li>
+<li class="chapter" data-level="10.2.4" data-path="introduction-to-methods-of-research-design.html"><a href="introduction-to-methods-of-research-design.html#from-relationships-between-variables-to-methods-of-evaluating-relationships"><i class="fa fa-check"></i><b>10.2.4</b> From Relationships Between Variables To Methods Of Evaluating Relationships</a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="introduction-to-methods-of-research-design.html"><a href="introduction-to-methods-of-research-design.html#evaluating-relationships-of-variables-in-programs-and-outcomes"><i class="fa fa-check"></i><b>10.3</b> Evaluating Relationships Of Variables In Programs And Outcomes</a></li>
+<li class="chapter" data-level="10.4" data-path="introduction-to-methods-of-research-design.html"><a href="introduction-to-methods-of-research-design.html#overview-of-research-methods"><i class="fa fa-check"></i><b>10.4</b> Overview Of Research Methods</a><ul>
+<li class="chapter" data-level="10.4.1" data-path="introduction-to-methods-of-research-design.html"><a href="introduction-to-methods-of-research-design.html#non-experimental-methods"><i class="fa fa-check"></i><b>10.4.1</b> Non-Experimental Methods</a></li>
+<li class="chapter" data-level="10.4.2" data-path="introduction-to-methods-of-research-design.html"><a href="introduction-to-methods-of-research-design.html#experimental-methods"><i class="fa fa-check"></i><b>10.4.2</b> Experimental Methods</a></li>
+</ul></li>
+<li class="chapter" data-level="10.5" data-path="introduction-to-methods-of-research-design.html"><a href="introduction-to-methods-of-research-design.html#looking-ahead-5"><i class="fa fa-check"></i><b>10.5</b> Looking Ahead</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="non-experimental-methods-for-program-evaluation-and-research.html"><a href="non-experimental-methods-for-program-evaluation-and-research.html"><i class="fa fa-check"></i><b>11</b> Non-Experimental Methods For Program Evaluation And Research</a><ul>
+<li class="chapter" data-level="11.1" data-path="non-experimental-methods-for-program-evaluation-and-research.html"><a href="non-experimental-methods-for-program-evaluation-and-research.html#observational-methods"><i class="fa fa-check"></i><b>11.1</b> Observational Methods</a><ul>
+<li class="chapter" data-level="11.1.1" data-path="non-experimental-methods-for-program-evaluation-and-research.html"><a href="non-experimental-methods-for-program-evaluation-and-research.html#important-aspects-of-observational-methods"><i class="fa fa-check"></i><b>11.1.1</b> Important Aspects Of Observational methods</a></li>
+<li class="chapter" data-level="11.1.2" data-path="non-experimental-methods-for-program-evaluation-and-research.html"><a href="non-experimental-methods-for-program-evaluation-and-research.html#the-importance-of-using-a-systematic-and-replicable-method"><i class="fa fa-check"></i><b>11.1.2</b> The Importance Of Using A systematic And Replicable Method</a></li>
+</ul></li>
+<li class="chapter" data-level="11.2" data-path="non-experimental-methods-for-program-evaluation-and-research.html"><a href="non-experimental-methods-for-program-evaluation-and-research.html#types-of-observational-methods"><i class="fa fa-check"></i><b>11.2</b> Types Of Observational Methods</a><ul>
+<li class="chapter" data-level="11.2.1" data-path="non-experimental-methods-for-program-evaluation-and-research.html"><a href="non-experimental-methods-for-program-evaluation-and-research.html#collecting-data"><i class="fa fa-check"></i><b>11.2.1</b> Collecting Data</a></li>
+<li class="chapter" data-level="11.2.2" data-path="non-experimental-methods-for-program-evaluation-and-research.html"><a href="non-experimental-methods-for-program-evaluation-and-research.html#qualitative-versus-quantitative-observational-studies"><i class="fa fa-check"></i><b>11.2.2</b> Qualitative Versus Quantitative Observational Studies</a></li>
+</ul></li>
+<li class="chapter" data-level="11.3" data-path="non-experimental-methods-for-program-evaluation-and-research.html"><a href="non-experimental-methods-for-program-evaluation-and-research.html#looking-ahead-6"><i class="fa fa-check"></i><b>11.3</b> Looking Ahead</a></li>
+<li class="chapter" data-level="11.4" data-path="non-experimental-methods-for-program-evaluation-and-research.html"><a href="non-experimental-methods-for-program-evaluation-and-research.html#naturalistic-observation"><i class="fa fa-check"></i><b>11.4</b> Naturalistic Observation</a><ul>
+<li class="chapter" data-level="11.4.1" data-path="non-experimental-methods-for-program-evaluation-and-research.html"><a href="non-experimental-methods-for-program-evaluation-and-research.html#how-the-analysis-plan-affects-our-collection-methods"><i class="fa fa-check"></i><b>11.4.1</b> How The Analysis Plan Affects Our Collection Methods</a></li>
+<li class="chapter" data-level="11.4.2" data-path="non-experimental-methods-for-program-evaluation-and-research.html"><a href="non-experimental-methods-for-program-evaluation-and-research.html#revisiting-pay-raise-and-productivity"><i class="fa fa-check"></i><b>11.4.2</b> Revisiting Pay Raise And Productivity</a></li>
+<li class="chapter" data-level="11.4.3" data-path="non-experimental-methods-for-program-evaluation-and-research.html"><a href="non-experimental-methods-for-program-evaluation-and-research.html#advantages-of-naturalistic-observation"><i class="fa fa-check"></i><b>11.4.3</b> Advantages Of Naturalistic Observation</a></li>
+<li class="chapter" data-level="11.4.4" data-path="non-experimental-methods-for-program-evaluation-and-research.html"><a href="non-experimental-methods-for-program-evaluation-and-research.html#disadvantages-of-naturalistic-observation"><i class="fa fa-check"></i><b>11.4.4</b> Disadvantages Of Naturalistic Observation</a></li>
+<li class="chapter" data-level="11.4.5" data-path="non-experimental-methods-for-program-evaluation-and-research.html"><a href="non-experimental-methods-for-program-evaluation-and-research.html#when-a-researcher-reveals-or-participates-in-the-observation"><i class="fa fa-check"></i><b>11.4.5</b> When A Researcher Reveals Or Participates In The Observation</a></li>
+</ul></li>
+<li class="chapter" data-level="11.5" data-path="non-experimental-methods-for-program-evaluation-and-research.html"><a href="non-experimental-methods-for-program-evaluation-and-research.html#reviewing-naturalistic-observation"><i class="fa fa-check"></i><b>11.5</b> Reviewing Naturalistic Observation</a><ul>
+<li class="chapter" data-level="11.5.1" data-path="non-experimental-methods-for-program-evaluation-and-research.html"><a href="non-experimental-methods-for-program-evaluation-and-research.html#looking-aread"><i class="fa fa-check"></i><b>11.5.1</b> Looking Aread</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="surveys-in-program-evaluation.html"><a href="surveys-in-program-evaluation.html"><i class="fa fa-check"></i><b>12</b> Surveys In Program Evaluation</a><ul>
+<li class="chapter" data-level="12.1" data-path="surveys-in-program-evaluation.html"><a href="surveys-in-program-evaluation.html#surveys-in-organizations"><i class="fa fa-check"></i><b>12.1</b> Surveys In Organizations</a></li>
+<li class="chapter" data-level="12.2" data-path="surveys-in-program-evaluation.html"><a href="surveys-in-program-evaluation.html#developing-a-reliable-and-valid-survey"><i class="fa fa-check"></i><b>12.2</b> Developing A Reliable And Valid Survey</a><ul>
+<li class="chapter" data-level="12.2.1" data-path="surveys-in-program-evaluation.html"><a href="surveys-in-program-evaluation.html#initial-steps-before-developing-a-reliable-and-valid-survey"><i class="fa fa-check"></i><b>12.2.1</b> Initial Steps Before Developing A Reliable And Valid Survey</a></li>
+<li class="chapter" data-level="12.2.2" data-path="surveys-in-program-evaluation.html"><a href="surveys-in-program-evaluation.html#developing-high-quality-survey-questions"><i class="fa fa-check"></i><b>12.2.2</b> Developing High Quality Survey Questions</a></li>
+</ul></li>
+<li class="chapter" data-level="12.3" data-path="surveys-in-program-evaluation.html"><a href="surveys-in-program-evaluation.html#details-of-survey-question-design"><i class="fa fa-check"></i><b>12.3</b> Details Of Survey Question Design</a><ul>
+<li class="chapter" data-level="12.3.1" data-path="surveys-in-program-evaluation.html"><a href="surveys-in-program-evaluation.html#how-to-ovoid-leading-questions"><i class="fa fa-check"></i><b>12.3.1</b> How To Ovoid Leading Questions</a></li>
+<li class="chapter" data-level="12.3.2" data-path="surveys-in-program-evaluation.html"><a href="surveys-in-program-evaluation.html#how-to-create-simple-and-non-complex-questions"><i class="fa fa-check"></i><b>12.3.2</b> How To Create Simple And Non-Complex Questions</a></li>
+<li class="chapter" data-level="12.3.3" data-path="surveys-in-program-evaluation.html"><a href="surveys-in-program-evaluation.html#the-importance-of-presenting-the-optimal-number-of-questions"><i class="fa fa-check"></i><b>12.3.3</b> The Importance Of Presenting The Optimal Number Of Questions</a></li>
+<li class="chapter" data-level="12.3.4" data-path="surveys-in-program-evaluation.html"><a href="surveys-in-program-evaluation.html#ask-about-only-one-thing-at-a-time"><i class="fa fa-check"></i><b>12.3.4</b> Ask About Only One Thing At A Time</a></li>
+<li class="chapter" data-level="12.3.5" data-path="surveys-in-program-evaluation.html"><a href="surveys-in-program-evaluation.html#how-should-questions-be-ordered-in-a-survey"><i class="fa fa-check"></i><b>12.3.5</b> How Should Questions Be Ordered In A Survey</a></li>
+<li class="chapter" data-level="12.3.6" data-path="surveys-in-program-evaluation.html"><a href="surveys-in-program-evaluation.html#types-of-survey-aswers"><i class="fa fa-check"></i><b>12.3.6</b> Types Of Survey Aswers</a></li>
+</ul></li>
+<li class="chapter" data-level="12.4" data-path="surveys-in-program-evaluation.html"><a href="surveys-in-program-evaluation.html#review-general-principles-in-survey-design"><i class="fa fa-check"></i><b>12.4</b> Review General principles In Survey Design</a><ul>
+<li class="chapter" data-level="12.4.1" data-path="surveys-in-program-evaluation.html"><a href="surveys-in-program-evaluation.html#looking-ahead-7"><i class="fa fa-check"></i><b>12.4.1</b> Looking Ahead</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="interviewing-methods.html"><a href="interviewing-methods.html"><i class="fa fa-check"></i><b>13</b> Interviewing Methods</a><ul>
+<li class="chapter" data-level="13.1" data-path="interviewing-methods.html"><a href="interviewing-methods.html#collecting-data-in-person"><i class="fa fa-check"></i><b>13.1</b> Collecting Data In Person</a></li>
+<li class="chapter" data-level="13.2" data-path="interviewing-methods.html"><a href="interviewing-methods.html#looking-ahead-8"><i class="fa fa-check"></i><b>13.2</b> Looking Ahead</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="coding-systems.html"><a href="coding-systems.html"><i class="fa fa-check"></i><b>14</b> Coding Systems</a><ul>
+<li class="chapter" data-level="14.1" data-path="coding-systems.html"><a href="coding-systems.html#how-to-develop-a-coding-system"><i class="fa fa-check"></i><b>14.1</b> How To Develop A Coding System</a><ul>
+<li class="chapter" data-level="14.1.1" data-path="coding-systems.html"><a href="coding-systems.html#an-example-of-how-to-code"><i class="fa fa-check"></i><b>14.1.1</b> An Example Of How To Code</a></li>
+</ul></li>
+<li class="chapter" data-level="14.2" data-path="coding-systems.html"><a href="coding-systems.html#looking-ahead-9"><i class="fa fa-check"></i><b>14.2</b> Looking Ahead</a></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="introduction-to-experimental-methods.html"><a href="introduction-to-experimental-methods.html"><i class="fa fa-check"></i><b>15</b> Introduction To Experimental Methods</a><ul>
+<li class="chapter" data-level="15.1" data-path="introduction-to-experimental-methods.html"><a href="introduction-to-experimental-methods.html#experimental-methods-vs.-non-experimental-methods"><i class="fa fa-check"></i><b>15.1</b> Experimental Methods Vs. Non-Experimental Methods</a><ul>
+<li class="chapter" data-level="15.1.1" data-path="introduction-to-experimental-methods.html"><a href="introduction-to-experimental-methods.html#what-makes-an-experiment"><i class="fa fa-check"></i><b>15.1.1</b> What Makes An Experiment?</a></li>
+</ul></li>
+<li class="chapter" data-level="15.2" data-path="introduction-to-experimental-methods.html"><a href="introduction-to-experimental-methods.html#looking-ahead-10"><i class="fa fa-check"></i><b>15.2</b> Looking Ahead</a></li>
+<li class="chapter" data-level="15.3" data-path="introduction-to-experimental-methods.html"><a href="introduction-to-experimental-methods.html#types-of-experimental-design"><i class="fa fa-check"></i><b>15.3</b> Types Of Experimental Design</a><ul>
+<li class="chapter" data-level="15.3.1" data-path="introduction-to-experimental-methods.html"><a href="introduction-to-experimental-methods.html#measuring-outcome-only"><i class="fa fa-check"></i><b>15.3.1</b> Measuring Outcome Only</a></li>
+<li class="chapter" data-level="15.3.2" data-path="introduction-to-experimental-methods.html"><a href="introduction-to-experimental-methods.html#measuring-before-the-program-and-the-outcome-after"><i class="fa fa-check"></i><b>15.3.2</b> Measuring Before The Program And The Outcome After</a></li>
+</ul></li>
+<li class="chapter" data-level="15.4" data-path="introduction-to-experimental-methods.html"><a href="introduction-to-experimental-methods.html#looking-ahead-11"><i class="fa fa-check"></i><b>15.4</b> Looking Ahead</a></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="advanced-experimental-design.html"><a href="advanced-experimental-design.html"><i class="fa fa-check"></i><b>16</b> Advanced Experimental Design</a><ul>
+<li class="chapter" data-level="16.1" data-path="advanced-experimental-design.html"><a href="advanced-experimental-design.html#the-solomon-four-group-experimental-designs"><i class="fa fa-check"></i><b>16.1</b> The Solomon Four-Group Experimental Designs</a></li>
+<li class="chapter" data-level="16.2" data-path="advanced-experimental-design.html"><a href="advanced-experimental-design.html#between-subject-design-and-within-subjectrepeated-measures-design"><i class="fa fa-check"></i><b>16.2</b> Between Subject Design And Within Subject/Repeated Measures Design</a><ul>
+<li class="chapter" data-level="16.2.1" data-path="advanced-experimental-design.html"><a href="advanced-experimental-design.html#advantages-and-disadvantages"><i class="fa fa-check"></i><b>16.2.1</b> Advantages And Disadvantages</a></li>
+</ul></li>
+<li class="chapter" data-level="16.3" data-path="advanced-experimental-design.html"><a href="advanced-experimental-design.html#looking-ahead-12"><i class="fa fa-check"></i><b>16.3</b> Looking Ahead</a></li>
+</ul></li>
+<li class="chapter" data-level="17" data-path="counterfactuals-and-quasi-experiments.html"><a href="counterfactuals-and-quasi-experiments.html"><i class="fa fa-check"></i><b>17</b> Counterfactuals And Quasi-Experiments</a><ul>
+<li class="chapter" data-level="17.1" data-path="counterfactuals-and-quasi-experiments.html"><a href="counterfactuals-and-quasi-experiments.html#quasi-experiments"><i class="fa fa-check"></i><b>17.1</b> Quasi-Experiments</a><ul>
+<li class="chapter" data-level="17.1.1" data-path="counterfactuals-and-quasi-experiments.html"><a href="counterfactuals-and-quasi-experiments.html#example-of-a-quasi-experiment"><i class="fa fa-check"></i><b>17.1.1</b> Example Of A Quasi-Experiment</a></li>
+<li class="chapter" data-level="17.1.2" data-path="counterfactuals-and-quasi-experiments.html"><a href="counterfactuals-and-quasi-experiments.html#other-types-of-quasi-experiments"><i class="fa fa-check"></i><b>17.1.2</b> Other Types Of Quasi-Experiments</a></li>
+</ul></li>
+<li class="chapter" data-level="17.2" data-path="counterfactuals-and-quasi-experiments.html"><a href="counterfactuals-and-quasi-experiments.html#introduction-to-counterfactuals"><i class="fa fa-check"></i><b>17.2</b> Introduction To Counterfactuals</a><ul>
+<li class="chapter" data-level="17.2.1" data-path="counterfactuals-and-quasi-experiments.html"><a href="counterfactuals-and-quasi-experiments.html#general-possible-counterfactuals"><i class="fa fa-check"></i><b>17.2.1</b> General Possible Counterfactuals</a></li>
+</ul></li>
+<li class="chapter" data-level="17.3" data-path="counterfactuals-and-quasi-experiments.html"><a href="counterfactuals-and-quasi-experiments.html#types-of-quasi-experimental-design"><i class="fa fa-check"></i><b>17.3</b> Types Of Quasi-Experimental Design</a><ul>
+<li class="chapter" data-level="17.3.1" data-path="counterfactuals-and-quasi-experiments.html"><a href="counterfactuals-and-quasi-experiments.html#the-relationship-betweend-counterfactuals-and-quasi-experimental-design"><i class="fa fa-check"></i><b>17.3.1</b> The relationship Betweend Counterfactuals And Quasi-Experimental Design</a></li>
+<li class="chapter" data-level="17.3.2" data-path="counterfactuals-and-quasi-experiments.html"><a href="counterfactuals-and-quasi-experiments.html#difference-in-differece-models"><i class="fa fa-check"></i><b>17.3.2</b> Difference In Differece Models</a></li>
+</ul></li>
+<li class="chapter" data-level="17.4" data-path="counterfactuals-and-quasi-experiments.html"><a href="counterfactuals-and-quasi-experiments.html#weak-counterfactuals"><i class="fa fa-check"></i><b>17.4</b> Weak Counterfactuals</a></li>
+<li class="chapter" data-level="17.5" data-path="counterfactuals-and-quasi-experiments.html"><a href="counterfactuals-and-quasi-experiments.html#looking-ahead-13"><i class="fa fa-check"></i><b>17.5</b> Looking Ahead</a></li>
+</ul></li>
+<li class="part"><span><b>III APPLIED REGRESSION</b></span></li>
+<li class="chapter" data-level="18" data-path="difference-in-difference-models.html"><a href="difference-in-difference-models.html"><i class="fa fa-check"></i><b>18</b> Difference-in-Difference Models</a><ul>
+<li class="chapter" data-level="18.1" data-path="difference-in-difference-models.html"><a href="difference-in-difference-models.html#example"><i class="fa fa-check"></i><b>18.1</b> Example</a><ul>
+<li class="chapter" data-level="18.1.1" data-path="difference-in-difference-models.html"><a href="difference-in-difference-models.html#gains-realized-by-comparison-group-the-first-difference"><i class="fa fa-check"></i><b>18.1.1</b> Gains Realized by Comparison Group (The First Difference)</a></li>
+<li class="chapter" data-level="18.1.2" data-path="difference-in-difference-models.html"><a href="difference-in-difference-models.html#gains-realized-by-the-treatment-group-the-second-difference"><i class="fa fa-check"></i><b>18.1.2</b> Gains Realized by the Treatment Group (The Second Difference)</a></li>
+<li class="chapter" data-level="18.1.3" data-path="difference-in-difference-models.html"><a href="difference-in-difference-models.html#realized-gains-minus-expected-gains-diff-in-diff"><i class="fa fa-check"></i><b>18.1.3</b> Realized Gains Minus Expected Gains (Diff-in-Diff)</a></li>
+</ul></li>
+<li class="chapter" data-level="18.2" data-path="difference-in-difference-models.html"><a href="difference-in-difference-models.html#the-counterfactual"><i class="fa fa-check"></i><b>18.2</b> The Counterfactual</a></li>
+<li class="chapter" data-level="18.3" data-path="difference-in-difference-models.html"><a href="difference-in-difference-models.html#difference-in-difference-models-1"><i class="fa fa-check"></i><b>18.3</b> Difference-in-Difference Models</a><ul>
+<li class="chapter" data-level="18.3.1" data-path="difference-in-difference-models.html"><a href="difference-in-difference-models.html#example-1"><i class="fa fa-check"></i><b>18.3.1</b> Example</a></li>
+<li class="chapter" data-level="18.3.2" data-path="difference-in-difference-models.html"><a href="difference-in-difference-models.html#interpretation"><i class="fa fa-check"></i><b>18.3.2</b> Interpretation</a></li>
+<li class="chapter" data-level="18.3.3" data-path="difference-in-difference-models.html"><a href="difference-in-difference-models.html#summary-of-hypothesis-tested"><i class="fa fa-check"></i><b>18.3.3</b> Summary of Hypothesis Tested</a></li>
+<li class="chapter" data-level="18.3.4" data-path="difference-in-difference-models.html"><a href="difference-in-difference-models.html#three-cases"><i class="fa fa-check"></i><b>18.3.4</b> Three Cases</a></li>
+<li class="chapter" data-level="18.3.5" data-path="difference-in-difference-models.html"><a href="difference-in-difference-models.html#multiple-treatment-groups"><i class="fa fa-check"></i><b>18.3.5</b> Multiple Treatment Groups</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="19" data-path="interactions-with-slopes.html"><a href="interactions-with-slopes.html"><i class="fa fa-check"></i><b>19</b> Interactions with Slopes</a><ul>
+<li class="chapter" data-level="19.1" data-path="interactions-with-slopes.html"><a href="interactions-with-slopes.html#one-slope---one-intercept-model"><i class="fa fa-check"></i><b>19.1</b> One Slope - One Intercept Model</a></li>
+<li class="chapter" data-level="19.2" data-path="interactions-with-slopes.html"><a href="interactions-with-slopes.html#three-types-of-hybrids"><i class="fa fa-check"></i><b>19.2</b> Three Types of Hybrids</a></li>
+<li class="chapter" data-level="19.3" data-path="interactions-with-slopes.html"><a href="interactions-with-slopes.html#one-slope---three-intercepts"><i class="fa fa-check"></i><b>19.3</b> One Slope - Three Intercepts</a></li>
+<li class="chapter" data-level="19.4" data-path="interactions-with-slopes.html"><a href="interactions-with-slopes.html#three-slopes---three-intercepts"><i class="fa fa-check"></i><b>19.4</b> Three Slopes - Three Intercepts</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://webapp4.asu.edu/programs/t5/majorinfo/ASU00/PPPGEMS/graduate/false" target="blank">ASU</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Program Evaluation: Methods and Design</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="validity-and-reliability" class="section level1">
+<h1><span class="header-section-number">Chapter 9</span> Validity and Reliability</h1>
+<p><em>Validity And Reliability In Research Design And Program Evaluation</em></p>
+<p>As we have discussed, program evaluation uses research and statistical analysis to provide what should be the best possible evidence that a program that has been implemented is actually having an impact. Because the quality of research is very important to obtain the best results, it is important to consider the formal understanding of what makes quality research. It is often important in research design and analysis to formally systematize the research and analysis process.</p>
+<p>One very important aspect of all research is validity. If we spend time and money on a program and then evaluated it we must be concerned about validity. A very simple question to ask is ’What use is the research if the methods and results are not valid? At this point it is extremely important to discuss what is formally meant by validity in research.</p>
+<div id="research-validity" class="section level2">
+<h2><span class="header-section-number">9.1</span> Research Validity</h2>
+<p>There are several types of validity that are important. However, three are especially integral to research quality. The following are the three types that we will focus on the most:</p>
+<ol style="list-style-type: decimal">
+<li>External Validity</li>
+<li>Internal Validity</li>
+<li>Construct Validity</li>
+</ol>
+<div id="external-validity" class="section level3">
+<h3><span class="header-section-number">9.1.1</span> External Validity</h3>
+<p>In all fields, research does not exist in a vaccum. This is very true for organizations and research methods must consider this. For example, a program may be implemented across an organization, company, or agency. However, all of these may have offices throughout a region, country, or the world. One of the important concepts that involves external validity is does the research results or evaluation of the program apply in the same way for each of these?</p>
+<p>Because organizations are diverse and often located in many places, the concept of generalizability is very important. The basic questions are: Do the results of the evaluation or analysis apply to different locations or settings. Consider that the different locations may involve different states or countries, and these different areas may have different cultures and traditions. Therefore, the results from a study in one location may not always accurately describe the effects of the implemented program in all locations.</p>
+<p>In more formal terms external validity tells you if your results can be generalized to different measures, people, settings, and times.</p>
+<p>-Cook &amp; Campbell 1979, Steckler &amp; McLeroy -2008</p>
+</div>
+<div id="breaking-down-external-validity" class="section level3">
+<h3><span class="header-section-number">9.1.2</span> Breaking Down External Validity</h3>
+<div id="what-does-it-mean-to-generalize-to-different-measures" class="section level4">
+<h4><span class="header-section-number">9.1.2.1</span> What Does It Mean To Generalize To Different Measures?</h4>
+<p>Measures are a developed method to collect data, such as surveys, observations, experiments, quasi-experiments, etc. (We will discuss the details of theys later in this course). However, in organizations it is often the case that our methods involve data that come from archival or previously collected data. Let us assume we were collecting data to evaluate a program using surveys and by observing the behavior and productivity of people in an organization. If we designed another survey or method of observing that was intended to measure the same concepts or type of data would we get the same results as we originally did. If so then we have high external validity. However, if we get very different results then our measures have lower external validity.</p>
+</div>
+<div id="what-does-it-mean-to-generalize-to-different-people" class="section level4">
+<h4><span class="header-section-number">9.1.2.2</span> What Does It Mean To Generalize To Different People?</h4>
+<p>As we previously mentioned organizations may have many locations, but also have many people. People vary on many characteristics, such as education, personality, experience, etc. When we evaluate and analyze a program often we can not measure the effect it has on the complete organization. Recall from Statistical Foundations of Program Evaluation that often we must rely on a sample of the entire population. Therefore, our results are estimated from a sample or subset.</p>
+<p>If we cannot generalize our results to the entire organization or population then the evaluation may have limited use. Therefore, researchers often attempt to maximize external validity in order to implement successful programs with a variety of people or employees in the future.</p>
+<p>Similarly to previous factors of external validity, the evaluation and analysis of the program is often limited to a subsets of locations. As mentioned different locations may have different factors and cultures. Cultures could be different in places like different offices or geographical regions. These differences may also introduce different variables that can factor into the evaluation. Therefore, the different settings must be considered when evaluating and interpreting the generalization of the program and results.</p>
+</div>
+<div id="what-does-it-mean-to-generalize-to-different-times" class="section level4">
+<h4><span class="header-section-number">9.1.2.3</span> What Does It Mean To Generalize To Different Times?</h4>
+<p>Finally, evaluations and analyses are often limited to a specific time or time range. Things may change over time and can influence the success of a program. While the evaluation may be a longitudinal study over a long period of time, the analysis can be used to predict the success in the future. However, it is important to consider the various different and changing factors in the future.</p>
+</div>
+</div>
+<div id="pulling-together-the-components-of-external-validity" class="section level3">
+<h3><span class="header-section-number">9.1.3</span> Pulling Together The Components Of External Validity</h3>
+<p>When considering the components of external validity there is a common theme. Research is often conducted in a limited or restricted environment. This may limit the measure or how we conduct the study, who is studied, where it is studied, and when it is studied. Therefore, external validity is an important concern of researchers</p>
+<div id="is-external-validity-always-important" class="section level4">
+<h4><span class="header-section-number">9.1.3.1</span> Is External Validity Always Important?</h4>
+<p>There is a caveat to consider sometimes when thinking about external validity. The researcher must consider the goal of the program evaluation. Perhaps we are only concerned with what is happening currently at a specific location. In this case external validity may not be the primary concern. Another possibility is that the evaluation of the program is not attempting to show what does typically happen, but rather what could happen. Sometimes showing that certain results are possible is important to understand. To further explore this please refer to Mook’s “In Defense Of External Invalidity” -1983. In general with all research the purpose of the research is always an underlying consideration.</p>
+</div>
+</div>
+</div>
+<div id="internal-validity" class="section level2">
+<h2><span class="header-section-number">9.2</span> Internal Validity</h2>
+<p>Another very important type of validity is internal validity. When evaluating a program it is often extremely important to be sure that the program actually had an effect. In other words, we would like to know that implementing the program acually caused the changes of the outcome in the organization. Unfortunately, causality is not always easy to be confident in, especially when evaluating a program that has already been implemented.</p>
+<p>More formally, internal validity is the extent to which we can be confident that the program (independent variable/input) caused the change or effect (dependent variable/outcome.) There are several things to consider when infering the cause and effect between the independent variable and dependent variable.</p>
+<div id="breaking-down-internal-validity" class="section level3">
+<h3><span class="header-section-number">9.2.1</span> Breaking Down Internal Validity</h3>
+<p>One important thing to consider is did the effect happen completely after the program was implemented? It is possible that the resulting change or effect in the organization began before the program began. Sometimes we may not know this. This is another reason to consider this in research design. For example, assume that we implement a program to improve productivity, such as pay increase in the example from Statistical Foundations To Program Evaluation. We use historical data as the baseline for productivity and see an increase after the pay increase. It is possible that the increase in productivity actually began before the pay increase began, but after we measured the baseline productivity. Therefore, there is a chance that the pay increase did not actually cause the increase in productivity. Rather, the program coincided with a productivity increase that was already in progress. One caution though is that the program may have had an impact also. This could be an example of an omitted variable.</p>
+<p>As we see, just because the program was implemented before we measured the change it does not alwayse mean that the program caused the effect. This leads to one of the most important factors to consider. Is there another explanation for the effect measured after the program was implemented. In other words, are there alternative explanations or other variables that actually caused the effect. Other terms for this is a confound or third variable effect. This basically means that there was something that was unmeasured that actually explains the effect, which is similar to the example of productivity increasing before the program was implemented, but the baseline was measured before the productivity increase. Therefore, there could be one or more other variables that actually cause the increase in productivity.</p>
+<p>One important way to increase internal validity is to add a control variable. This is basically comparing the group of people that experience the program to a group of people that did not. One thing this could show is that the effect of the program was seen in the group of people that experienced the program, but not in those that did not. However, it is possible that there was a small effect in the control, but the group of people that experienced the program showed a larger effect. Both of these cases could indicate that the program had a causal effect. However, there is still a possiblity that the program did not cause the effect. There still could be an alternative explanation or confounding variables.</p>
+<p>We will see in the second course in Statistical Foundations Of Program Evaluation various statistical methods that are used to try to tease out causality. However, one way to be confident about the causal relationship and internal validity is to randomly assign participants to different conditions of the program or independent variable. If we take the simple case of increasing pay to evaluate the increase of productivity, some people in the organization would not receive a pay increase and some people would receive a pay increase. However, it is not enough to simply divide the groups in half.</p>
+<p>Consider that we divided the people in the organization into the control group and the program group (sometimes called the experimental group or treatment group). A simple way would be to assign the people that arrived to the organization one day to the treatment group that receiveda pay increase and the remaining people that arrived to the control group that did not receive a pay increase. After evaluating the differnce between the treatment and control group, we observed that the treatment group had a higher productivity increase. Can we now infer causality?</p>
+<p>Why would this example have lower internal validity and result in less confidence in pay increases causing increases productivity? Perhaps the people that arrive ealier have higher motivation or some other factor that relates to higher productivity. This would mean that the experimental group was inherently different than the control group. Because of this the goal is to create groups that are the same on all factors except for the pay increase or the category of the independeent variable. In research the method that is often used is randomly assign each person to the experimental group or the cotrol group. This basically creates two groups that are identical on average. We will discuss this further in this course.</p>
+</div>
+</div>
+<div id="construct-validity" class="section level2">
+<h2><span class="header-section-number">9.3</span> Construct Validity</h2>
+<p>The third type of validity that we will discuss in this unit is construct validity. In order to collect data we must have a sytematic way of measuring the concept in which we are interested, such as surveys, interviews, or systematic observation. Therefore, it is important to be sure that the measure or method we use to collect the data actually is measuring what we intend to be measured.</p>
+<div id="breaking-down-construct-validity" class="section level3">
+<h3><span class="header-section-number">9.3.1</span> Breaking Down Construct Validity</h3>
+<p>Let us consider an example of measuring satisfaction in an organiatzion. We could potentially do this with a survey or interview. When developing the measurements to be used we must be sure that we are measuring what we intend to measure. For example, we may be interested in overall statisfaction or current satisfaction the day of the data collection. If we are actually interested in overall satisfaction, we must create a measure that actually provides data for overall satisfaction and not the current satisfaction of the day. This is essentially construct validity. This is important because the results would be misleading if we were not measuring the concept that is intended, and therefore we would have low construct validity.</p>
+</div>
+</div>
+<div id="reliability" class="section level2">
+<h2><span class="header-section-number">9.4</span> Reliability</h2>
+<p>Another important factor in conducting research is the reliability of our measures. It is similar to validity, but represents the consistency of our measures. A reliable measure basically means that if you conduct the test or study with the same measure you should get very close to the same results multiple times, especially with the same participant. This is sometimes called test-retest reliability.</p>
+<div id="breaking-down-reliability" class="section level3">
+<h3><span class="header-section-number">9.4.1</span> Breaking Down Reliability</h3>
+<p>Because we want our measures to be consistent we aim to have small measurement error. As we discussed in the Statistical Foundation of Program Evaluation, minimizing error is important. If there is too much measurement error it is likely not going to be a very reliable measure.</p>
+<p>How can we test reliability? One way would be to see how correlated multiple tests are using our measure. The goal would be to have a high correlation to support our measure being reliable. If it was 0 then they would not be correlated and essentially each test does not have a strong relationship. If it is negative then each test is essentially showing an opposite relationship, which yields very different results each time you test with your measure. Therefore, a strong positive correlation supports a high relationship between each test with our measure and our measure likely has high reliability.</p>
+</div>
+</div>
+<div id="looking-ahead-4" class="section level2">
+<h2><span class="header-section-number">9.5</span> Looking Ahead</h2>
+<ul>
+<li><p>Now that we have discussed some of the basic and essential underlying concepts in research we will begin to discuss the different methods for research design.</p></li>
+<li><p>We will discuss the intricate details of each method to learn how to develop our specific methods for the research and evaluation.</p></li>
+<li><p>We have many different types of research methods and will discuss the pros and cons of each type, and relate those pros and cons to the purpose of the research.</p></li>
+</ul>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="introduction-to-research-design.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="introduction-to-methods-of-research-design.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/DS4PS/program-evaluation-course/edit/master/part_02_ch_02.Rmd",
+"text": "Edit"
+},
+"download": ["Foundations of Program Evaluation.pdf", "Foundations of Program Evaluation.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

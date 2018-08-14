@@ -1,0 +1,90 @@
+# (PART) RESEARCH DESIGN {-}
+
+
+
+# Introduction To Research Design
+
+
+
+## Why Do We Need Quality Research Design And Methods?
+
+Recall from Statistical Foundations of Program Evaluation that the three fundamental elements of evaluation research are the choice of the appropriate outcome measure, the assessment of the direct and indirect cost associated with the intervention, and the attribution of effects to underlying causes. 
+
+-Christoph Schmidt 1999
+
+This is an essential part of research design. In particular, the appropriate outcome measure in addition to determining and designing the best income or independent variables is very important. Focusing on these factors and other factors of design are necessary to conduct a valid and quality statistical analysis.
+
+
+### Overview Of Research Design
+
+In this first unit we will give an overview of importance concepts and factors of research design to get the be picture. Throughout the course we will focus on more details of the important components of designing methods to collect data, use archival data, and work with data that we can obtain in organizations to help evaluate programs.
+
+
+Learning objectives of these chapters on research design include: 
+
+1. Understanding the goals of research design for evaluating programs
+2. Determining the factors and appropriate variables to research to understand the effects of programs
+3. Understanding the various methods that can be used to design quality and valid research that will yield data that can be used for a statistical analysis
+4. Explore counterfactuals and alternative explanations for results in research
+
+
+## Why Do We Conduct Studies To Evalueate Programs
+
+As we discussed in Statistical Foundations of Program Evaluation, there are many reasons why systematic and quantitative analysis of programs is very important to understand if the program is successful and the impact the program has. Programs are implemented in many types of settings, including organizations and with public policy. Because these programs have costs and can impact many people it is important to have successful programs. Therefore, program evaluation and analysis of the impact is a vital component.
+
+
+One simple reason we must conduct these studies for program evaluation is that we are interested in how the organization or system functions and works. We often also need to know how people behave in organizations and respond to changes with program implementation. Through a well designed research study of the programs and systematic analysis of the effects we can answer these questions.
+
+
+### The Importance Of Understanding The Relationship Among Variables
+
+One basis of program evaluation is that it is important to understand the relationship. Recall from Statistical Foundations of Program Evaluation that these variables often are representing the input and outcome of programs that are used. With a well designed research studies there will be reliable and valid data to measure these variables. These variables will help to understand, not only the impact of the program, but also potentially the processes within the organization that lead to the outcome.
+
+
+
+### Variables And Function In Program Evaluation
+
+Recall that variables are used in statistical analysis. We discussed the input or independent variable and outcome or the dependent variable in detail with statistics. In order for the statistical analysis to be useful and valid, first you need to have quality variables. Variables are essentially a measurable characteristic that can take on different values. In addition, statistical analyses do not always have an independent and dependent variable. In this course we will see many ways to design variables and how these different variables may be analyzed in different ways.
+
+
+### The Function Of Independent And Dependent Variables
+
+We have discussed the differences between independent and dependent variables. How do we design these? We will see in detail the differences between true experiments, quasi-experiments, observational studies, and archival studies. Each of the different types of research designs can have an independent variable and a dependent variable.
+
+
+While independent variables function as inputs of the program, they are interpreted differently depending on the type of research design. As we will see in a true experiment the researcher actually manipulates the independent variable and has control over it. However, often in program evaluation we are not using true experiments and may need to observe changes in the independent variable that vary naturally or outside of the control of the researcher.
+
+
+The dependent variable is thought to be the result of changes in the independent variable. In other words, the independent variable is thought to cause the change in the dependent variable. However, as we will see, inferring or concluding the independent variable actually caused the change in the dependent variable will depend on the type of research design. 
+
+
+### Other Factors
+
+Other Factors That Must Be Considered With The Independent And Dependent Variables
+
+One important thing to consider is that organizations and policies that implement programs involve people, and therefore when designing research it is important to consider different human factors or variables that may influence or have an impact on the relationship between the independent and dependent variables. Recall the example of pay raises and productivity. The data was variable and not perfectly on the regression line. Personal characteristics, such as socio-economic status, education, motivation, etc. may also be factors resulting in more variability. This is related to omitted variables, because these variables may be important. 
+
+
+### Important Characteristics Of Variables In Research Design
+
+When designing research it is very important to think about the characteristics of the variables. High quality variables and data is necessary to conduct a quality analysis.
+
+
+One important characteristic is the variable being operable. How a variable is operable is how specific procedures are used to measure or manipulated it. Sometimes there may be variables that are of interest, but are not operable and cannot actually be measured. It is basically essential to be able to actually measure the variable. This concept is one of the first things to consider when designing research. Without operable variables the data would not be able to be collected and programs could not be evaluated.
+
+
+## Looking Ahead
+
+* A key concept that we will discuss in the next unit is another basic aspect of research design: Validity. Because one goal is to do valid research, there are specific types of validity that must be considered when designing research. 
+
+* We will also begin to discuss different types of research designs in detail, and the pros and cons of the different methods.
+
+* Throughout the course we will continue to explore different ways to develop a high quality research project to conduct program evaluation.
+
+
+
+
+
+
+
+

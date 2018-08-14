@@ -1,0 +1,172 @@
+# Non-Experimental Methods For Program Evaluation And Research
+
+
+When evaluating and researching programs non-experimental methods are often used. As we discussed briefly in the last unit non-experimental methods are the only method that may be able to be used. This can be due to several reasons, such as ethical considerations, the data that is being used is not original data that is collected as part of the research, or the impact of the evaluation process may be intrusive and have negative impacts on the organization. Therefore, researchers are often limited to certain methods. One thing to note is that non-experimental methods are different than experiments because experiments involve the researcher directly manipulating the independent variable and usually involves random assignment of the participants to a particular level or value of the independent variable. We will cover experiments in the future.
+
+
+## Observational Methods
+
+In general and simple terms, observational methods involve what the name implies. It involves factors such as the researcher observing behavior, organizational processes, characteristics of the organization, and characteristics of the people in the organization.
+
+
+
+Below are some general characteristics of observational methods.
+
+* Observing behavior in the field. The field typically means the real world.
+* Can be qualitative or quantitative.
+* Qualitative simply describes the behavior and the researcher interprets the description.
+* Quantitative assigns numerical values to types of behavior and variables. Statistical analysis is used.
+
+
+### Important Aspects Of Observational methods
+
+The evaluation and research usually occurs in the real world or the field, as opposed to direct questioning of people in the organization or in a laboratory study. Because of this it usually simply observing and recording natural behavior without manipulation or control of the independent variable. 
+
+
+Because the researcher is observing behavior usually there are no limitations or restriction on how the organization functions or on the people being observed and how they behave. Because of this the natural functioning of the organization and behaviors are observed, and can provide much important information and data. This also allows to observation of natural processes of the organization and behaviors.
+
+
+### The Importance Of Using A systematic And Replicable Method
+
+Previously we discussed reliability. One of the aspects of reliability was that if you conducted the study several times you would get similar results. Using methods that are systematic and replicable is important, especially when collecting and coding the data. Coding data is important in observational studies because usually the researcher is simply observing behavior, rather than actually getting responses or data directly from the participants. In these types of studies the researcher must observe behavior and code it in a way that can be used for analysis. For example, if the researcher is observing the interactions of people the researcher must be able to determine exactly what type of interaction occurs and other things, such why and what is the meaning of the interaction.
+
+
+Therefore, the coding must be systematic. It should not simply be what the researcher's opinion is, but rather be scientific and objective. This can be difficult in observational studies because the researcher is often limited with how much specific and personal data that can be collected. For example, if you wanted to know what a person was thinking, often in an observational study this does not involve interactions with the participants or even asking the participants what they were thinking. Therefore, the researcher must interpret the interactions in an unbiased way and an objective way.
+
+
+Being replicable usually refers to the fact that you create the system of coding in such a manning that other people will be able to use the same system and get very similar results, if not exactly the same results. This helps to remove any bias and ensure objectivity. We will discuss coding further.
+
+
+## Types Of Observational Methods
+
+Often in program evaluation, we are interested in learning about the processes and how an organization functions. Because of this the researcher may use what is referred to as a field study where natural functioning of an organization and people are simply observed to collect data. 
+
+
+### Collecting Data
+
+Because observational study often only use observing the organization there are many important things to consider. As we have just discussed it is important to develop the coding system. Before the data can be coded the data must be observed and recorded. It is very important to develop a detailed and specific plan to observe and record the data. A researcher must have a system that that is practical and manageable. This is very similar to having operational variables that we discussed previously. 
+
+
+This system should be prepared and practiced before the data is actually collected. The researcher should not simply go and begin to observe people without proper preparation. One aspect of all research is that a good research or evaluation takes much time before the research begins. Sometimes this is years.
+
+
+### Qualitative Versus Quantitative Observational Studies
+
+In general there are two types of using observational studies. The two types are qualitative and quantitative. Basically, if you conduct a qualitative study there is very rarely an actual statistical or econometric analysis. One very common method is a detailed description of everything has occurred, including behaviors and interactions of people in the organization, interpretations of characteristics, such as intentions or bodily expressions, and how the organization functions. In some cases this may involve what is called ethnography. However, that is not the focus of this course. Ethnography may include reports of how often or the number of occurrences of any thing that happens that is of interest.
+
+
+One important aspect with qualitative data is that the data must often be interpreted by the researcher. This is because the researcher is not directly collecting data, but recording the actual things that are occurring at the organization. While there should be a systematic method to increase objectivity and decrease bias, this often provides the possibility for researchers to be less objective and potentially introduce error. Anytime that someone must interpret data it must be processed by the mind and interpretations can often vary dependent on many factors, including who is doing the interpreting, environmental factors and the setting in which the observation is conducted. There are many ways that these factors can create different interpretation, which may lead to bias and error.
+
+
+One other type of qualitative study is a case study. Often this involves only one person or possibly several. Case studies can be very detailed, but lack the ability to make many observations with a sufficiently large sample. This can cause problems with external validity and generalization because the data do not come from a larger diverse group of people.
+
+
+Quantitative analysis involves using numerical values as the data and can use statistical methods. Often it is possible to quantify behaviors and processes that are simply observed. One common way is to code the frequency of something observed. For example, a researcher could observe how many times a negation in an organization is successful versus the number of times it is not. This frequency can then be statistically analyzed. 
+
+
+It is often possible to create categories of a variable, such as positive interactions, negative interactions, or neutral interactions. This can be used in a regression as dummy variables or similarly in an ANOVA/analysis of variance. Demographics can also be coded into categorical variables. 
+
+
+## Looking Ahead
+
+We have introduced specific details and considerations when conducting observational studies. Observational studies can be very useful in evaluating organizations. We also over viewed the importance of using systematic and replicable systems. This will help to be sure that our evaluation is objective and scientific in nature, which increases the confidence we can have in the results and outcome of the program.
+
+
+We discussed the ways to collect quality data by observation. As can be seen, the overall goal is collecting quality data that will yield meaningful results. Finally, we discussed how the data could be analyzed either qualitatively or quantitatively.
+
+
+* We will continue to discuss observational methods and several pros and cons.
+* When considering the pros and cons we will discuss potential improvements.
+* We will continue with how to develop and use surveys to collect data for evaluation.
+
+
+
+
+
+## Naturalistic Observation
+
+In the last unit we over viewed techniques to collect data by simply observing behavior, interactions, and outcomes of programs, in addition to many other factors. This can be a useful tool when trying to understand the variables that are inputs to the organizational system, the process of the organization, and how the outcomes are related to the program. This can be a very powerful tool in understanding the program and how to best develop new programs.
+
+
+The most typical type of observational studies that are related to our discussion in the last unit are naturalistic observational studies. We briefly discussed this and how observational studies usually occur in the field or in the "real world". We can now discuss some of the details and important factors that are involved in naturalistic observation.
+
+
+The key word here is "naturalistic". Because this is intended to be natural the researcher usually simply observes the natural interactions and functioning of the organization. Because the researcher is simply observing, collecting and coding data the organization and its members are free to behave naturally as they normally would.
+
+
+As we discussed in the previous unit, it is very important in observational studies to be objective in our data collection. Therefore, as previously mentioned, a systematic approach is very important. In addition, the researcher must rehearse the data collection process in order to prevent biases from entering into the research and evaluation.
+
+Each evaluation of different programs will vary widely on the details of the specific methods that will be used. If the overall goal of collecting quality and useful data is kept in mind they will all share the general principles that we have discussed. 
+
+
+### How The Analysis Plan Affects Our Collection Methods
+
+Often researchers do not think enough about the analysis plan while developing the methods for conducting the evaluation. This applies to all types of research and evaluation, but it is particularly important for observational methods. The analysis plan should inform the researcher when determining exactly the behaviors and interaction that will be recorded, in addition as to how to record and code the behaviors and interactions. An example of a general case would be whether the analysis is qualitative or quantitative. If the researcher encodes quantitative data it would be difficult to use qualitative analyses and simply describe the behaviors and interactions.
+
+
+Another reason to have a well developed analysis plan is to be sure that the researcher not only has the data that can be used in the appropriate analysis, but also that the researcher has all of the data and variables to do a complete evaluation. This is very related to omitted variables. If the researcher contemplates all of the analyses that may need to be completed then this will be informative of exactly which variables should be collected. As with omitted variables, the researcher will often collect data regarding additional variables that are not particularly of interest, but may be important and could affect the results from of the analysis as we saw in Statistical Foundations of Program Evaluation. If the variables are not collected then there are limitations on the analysis that could lead to potentially misspecified models.
+
+
+### Revisiting Pay Raise And Productivity
+
+Recall we have discussed the hypothetical example of pay raise and the relationship with productivity. When we previously discussed the importance of randomization we showed that if we simply gave pay raises to the first half of the people that showed up to work at an organization and not to the second half of the people we may actually see that people with pay raises had higher levels of productivity. However, it is possible that people that arrive early may be more motivated and motivation may actually account for the productivity level, not the pay raise. The groups were systematically different on a variable that we did not consider. 
+
+
+Now let us take a similar example from a slightly different viewpoint. Perhaps we knew the pay levels of people that work for the organization and wanted to compare the productivity levels. Therefore, we can now observe productivity levels and code the levels systematically with a naturalistic observational study. In this case we are interested in the independent variable of pay and the dependent variable of productivity, as we were earlier. We conduct the observational study and then correlate the pay level with productivity and discover that there is indeed a positive correlation between the two variables. This supports that implementing pay raise as a simple program may lead to increased productivity. Is this a conclusion to be made with confidence?
+
+We have just discussed the importance of developing an analysis plan before conducting the research. This case is an simple example of how not developing an adequate plan can lead to erroneous conclusions. A well developed analysis plan would also include alternative explanations or counterfactuals. One of these alternative explanations would be arrival time at the organization. A well developed analysis plan should include variables, such as arrival time and any other variables that may explain productivity.
+
+If the analysis plan was developed to include arrival time and other potential factors, we may actually see that pay is not as important as other factors, such as arrival time, which may be a proxy variable for motivation. By omitting this variable, we arrived a conclusion in which we actually should not have complete confidence. This illustrates the importance of a well developed analysis plan. In addition, with all observational studies there are many variables that are difficult to record and we should always consider how other variables may affect our results.
+
+
+### Advantages Of Naturalistic Observation
+
+Perhaps the best advantage of naturalistic observation is that you have the opportunity to observe people, processes, and the functions of an organization in a real and natural setting. Because organizations function in the real world, why not observe them in the real world? This is the most obvious advantage. As you will continue to see, there are other methods to collect data, but are often not in a natural setting.
+
+
+
+As is often the case, naturalistic observation involves the evaluation of an organization without the researcher being directly involved and interfering in the organization. This can be very important for program evaluation because the program is being implemented and we are simply here to evaluate the success. It is often advantageous to observe the program and organization at a distance with no interference. This will help to keep the data pure and unbiased from the perspective of the research if the research is conducted professionally with as much objectivity as possible.
+
+
+
+By not being involved in the organization while observing, it also helps to keep the functioning normal and natural without changing the behavior of the people and the typical processes of the organization. This can be very important also. Remaining anonymous during the evaluation and research will prevent the introduction of additional biases. If the researcher was involved this is potentially an alternative explanation for the outcome and may need to be treated as an actual variable in the evaluation.
+
+
+
+As we have previously discussed there could be ethical considerations if a researcher becomes involved. Typically observing natural occurrences does not present many ethical dilemmas because it is generally accepted that if people are simply behaving normally then there is much less chance for harm. However, the researcher must always consider any ethical violations and potential harm even when the researcher is concealed and there is not direct participation or influence in the natural behaviors. One of the ethical concerns is that the people in the organization do not know they are being studied. There could also be many confidential aspects of the organization and the researchers may potentially violate privacy concerns. 
+
+
+### Disadvantages Of Naturalistic Observation
+
+We have discussed that there is rarely a perfect method. This is true of naturalistic observation. An observer can only infer the meaning of the behaviors and processes. Only observable aspects can be recorded as data. During  observation there are many things that go on behind the scene and the researcher cannot include all important factors. In addition, what do all of the behaviors and interactions actually represent? We are often interested in how the various components and people in an organization interact with each other. Perhaps we are interested in the morale of the organization. When a researcher is observing and collecting data from a distance it is difficult to know what these interactions represent and difficult to evaluate morale. This is a reason for a systematic recording and coding system. The system will make sure that everything is interpreted in the best, most consistent, and reliable way possible.
+
+### When A Researcher Reveals Or Participates In The Observation
+
+One way to potentially alleviate some of these disadvantages is for the researcher to reveal to the people in the organization that they are being observed. This could present some important opportunities. One such is that the researcher now relies less on inferring and interpreting the people and interactions. The researcher can now simply observe and ask what was involved or meant by these interactions and processes. This can remove some of the observer's bias.
+
+
+One concern is that whenever a researcher becomes involved in the organization the people and function of the organization may become altered or influenced by the mere presence of the researcher and evaluation. Whereas we just discussed removing the bias of researcher interpretation we potentially introduced a new bias by altering the functioning of the organization. It can be seen again that no method is always perfect.
+
+
+While it is true that the mere presence of the researcher may alter the natural behaviors, processes, and functioning of the organization, there can be benefits also. Often people want to assist in the research and they may be more truthful, honest, and freely offer up important information and factors in which the researcher is interested. This can also reveal information that was unobservable when the researcher was not revealed. 
+
+We discussed that not revealing the presence of a researcher can be ethical because they are not involved. However, it can be unethical because the people are unaware and there are very likely confidentiality and privacy concerns. When the researcher is revealed to the organization these concerns decreases. The researcher can now get the permission or consent of the people in the organization. This is always an important factor when conducting any research.
+
+
+## Reviewing Naturalistic Observation
+
+As we have seen there are many benefits of observing organizations in their natural setting. We have also seen that organizations are very complex and it is difficult for the researcher to interpret the organization and to account for unobservable factors, including many potential alternative explanations for the outcome of the program.
+
+
+### Looking Aread
+
+- We will continue to discuss other methods of research that will alleviate some of the concerns and disadvantages of pure observational methods.
+
+- We will begin to develop methods for survey design to collect data.
+
+
+
+
+
+
+

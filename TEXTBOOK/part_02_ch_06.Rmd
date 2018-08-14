@@ -1,0 +1,180 @@
+# Surveys In Program Evaluation
+
+In the previous two units we discussed how to observer organization for research and evaluation. The advantage to observation is that in many cases the organizations would be observed in a manner that was natural. Toward the end we discussed how researchers may want to reveal the research to the people being evaluated. We saw advantages and disadvantages. However, we moved toward actually asking people about the functioning, interactions, and behaviors in organizations, in addition to interpretations and meaning. We now will move further toward researching by directly interacting and inquiring about the organization.
+
+
+## Surveys In Organizations
+
+Surveys can be another useful tool in research design and evaluation. Sometimes when a researcher must know something about the people and the organization a great way to find out is to simply ask questions. Often this will yield information that is difficult to know when simply observing.
+
+
+A researcher can be very direct when collecting data with surveys. This can provide a precise level of data that is very useful in evaluation. There is still some level of interpretation, but because the information comes directly from people in the organization there is a deeper level of the information and data obtained from a survey.
+
+
+## Developing A Reliable And Valid Survey
+
+We have been discussing the need for systematic and replicable methods in observational studies. The same is also very true and very important for survey design. It is easy to overlook certain aspects in developing a survey and individual questions, but much attention to detail and consideration must be taken for a survey to yield high quality and valid data.
+
+
+Several important steps must be taken before beginning any development in all research methods. The following are important determinations that must be made. What is the research question? Is there and if so what is the hypothesis? What is the goal of the research? Who are the people that are being surveyed? Are there any characteristics of the people being surveyed that may be important to understand? How does the survey planned to be analyzed?
+
+These are questions that are integral to developing a quality survey.
+
+
+### Initial Steps Before Developing A Reliable And Valid Survey
+
+It is always a good idea to start with the research question. Until a researcher know the question that is being investigated it is difficult to have a direction and plan for developing the research. In program evaluation a typical question may simply be did the program achieve the anticipated outcome? However, the evaluation may also be concerned with what the processes are in the organization once the program was implemented. There could also be many other research questions, such as how was individual performance affected, what was the response of the participants to the program, or how do the participants in the organization feel about the future of the program or the organization as a whole. There may be many other research questions that are dependent on the program and the organization.
+
+
+The next important step is to determine if there is a hypothesis. In program evaluation it is usually related to successful outcomes of the program. However, it is also possible that the evaluation could be conducted before the outcomes are known and can be measured. This could lead to an exploratory survey that will determine the responses and status of the organization before the program has reached a point to show exact outcomes. An exploratory study may not have a specific hypothesis, but rather is exploring the state of the people, processes, and the organization.
+
+
+If there is a hypothesis than this will be important in developing a survey. Recall that a hypothesis is an anticipated result of a research project based on the variables and factors being studied. Hypotheses are typically not in a vacuum, but rather are developed over time based on prior studies and knowledge of how variables are related from a long history of research. Often specific hypotheses are being tested for the first time based on the prior research. In program evaluation the hypothesis may have been tested prior, but now the same or similar program is being implemented and therefore the anticipated results and hypotheses are not necessarily unique to a specific program evaluation study.
+
+
+If there is a hypothesis this will lead to specific data that must be obtained from the survey questions. If the appropriate data is not obtained through the survey questions, it will be impossible to investigate the hypothesis. Without the appropriate or quality data the analysis cannot be successful. Therefore, the researcher must keep the hypothesis in mind when developing the survey in order to have reliable and valid data to investigate the hypothesis. There is a caution here. Sometimes a researcher will develop a survey that is meant to confirm rather than investigate the hypothesis or the outcome of a program. This not only violates ethics, but also will yield results in which the organization cannot be confident. All good research searches for alternative explanations, factors that may disprove the hypothesis in addition to believing the hypothesis and outcomes will be supported by the data. 
+
+
+A related step is to determine the goal of the research and evaluation. Perhaps the goal is exploratory and not meant to investigate the hypothesis, which can affect the types of questions on the survey. Perhaps, as in the suggested reading by Mook, the goal is not to show what is happening, but rather that something simply can happen under certain conditions. This can be very informative for future programs that will be implemented. 
+
+
+It is also very important to understand who is being researched and what particular characteristics both they and the organization possess. Without knowing who will complete the survey it can be difficult to develop the survey questions. A part of this are the characteristics. For example, does everyone speak the same language? Are there differences in educational levels and experience? Finally, what is the culture of the organization? All of these factors are important in order to collect quality data. If these factor are ignored it is possible that people may interpret questions in different ways.
+
+
+Finally, as we discussed in the last unit it is essential to have an analysis plan. As we will see there are many types of questions and responses that require different analysis techniques. This will continue to be a theme throughout this course for every research and evaluation method that is explored.
+
+
+### Developing High Quality Survey Questions
+
+Now that we have some important first steps covered we can begin to cover how to actually create a survey. When creating the survey it is important to remember that people will be answering the survey questions. Therefore, it is important to understand how to be sure that the questions are interpreted the correct way and also limitations that people have.
+
+
+We have covered interpretation to some extent already. An important goal of survey design is that everyone interprets the questions in the same way. In everyday life we ask questions and we are often misinterpreted. To obtain reliable data it is important that the questions are easily interpretable. It is important to contemplate carefully about any other possible interpretations of each single question. If you recall construct validity, it is important that we are measuring what we intend do measure as researchers. We must spend much time eliminating alternative interpretations. This is never perfect, because human beings always can interpret things in different ways. If we can minimize this we will have better questions and data.
+
+
+Another concern is that people have limitations to their cognitive capacity, attention spans, and interest in the survey. This is why it is always good to have simple questions that are not too complex if possible. If a person must spend time thinking about what the question is asking that person is not thinking about the true honest answer. This can cause fatigue while attempting to answer the question and may lead to lower quality answers and data.
+
+Because of the limitations with people it is also important not to ask too many questions or questions that are not necessary for the research and evaluation. This can also cause fatigue and often leads to people automatically answering the questions without effortfully thinking about their answers. However, we will see that sometimes we must violate this principle in order to have a reliable and valid survey.
+
+
+The next point basically comes from the point of knowing to whom you are asking the questions and their characteristics. If there are certain characteristics of the people or the organizational culture it can cause not only misinterpretation, but also difficulties understanding certain types of questions that are good for some people and organizations, but not necessarily all.
+
+Therefore, always keep the questions simple, clear and to the point. This is also related to limitations in all people, but people and organizations do vary and it is important to create questions that are simple and easily understandable for the particular participants and organization. However, this applies to all participants. Simple, clear and to the point will keep the data reliable. If at all possible the questions should be as simple as the researcher can make them. This does not mean that this is done at the expense of the purpose and meaning of the question, but much care and time should be taken to keep the questions simple.
+
+
+Another important concept that applies to all survey questions is to be sure the question asks about only one thing at a time. Many researchers fall into the trap of asking about more than one thing in a question. The issue is that a person may not be able to respond to two things in the same way. 
+
+
+Finally, it is always important not to bias the data in anyway. We previously discussed that it is important to not conduct research in a manner that will ultimately bias the results and confirm a hypotheses because the question can only support the hypothesis. If it does not attempt to look for alternative explanations or even try to disprove the hypothesis then the researcher is designing the survey that is likely to lead to only one outcome: supporting the hypothesis.
+
+
+In survey questions there is something called a leading question. This is where the question contains information or is worded in a way that biases the respondent to be more likely to answer in a particular way. When this occurs the question leads to answer in ways that may not be entirely the truth because there would be conflict between the information in the question and the natural and truthful answer. The underlying concept is that questions should always be created in an objective manner.
+
+
+
+
+## Details Of Survey Question Design
+
+Last unit we left off with the discussion of how the design of a question could lead respondents to likely answer in a particular way. This will add bias and not be ethical. As we continue this theme, objectivity is very important in research design. We can now discuss some of the detail of how questions could be leading.
+
+
+In the last unit we covered many of the important principals of survey design. In this unit we will continue to discuss survey design. In this unit we will discuss some more detailed aspects of creating individual questions and also how to create an entire survey that consists of the appropriate questions. We will also take many of these principles and begin discussing interviewing methods.
+
+
+
+### How To Ovoid Leading Questions
+
+One type of leading question is when the question provides information that would lead to a particular answer. Continuing with the pay raise and productivity example we can see how you could create a leading question. An example question could be: "Past research has shown pay raises can result in higher productivity. Do you feel that you are more productive with your pay raise?". This is a leading question because it reveals that research already supports the increase in productivity. Because the question tells the respondent that it is already "true" or supported, the respondent may feel like the only correct answer is to say that the pay raise has led to more productivity for the respondent. This is a form of bias.
+
+
+Another related example is how the question is worded. An example would be: "Would you like a pay raise to increase productivity?". While it may be true that most people would, the wording makes it very unlikely that anyone would say no. This is a subtle point. Because most people would like a pay raise it is unlikely that they would say no. Therefore, some people are actually answering about the pay raise and it does not really matter if the productivity were to increase. The same results could occur if the question involved pay raise and lower productivity. This is because pay raise is a positive aspect of the question and creates a bias toward answering yes. A better wording would be to ask: "Please list the top 3 things that you think would increase productivity?". Now the respondents can answer how they truly feel without bias.
+
+
+Finally, there is one other factor that may lead or influence that way a respondent answers a question. It is important to avoid very emotional words. Emotional words could be either positive or negative. People are more likely to agree with emotionally positive words and less likely to agree with  emotionally negative words. These words could also potentially elicit emotional responses that in turn affect judgment and the way the question is answered.
+
+- See the work by Jennifer Lerner to learn more about emotions and judgment. See the work by Joshua Greene to learn how presentation of scenarios can affect judgments and responses.
+
+
+### How To Create Simple And Non-Complex Questions
+
+It is also important to avoid complex questions that may not be very simple and clear. As we have discussed, if the respondent is spending time attempting to understand the question then there is less time and effort spent on simply answering how the respondent feels honestly. An example is: "Do you think having increased disposable income would yield an increase a positive valence of affect". What this question is asking is simple "Do you think having more income would increase happiness?". Using complicated words creates a question that may be difficult for many to understand and interpret.
+
+
+Another issue with keeping questions simple is to avoid negative wording. Negative wording here is dealing with negatives in the grammatical sense. This is not saying you cannot ask questions about negative topics. For example a question could be: "Do you think not increasing pay will lead to not increasing productivity?". This is a complicated way to ask the question and can cause confusion for the respondent. You could ask the question in a simpler way, such as: "Do you think increasing pay will lead to increasing productivity?" or "Do you think decreasing pay will lead to decreasing productivity?". There could be subtle differences in the interpretation of the two, but essentially they are asking the same concept, which is the belief in the relationship between pay and productivity. 
+
+
+One final point that is often confused with negatively worded questions can be seen in the questions that were just presented to reverse the negative wording of having the phrases "increasing pay" increasing productivity" decreasing pay" and "decreasing productivity". As mentioned, the two words are essentially asking the same thing. However, the difference in interpretation still exists. This is actually a good thing for survey design. 
+
+The question: "Do you think increasing pay will lead to increasing productivity?" is asking about something in a "positive" way semantically. The question: "Do you think decreasing pay will lead to decreasing productivity?" is asking the question in a "negative" way semantically. As previously stated, these questions are actually asking the same thing. Using both semantically "positive" and "negative" questions is very important in a survey. People sometimes tend to respond with agreement more often to questions that are semantically "positive". Therefore, having both semantically "positive" and "negative" questions in the survey helps to obtain more truthful responses.
+
+
+### The Importance Of Presenting The Optimal Number Of Questions
+
+The optimal number of questions to include in a survey is not always a simple decision. As we discussed in the last unit, respondents can experience fatigue if the survey is too long. This can lead to simply answering all of the questions in one way without thinking carefully about how to answer. 
+
+
+The general principle is to use as few questions as necessary. However, there are cases where you need to include more questions and not fewer. One issue can be if the survey has questions that are all about one topic. It may seem that if this topic is what is being researched than that is sufficient. However, as we discussed researcher demand, the respondents may know exactly what you a trying to evaluate. This can lead to biasing and altering the answers because the purpose of the survey is to obvious. 
+
+
+A solution is to embed other question among the questions that are important. This will help to avoid the situation where the respondents know what you may be trying to show with the data. While we did discuss the importance of not including questions that are not related to the particular research study, this is an example where it is acceptable and better to add unrelated questions.
+
+
+Often it is important to include more than the minimum number of questions and also to ask about similar topics in multiple questions. Consider being asked something once. It is very possible that you provide an answer, but may not be completely certain of how you feel or think about the question. Because of this, asking multiple question about the same topic allows the researcher to get a better overall response of the true underlying feelings and thoughts about the respondents answer. 
+
+
+There are also statistical and analytical considerations, which are a factor when determining the optimal number of questions. There must be a sufficient number of questions to be able to statistically analyze the data, enough variance to analyze the data, and also enough statistical power to have a chance of obtaining significant results. This is another example of why it is very important to develop an analysis plan before creating the survey or any type of research method. 
+
+
+### Ask About Only One Thing At A Time
+
+The final principle that was discussed generally in the last unit is to only ask about one thing at a time. A good survey question will never ask about two different things, concepts, etc. in one question. This can create much difficulty in answering the question.
+
+Let us consider the pay and productivity example. It is possible that people are asked if an increase in pay makes them more productive and improves morale. This seems like a very reasonable question, but on closer examination causes problems. It is very likely that people are more productive and have higher morale with a pay raise. However, some people may view a pay raise as a contractual agreement to work harder and be more productive. It could even lead to lower morale because of factors like stress from the harder work. It is also possible that a pay raise increases morale due to simply appreciating the pay raise, but do not necessarily work any harder. The takeaway is that asking two questions at one time can cause conflict in how to answer and hurts the data.
+
+
+### How Should Questions Be Ordered In A Survey
+
+We discussed how to decide the optimal number of questions. Now we will discuss the order of questions. The order is very important and can affect the way people respond. One issue is that the respondents should trust the researcher. This will lead to more truthful responses. In an organization, there may be questions that deal with sensitive material, personal interactions, or personal opinions. If the respondents do not fully trust the researcher there is a chance that the respondents will be concerned about answering truthfully to protect themselves. Therefore, it is important not to begin a survey with sensitive or personal questions when possible.
+
+As previously mentioned, it is sometimes important that the respondents do not see exactly the purpose or hypothesis of the research or evaluation. This is the reason to sometimes embed unrelated questions so not to reveal the purpose or the hypothesis. 
+
+A final concern with the order is how the questions in the beginning of the survey could affect the responses in subsequent questions. For example, a question could ask about how someone feels generally about the quality of the organization. Let us assume that a person answered positively. If there are question later in the survey that ask about details of the organization there is a potential internal conflict in the respondent. For example, the question "How do you feel about management at the organization?" could present a conflict if the answer about the organization in general was positive it may be difficult for someone to respond negatively about management because this could contradict the previous answer about management. Therefore, it is important to consider the effect of questions on related subsequent questions.
+
+
+### Types Of Survey Aswers
+
+There are many ways that a respondent can answer questions. The type of answers often depends on the goals of the research, the type of analysis that will be conducted, and the type of information that is needed from the evaluation. This is similar to many themes that we have seen. One important thing to keep in mind is that surveys may use different types of answers in one survey when it is needed.
+
+One way to design survey questions is to have open-ended questions. This is when people can freely respond however they would like. This can be very useful. As with observational studies, there are many things that a researcher may not know. By allowing a free response a researcher can learn many in depth viewpoints and characteristics of the organization and its functioning. This provides potentially much data that can be very valuable and informative. 
+
+
+There are some disadvantages with open-ended questions. One is that the respondent may not actually answer questions with the information for which is being asked. The answer can stray from the topic. This would yield data that may not be useful for the evaluation. Sometimes restricting the scope of answer may be more productive. However, any restrictions must maintain objectivity and not limit responses in such a way that will bias answers to confirm a hypothesis.
+
+Open-ended questions have many similarities with observational studies. Open-ended questions must be interpreted by the researcher. As with observational studies, a systematic coding system must exist to be sure that the data is valid and reliable, and also objective. The only difference is that there are now direct questions. This should help to minimize some of the need for interpretation. However, open-ended questions are not as simple to statistically analyze. Therefore, it is very important, as with other methods, to have an analysis plan before creating the survey.
+
+Another class of answers that are used are involve very simple do you agree or disagree answers and yes or no answers. These can be very useful because the answers are very clear and need no interpretation. These are also much more easy to analyze and can be used with several statistical models, such as regression, ANOVA, and simple comparisons of means. One disadvantage is that there are often cases where a respondent is not precisely in a yes or no category. This can lead to lower quality data because either option is not exactly how the respondent feels.
+
+Because having only two choices can sometimes be too restrictive and not allow for the true response, a good way is to expand the options. Instead of asking do you agree or disagree, it could be better to provide a scale of options. These may range from 1-5 where 1 is completely disagree and 5 is completely agree. This is called a Likert Scale. Typically these scales are either 1-5 or 1-7. There are other ranges of scales. One important consideration is to use an odd numbered scale. This will provide a middle point where often the option is "neutral, or "neither agree nor disagree". The other options such as 2 and 4 on a 1-5 scale is often "somewhat disagree" for 2 and "somewhat agree" for 3. This provides a full range of options, while restricting the answers.  
+
+As mentioned, there are other ranges of scales. A researcher should be careful when deciding on the range. If there are too few options then again we encounter the situation of the respondent not being able to answer precisely truthful always. If we have too many options then the respondent may not know exactly how to respond due to too many options to consider. It is also important to label what each number on the scale means. As with keeping questions simple, by not labeling the meaning of each number there is more complexity and need for the respondent to interpret what the number means. 
+
+
+One final consideration with Likert Scales is that it is important to keep all of the ranges of the scales the same. First, it begins to confuse the respondent when scale ranges change. Second, it is difficult to compare the data from different ranges. However, depending on the type of question there may be a need to have different types of responses, but when using a scale it is best to remain with the same range throughout the survey.
+
+
+
+
+
+## Review General principles In Survey Design
+
+We have covered some very important principles that should always be considered when developing surveys. As we have seen there are many things to consider before question have actually been created. This is also an underlying theme: much preparatory work is needed before creating the first question.
+
+
+### Looking Ahead
+
+- We will continue to discuss how to best design a survey.
+
+- We will discuss important procedures that should be used when developing specific questions.
+
+- We will expand upon these procedures and principles and apply them to using interviews for program evaluation.
+
